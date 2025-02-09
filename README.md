@@ -1,2 +1,4 @@
 # ProjectRat
-Build Spring 2025 Unity 2D URP Minion-Collector Game
+Unity Version: 2022.3.57f1
+INIT's Build Project | Spring 2025 
+Unity 2D URP Minion-Collector Game
