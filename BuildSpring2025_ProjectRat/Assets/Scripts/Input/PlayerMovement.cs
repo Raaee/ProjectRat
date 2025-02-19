@@ -11,8 +11,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 _currentVelocity = Vector2.zero;
     private Vector2 _targetPos = Vector2.zero;
     
-    void Awake()
-    {
+    void Awake() {
         _playerControl = new PlayerControl();
         _rb = GetComponent<Rigidbody2D>();
         if (_rb is null) {
@@ -20,13 +19,11 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private void OnEnable()
-    {
+    private void OnEnable() {
         _playerControl.Enable();
     }
 
-    private void OnDisable()
-    {
+    private void OnDisable() {
         _playerControl.Disable();
     }
 
