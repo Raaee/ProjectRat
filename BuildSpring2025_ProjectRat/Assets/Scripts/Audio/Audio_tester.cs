@@ -27,4 +27,9 @@ public class Audio_tester : MonoBehaviour
         yield return new WaitForSeconds(playSeconds);
         audioSourcel.Stop();
     }
+
+    [ProButton]
+    private void StopAllAudio() {
+        audioSourcel.Stop();
+    }
 }
