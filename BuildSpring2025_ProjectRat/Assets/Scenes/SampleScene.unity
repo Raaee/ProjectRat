@@ -333,6 +333,7 @@ GameObject:
   - component: {fileID: 955373291}
   - component: {fileID: 955373294}
   - component: {fileID: 955373293}
+  - component: {fileID: 955373295}
   m_Layer: 0
   m_Name: Circle
   m_TagString: Untagged
@@ -448,6 +449,45 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   smoothTime: 0.1
+--- !u!114 &955373295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 955373290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59073bcd138d94fe59933455743240de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movement:
+    m_Name: Movement
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: d959537d-3458-4d13-82ea-e772fadebd05
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  interact:
+    m_Name: Interact
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: cb54a8d7-35a1-4586-86ea-8112cc5cd58a
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  attack:
+    m_Name: Attack
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: e5deb3ba-4f02-4a24-94cb-1a409b31964a
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
 --- !u!1 &1114104355
 GameObject:
   m_ObjectHideFlags: 3
