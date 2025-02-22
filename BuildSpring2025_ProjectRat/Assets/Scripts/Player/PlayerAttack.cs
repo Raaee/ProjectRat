@@ -1,6 +1,4 @@
-using System;
 using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
@@ -8,7 +6,7 @@ public class PlayerAttack : MonoBehaviour
     [Header("Attack Properties")]
     public bool isAttacking;
     [Header("Attack Duration (seconds)")]
-    public float attackDuration = 5f;
+    public float attackDuration = 0.5f;
 
     [SerializeField] private GameObject attackCollider;
     private Actions actions;

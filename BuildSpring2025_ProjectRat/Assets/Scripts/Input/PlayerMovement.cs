@@ -4,10 +4,10 @@ public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed = 10f;
     public float smoothTime = 0.1f;
+    public Vector2 moveDirection = Vector2.zero;
 
     private InputManager inputManager;
     private Rigidbody2D rb;
-    private Vector2 moveDirection = Vector2.zero;
     private Vector2 currentVelocity = Vector2.zero;
     private Vector2 targetPos = Vector2.zero;
     
