@@ -3,12 +3,11 @@ using UnityEngine.InputSystem;
 
 public class InputManager : MonoBehaviour
 {
-    [Header("Input")]
-    public InputAction movement;
-    public InputAction interact;
-    public InputAction attack;
-
     private PlayerControl playerControl;
+
+    [HideInInspector] public InputAction movement;
+    [HideInInspector] public InputAction interact;
+    [HideInInspector] public InputAction attack;
 
     private void Awake() {
         playerControl = new PlayerControl();
