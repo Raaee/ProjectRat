@@ -2,15 +2,19 @@ using UnityEngine;
 
 public class AttackDirection : MonoBehaviour
 {
-    [SerializeField] private Vector2 direction = Vector2.zero;
-    [SerializeField] private GameObject attackGameObject; 
+    [SerializeField] private Vector2 direction;
+    [SerializeField] private Transform attackTransform; 
     private PlayerAttack playerAttack;
     private PlayerMovement playerMovement;
 
     private void Awake() {
         playerMovement = GetComponent<PlayerMovement>();
         playerAttack = GetComponent<PlayerAttack>();
-        attackGameObject = GameObject.Find("Attack");
+
+        Transform pivot = gameObject.transform.Find("Pivot");
+        attackTransform = pivot.transform.Find("Attack");
+    
+        direction = Vector2.right;
     }
 
     private void FixedUpdate() {
@@ -25,7 +29,7 @@ public class AttackDirection : MonoBehaviour
         }
 
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        attackGameObject.transform.rotation = Quaternion.Euler(0, 0, angle);
-        attackGameObject.transform.localPosition = direction;
+        attackTransform.rotation = Quaternion.Euler(0, 0, angle);
+        attackTransform.localPosition = direction;
     }
 }
