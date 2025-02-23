@@ -7,6 +7,11 @@ public class FearState : EnemieStates
 {
     [SerializeField] private EnemieStates romingState;
 
+    public override void Awake()
+    {
+        base.Awake();
+    }
+
     public override void OnStateEnter()
     {
         Debug.Log("The enemy is currenly in fear");

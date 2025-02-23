@@ -10,6 +10,11 @@ public class RomingState : EnemieStates
 
     [SerializeField] private bool isBoss;
 
+    public override void Awake()
+    {
+        base.Awake();
+    }
+
     public override void OnStateEnter()
     {
         Debug.Log("Enemy is currenly on Roming");

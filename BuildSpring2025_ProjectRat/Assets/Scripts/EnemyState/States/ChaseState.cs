@@ -7,6 +7,11 @@ public class ChaseState : EnemieStates
     [SerializeField] private EnemieStates romingState;
     [SerializeField] private EnemieStates attackState;
 
+    public override void Awake()
+    {
+        base.Awake();
+    }
+
     public override void OnStateEnter()
     {
         Debug.Log("The Enemy is chasing");

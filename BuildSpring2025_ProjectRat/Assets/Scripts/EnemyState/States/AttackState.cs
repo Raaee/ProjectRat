@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class AttackState : EnemieStates
 {
+    public override void Awake()
+    {
+        base.Awake();
+    }
+
     public override void OnStateEnter()
     {
 
