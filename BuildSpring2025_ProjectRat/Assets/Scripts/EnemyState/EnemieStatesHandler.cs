@@ -18,6 +18,11 @@ public class EnemieStatesHandler : MonoBehaviour
         CurrentState.OnStateUpdate();
     }
 
+    private void FixedUpdate()
+    {
+        CurrentState.OnFixedUpdate();
+    }
+
     public void ChangeState(EnemieStates newState)
     {
         CurrentState.OnStateExit();

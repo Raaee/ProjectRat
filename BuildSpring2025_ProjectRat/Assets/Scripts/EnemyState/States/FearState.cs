@@ -11,10 +11,6 @@ public class FearState : EnemieStates
     {
         base.Awake();
     }
-    private void FixedUpdate()
-    {
-
-    }
 
     public override void OnStateEnter()
     {
@@ -28,7 +24,11 @@ public class FearState : EnemieStates
 
     public override void OnStateUpdate()
     {
-        
+
+    }
+    public override void OnFixedUpdate()
+    {
+
     }
 
     [ProButton]

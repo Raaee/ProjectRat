@@ -11,11 +11,6 @@ public class IdleState : EnemieStates
         base.Awake();
     }
 
-    private void FixedUpdate()
-    {
-        
-    }
-
     public override void OnStateEnter()
     {
         Debug.Log("Enemy is currenly on Idle");
@@ -27,7 +22,12 @@ public class IdleState : EnemieStates
         
     }
 
+
     public override void OnStateUpdate()
+    {
+
+    }
+    public override void OnFixedUpdate()
     {
 
     }

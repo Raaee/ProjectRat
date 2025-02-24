@@ -15,4 +15,6 @@ public abstract class EnemieStates : MonoBehaviour
     public abstract void OnStateEnter();
     public abstract void OnStateExit();
     public abstract void OnStateUpdate();
+
+    public abstract void OnFixedUpdate();
 }

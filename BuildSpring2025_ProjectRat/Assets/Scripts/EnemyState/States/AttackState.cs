@@ -8,10 +8,6 @@ public class AttackState : EnemieStates
     {
         base.Awake();
     }
-    private void FixedUpdate()
-    {
-
-    }
 
     public override void OnStateEnter()
     {
@@ -24,6 +20,10 @@ public class AttackState : EnemieStates
     }
 
     public override void OnStateUpdate()
+    {
+
+    }
+    public override void OnFixedUpdate()
     {
 
     }

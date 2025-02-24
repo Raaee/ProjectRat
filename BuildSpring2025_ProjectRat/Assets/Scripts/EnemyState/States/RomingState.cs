@@ -15,10 +15,6 @@ public class RomingState : EnemieStates
         base.Awake();
     }
 
-    private void FixedUpdate()
-    {
-
-    }
 
     public override void OnStateEnter()
     {
@@ -33,6 +29,11 @@ public class RomingState : EnemieStates
     public override void OnStateUpdate()
     {
         
+    }
+
+    public override void OnFixedUpdate()
+    {
+
     }
 
     [ProButton]
