@@ -151,7 +151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a732e68b6277439ea9afc4c019e3949, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  romingState: {fileID: 1378673554}
+  roamingState: {fileID: 1378673554}
 --- !u!4 &113018722
 Transform:
   m_ObjectHideFlags: 0
@@ -695,7 +695,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 065d14466e9c54a5f8ffa6401ea8fef8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  romingState: {fileID: 1378673554}
+  roamingState: {fileID: 1378673554}
 --- !u!4 &1944609773
 Transform:
   m_ObjectHideFlags: 0
@@ -903,7 +903,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4dc23bf08a2c14268ba9bbc701f72c25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  romingState: {fileID: 1378673554}
+  roamingState: {fileID: 1378673554}
   attackState: {fileID: 254254578}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
