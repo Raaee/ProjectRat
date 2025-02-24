@@ -30,10 +30,4 @@ public class FearState : EnemieStates
     {
 
     }
-
-    [ProButton]
-    public void Fear()
-    {
-        enemieStatesHandler.ChangeState(roamingState);
-    }
 }

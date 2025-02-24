@@ -6,10 +6,13 @@ public class ChaseState : EnemieStates
 {
     [SerializeField] private EnemieStates roamingState;
     [SerializeField] private EnemieStates attackState;
-
+    [SerializeField] private GameObject Player;
+    private FollowBehavior follow;
+ 
     public override void Awake()
     {
         base.Awake();
+        follow = FindFirstObjectByType<FollowBehavior>();
     }
 
     public override void OnStateEnter()
@@ -23,12 +26,15 @@ public class ChaseState : EnemieStates
     }
     public override void OnFixedUpdate()
     {
-
+        
     }
 
 
     public override void OnStateUpdate()
     {
-        enemieStatesHandler.ChangeState(roamingState);
+        if (follow.StopFolloing)
+        {
+            follow.MoveTowardsTarget(Player.transform);
+        }
     }
 }
