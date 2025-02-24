@@ -331,6 +331,7 @@ GameObject:
   m_Component:
   - component: {fileID: 560551196}
   - component: {fileID: 560551198}
+  - component: {fileID: 560551199}
   m_Layer: 0
   m_Name: Attack
   m_TagString: Untagged
@@ -347,8 +348,8 @@ Transform:
   m_GameObject: {fileID: 560551195}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.9280001, y: 0.033, z: 0}
-  m_LocalScale: {x: 5.584306, y: 4.2089705, z: 1}
+  m_LocalPosition: {x: 0.9280001, y: 0.0069, z: 0}
+  m_LocalScale: {x: 5.584306, y: 13.5819025, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1437239178}
@@ -405,6 +406,55 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &560551199
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 560551195}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0.049999997, y: 0.049999997, z: 0.049999997, w: 0.049999997}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.16, y: 0.16}
+    newSize: {x: 0.2, y: 0.2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.04362044, y: 0.07214858}
+      - {x: -0.07, y: 0}
+      - {x: 0.045853678, y: -0.07214859}
+      - {x: 0.067939445, y: -0.0009078495}
+  m_UseDelaunayMesh: 0
 --- !u!1 &955373290
 GameObject:
   m_ObjectHideFlags: 0
@@ -608,7 +658,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: {x: 0, y: 0}
-  attackGameObject: {fileID: 560551195}
+  attackTransform: {fileID: 0}
 --- !u!1 &1114104355
 GameObject:
   m_ObjectHideFlags: 3
