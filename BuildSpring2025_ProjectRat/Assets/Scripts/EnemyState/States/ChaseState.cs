@@ -11,6 +11,10 @@ public class ChaseState : EnemieStates
     {
         base.Awake();
     }
+    private void FixedUpdate()
+    {
+
+    }
 
     public override void OnStateEnter()
     {
