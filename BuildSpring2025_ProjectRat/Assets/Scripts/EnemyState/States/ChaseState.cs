@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ChaseState : EnemieStates
 {
-    [SerializeField] private EnemieStates romingState;
+    [SerializeField] private EnemieStates roamingState;
     [SerializeField] private EnemieStates attackState;
 
     public override void Awake()
@@ -29,6 +29,6 @@ public class ChaseState : EnemieStates
 
     public override void OnStateUpdate()
     {
-        enemieStatesHandler.ChangeState(romingState);
+        enemieStatesHandler.ChangeState(roamingState);
     }
 }

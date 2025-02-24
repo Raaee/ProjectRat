@@ -7,7 +7,7 @@ public class StatesConditions : MonoBehaviour
     private EnemieStates chaseState;
     private EnemieStates fearState;
     private EnemieStates attackState;
-    private EnemieStates romingState;
+    private EnemieStates roamingState;
 
     [SerializeField] private bool isBoss;
     private EnemieStatesHandler enemieStatesHandler;
@@ -16,7 +16,7 @@ public class StatesConditions : MonoBehaviour
     {
         enemieStatesHandler = GetComponent<EnemieStatesHandler>();
 
-        romingState = GetComponentInChildren<RomingState>();
+        roamingState = GetComponentInChildren<RoamingState>();
         chaseState = GetComponentInChildren<ChaseState>();
         fearState = GetComponentInChildren<FearState>();
         attackState = GetComponentInChildren<AttackState>();
@@ -24,7 +24,7 @@ public class StatesConditions : MonoBehaviour
 
 
     public void StartRomingState() {
-        enemieStatesHandler.ChangeState(romingState);
+        enemieStatesHandler.ChangeState(roamingState);
     }
     public void StartChaseState() {
         enemieStatesHandler.ChangeState(chaseState);

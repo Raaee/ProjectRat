@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using com.cyborgAssets.inspectorButtonPro;
 using UnityEngine;
 
-public class RomingState : EnemieStates
+public class RoamingState : EnemieStates
 {
     [SerializeField] private EnemieStates chaseState;
     [SerializeField] private EnemieStates fearState;
@@ -18,7 +18,7 @@ public class RomingState : EnemieStates
 
     public override void OnStateEnter()
     {
-        Debug.Log("Enemy is currenly on Roming");
+        Debug.Log("Enemy is currenly on roaming");
     }
 
     public override void OnStateExit()

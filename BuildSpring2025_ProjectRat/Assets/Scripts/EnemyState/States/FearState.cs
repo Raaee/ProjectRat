@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class FearState : EnemieStates
 {
-    [SerializeField] private EnemieStates romingState;
+    [SerializeField] private EnemieStates roamingState;
 
     public override void Awake()
     {
@@ -34,6 +34,6 @@ public class FearState : EnemieStates
     [ProButton]
     public void Fear()
     {
-        enemieStatesHandler.ChangeState(romingState);
+        enemieStatesHandler.ChangeState(roamingState);
     }
 }
