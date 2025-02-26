@@ -6,7 +6,6 @@ public class ChaseState : EnemieStates
 {
     [SerializeField] private EnemieStates roamingState;
     [SerializeField] private EnemieStates attackState;
-    [SerializeField] private GameObject Player;
     private FollowBehavior follow;
  
     public override void Awake()
@@ -32,9 +31,13 @@ public class ChaseState : EnemieStates
 
     public override void OnStateUpdate()
     {
-        if (follow.StopFolloing)
+        if (follow.isFollowing)
         {
-            follow.MoveTowardsTarget(Player.transform);
+            follow.KeepFollowingTarget();
+        }
+        else
+        {
+            follow.StopFollowingTarget();
         }
     }
 }
