@@ -7,6 +7,8 @@ public class FearState : EnemieStates
 {
     [SerializeField] private EnemieStates roamingState;
 
+    //Change to chaseState
+
     public override void Awake()
     {
         base.Awake();

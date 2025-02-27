@@ -17,6 +17,7 @@ public class ChaseState : EnemieStates
     public override void OnStateEnter()
     {
         Debug.Log("The Enemy is chasing");
+        //Addlisener.
     }
 
     public override void OnStateExit()
@@ -40,4 +41,8 @@ public class ChaseState : EnemieStates
             follow.StopFollowingTarget();
         }
     }
+
+    //StartFollow(){ follow.StartFollow(); }
+
+
 }

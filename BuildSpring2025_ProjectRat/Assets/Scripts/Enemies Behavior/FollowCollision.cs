@@ -5,8 +5,12 @@ using UnityEngine;
 public class FollowCollision : MonoBehaviour
 {
     [SerializeField] private FollowBehavior followBehavior;
+    //Add Event OnCollision
+
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        //OnCollision.Invoke
         followBehavior.StarFollowing();
     }
 

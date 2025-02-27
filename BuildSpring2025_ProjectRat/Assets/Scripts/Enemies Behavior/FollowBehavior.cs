@@ -21,7 +21,7 @@ public class FollowBehavior : MonoBehaviour
     [ProButton]
     public void StarFollowing()
     {
-        statesConditions.StartChaseState();
+        //statesConditions.StartChaseState();
         KeepFollowingTarget();
     }
 
@@ -40,6 +40,7 @@ public class FollowBehavior : MonoBehaviour
     public void StopFollowingTarget()
     {
         isFollowing = false;
+        //Add a reference to State Chase
     }
 
     public void MoveTowardsTarget(Transform targetTransform)
@@ -51,6 +52,6 @@ public class FollowBehavior : MonoBehaviour
     {
         yield return new WaitForSeconds(secondsToFollow);
         StopFollowingTarget();
-        statesConditions.StartRomingState();
+        //statesConditions.StartRomingState();
     }
 }
