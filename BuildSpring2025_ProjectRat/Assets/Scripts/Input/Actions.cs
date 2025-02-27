@@ -3,10 +3,9 @@ using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 public class Actions : MonoBehaviour {
-    private InputManager inputManager;
 
-    [HideInInspector] public UnityEvent OnInteract;
-    
+    private InputManager inputManager;
+    [HideInInspector] public UnityEvent OnInteract;    
     [HideInInspector] public UnityEvent OnAttack;
 
     private void Awake() {
