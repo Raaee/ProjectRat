@@ -2,12 +2,12 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float moveSpeed = 10f;
-    public float smoothTime = 0.1f;
-    public Vector2 moveDirection = Vector2.zero;
-
     private InputManager inputManager;
     private Rigidbody2D rb;
+
+    [SerializeField] private float moveSpeed = 10f;
+    [SerializeField] private float smoothTime = 0.1f;
+    public Vector2 moveDirection { get; set; } = Vector2.zero;
     private Vector2 currentVelocity = Vector2.zero;
     private Vector2 targetPos = Vector2.zero;
     
@@ -18,7 +18,6 @@ public class PlayerMovement : MonoBehaviour
             Debug.LogError("Rigidbody2D component is missing");
         }
     }
-
     void FixedUpdate() {
         moveDirection = inputManager.movement.ReadValue<Vector2>().normalized;
         targetPos = Vector2.SmoothDamp(targetPos, moveDirection, ref currentVelocity, smoothTime);

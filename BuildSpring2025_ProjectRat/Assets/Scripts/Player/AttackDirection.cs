@@ -2,18 +2,16 @@ using UnityEngine;
 
 public class AttackDirection : MonoBehaviour
 {
-    [SerializeField] private Vector2 direction;
-    [SerializeField] private Transform attackTransform;
     private PlayerAttack playerAttack;
     private PlayerMovement playerMovement;
 
+    [SerializeField] private Transform attackTransform;
+    [SerializeField] private Transform attackPivot;
+    private Vector2 direction;
+
     private void Awake() {
-        playerMovement = GetComponent<PlayerMovement>();
+        playerMovement = GetComponentInParent<PlayerMovement>();
         playerAttack = GetComponent<PlayerAttack>();
-
-        Transform pivot = gameObject.transform.Find("Pivot");
-        attackTransform = pivot.transform.Find("Attack");
-
         direction = Vector2.right;
     }
 
