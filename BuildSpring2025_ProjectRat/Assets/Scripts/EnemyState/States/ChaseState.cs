@@ -6,8 +6,9 @@ public class ChaseState : EnemieStates
 {
     [SerializeField] private EnemieStates roamingState;
     [SerializeField] private EnemieStates attackState;
+    [SerializeField] private FollowCollision followCollision;
     private FollowBehavior follow;
- 
+
     public override void Awake()
     {
         base.Awake();
@@ -16,19 +17,18 @@ public class ChaseState : EnemieStates
 
     public override void OnStateEnter()
     {
-        Debug.Log("The Enemy is chasing");
-        //Addlisener.
+        StartFollow();
+        followCollision.OnExitRadius.AddListener(StartRomingState);
     }
 
     public override void OnStateExit()
     {
-
+        StopFollow();
     }
     public override void OnFixedUpdate()
     {
         
     }
-
 
     public override void OnStateUpdate()
     {
@@ -42,7 +42,18 @@ public class ChaseState : EnemieStates
         }
     }
 
-    //StartFollow(){ follow.StartFollow(); }
+    public void StartRomingState()
+    {
+        enemieStatesHandler.ChangeState(roamingState);
+    }
 
+    private void StartFollow()
+    { 
+        follow.StarFollowing(); 
+    }
 
+    private void StopFollow() 
+    {
+        follow.StopFollowing();
+    }
 }

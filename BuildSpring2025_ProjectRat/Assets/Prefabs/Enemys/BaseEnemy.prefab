@@ -179,7 +179,7 @@ GameObject:
   - component: {fileID: 8955311746947286047}
   - component: {fileID: 1665001403962740932}
   - component: {fileID: 899400542009255714}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: AttackRadius
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -249,7 +249,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56d0d3b909f35db41a3c0e0f89a7695c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  followBehavior: {fileID: 4934665151421886369}
+  followBehavior: {fileID: 0}
   attackBehavior: {fileID: 4214199077863749018}
 --- !u!1 &3993251250858419910
 GameObject:
@@ -497,7 +497,7 @@ GameObject:
   - component: {fileID: 5991346662569395529}
   - component: {fileID: 3673831527091734740}
   - component: {fileID: 4314285473793493433}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: RoamingRadius
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -527,7 +527,7 @@ CircleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5845923697885477685}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -567,7 +567,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e40398d71716f348b28ba6073edac2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  followBehavior: {fileID: 4934665151421886369}
+  followBehavior: {fileID: 0}
+  OnRadius:
+    m_PersistentCalls:
+      m_Calls: []
+  OnExitRadius:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &5875573073967311729
 GameObject:
   m_ObjectHideFlags: 0
@@ -578,6 +584,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2969626491094830051}
   - component: {fileID: 6130178941590723828}
+  - component: {fileID: 5930544647692363411}
   m_Layer: 0
   m_Name: Chase
   m_TagString: Untagged
@@ -614,6 +621,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roamingState: {fileID: 4701619956932930859}
   attackState: {fileID: 7295028334425930617}
+  followCollision: {fileID: 4314285473793493433}
+--- !u!114 &5930544647692363411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5875573073967311729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7598de0f84163748ac66ed4a3f081e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  statesConditions: {fileID: 439776456059451898}
+  objToMove: {fileID: 6371445702999229875}
+  player: {fileID: 0}
+  enemySpeed: 2
+  secondsToFollow: 2
+  isFollowing: 0
+  keepFollowingTarget: 0
 --- !u!1 &5887213553701789379
 GameObject:
   m_ObjectHideFlags: 0
@@ -708,6 +735,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4301406947897067117}
   - component: {fileID: 5667688906857385571}
+  - component: {fileID: 2776162351557109362}
   m_Layer: 7
   m_Name: BaseEnemy
   m_TagString: Enemy
@@ -762,6 +790,41 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!58 &2776162351557109362
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6371445702999229875}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 191
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &6479219125564662916
 GameObject:
   m_ObjectHideFlags: 0
@@ -830,7 +893,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2780645637767864478}
   - component: {fileID: 4701619956932930859}
-  - component: {fileID: 4934665151421886369}
   m_Layer: 0
   m_Name: Roming
   m_TagString: Untagged
@@ -867,26 +929,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chaseState: {fileID: 6130178941590723828}
   fearState: {fileID: 5488024787495605474}
-  isBoss: 0
---- !u!114 &4934665151421886369
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6642834687948724083}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7598de0f84163748ac66ed4a3f081e1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  statesConditions: {fileID: 439776456059451898}
-  objToMove: {fileID: 6371445702999229875}
   player: {fileID: 0}
-  enemySpeed: 2
-  secondsToFollow: 2
-  isFollowing: 0
-  keepFollowingTarget: 0
+  isBoss: 0
+  followCollision: {fileID: 4314285473793493433}
 --- !u!1 &8904390402025497055
 GameObject:
   m_ObjectHideFlags: 0
@@ -918,8 +963,8 @@ Transform:
   m_Children:
   - {fileID: 8617444370135785760}
   - {fileID: 2780645637767864478}
-  - {fileID: 6675397673276923610}
   - {fileID: 2969626491094830051}
   - {fileID: 4735318604846014480}
+  - {fileID: 6675397673276923610}
   m_Father: {fileID: 6371103617188200373}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

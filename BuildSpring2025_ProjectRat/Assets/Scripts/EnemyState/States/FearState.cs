@@ -32,4 +32,9 @@ public class FearState : EnemieStates
     {
 
     }
+
+    public void StartRomingState()
+    {
+        enemieStatesHandler.ChangeState(roamingState);
+    }
 }

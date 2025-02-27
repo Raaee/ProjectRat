@@ -7,18 +7,22 @@ public class RoamingState : EnemieStates
 {
     [SerializeField] private EnemieStates chaseState;
     [SerializeField] private EnemieStates fearState;
-
-    [SerializeField] private bool isBoss;
+    [SerializeField] private GameObject player;
+    [SerializeField] private FollowCollision followCollision;
+    [SerializeField] private FearState fearStateGameObj;
 
     public override void Awake()
     {
         base.Awake();
+        player = GameObject.FindGameObjectWithTag("Player").transform.GetChild(0).gameObject;
+        fearStateGameObj = this.transform.parent.GetComponentInChildren<FearState>();
     }
 
 
     public override void OnStateEnter()
     {
         Debug.Log("Enemy is currenly on roaming");
+        followCollision.OnRadius.AddListener(StartChaseState);
     }
 
     public override void OnStateExit()
@@ -28,20 +32,26 @@ public class RoamingState : EnemieStates
 
     public override void OnStateUpdate()
     {
-        
+        Debug.Log(player.GetComponentInChildren<PlayerRadius>());
+        if (player.GetComponentInChildren<PlayerRadius>().IsObjectInRadius(fearStateGameObj))
+        {
+            StartFearState();
+        }
     }
 
     public override void OnFixedUpdate()
     {
-
+        
+        //PlayerRadius.(Player.IsObjectInRadius(this)
     }
 
-    [ProButton]
-    public void Roming()
+    public void StartChaseState()
     {
-        if (isBoss)
-            enemieStatesHandler.ChangeState(chaseState);
-        else
-            enemieStatesHandler.ChangeState(fearState);
+        enemieStatesHandler.ChangeState(chaseState);
+    }
+
+    public void StartFearState()
+    {
+        enemieStatesHandler.ChangeState(fearState);
     }
 }

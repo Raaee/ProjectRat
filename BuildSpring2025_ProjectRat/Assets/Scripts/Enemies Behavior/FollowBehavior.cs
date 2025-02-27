@@ -10,19 +10,33 @@ public class FollowBehavior : MonoBehaviour
     [SerializeField] private GameObject player;
     [SerializeField] private float enemySpeed = 2f;
     [SerializeField] private float secondsToFollow = 2f;
+    private ChaseState chaseState;
     public bool isFollowing = false;
     public bool keepFollowingTarget = false;
 
     private void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform.GetChild(0).gameObject;
+        chaseState = this.GetComponent<ChaseState>();
+    }
+
+    private void Update()
+    {
+        if (isFollowing) {
+            MoveTowardsTarget(player.transform);
+        }
     }
 
     [ProButton]
     public void StarFollowing()
     {
-        //statesConditions.StartChaseState();
-        KeepFollowingTarget();
+        //KeepFollowingTarget();
+        isFollowing = true;
+    }
+    public void StopFollowingTarget()
+    {
+        isFollowing = false;
+        chaseState.StartRomingState();
     }
 
     public void StopFollowing()
@@ -33,15 +47,9 @@ public class FollowBehavior : MonoBehaviour
 
     public void KeepFollowingTarget()
     {
-        MoveTowardsTarget(player.transform);
         isFollowing = true;
     }
 
-    public void StopFollowingTarget()
-    {
-        isFollowing = false;
-        //Add a reference to State Chase
-    }
 
     public void MoveTowardsTarget(Transform targetTransform)
     {
@@ -52,6 +60,5 @@ public class FollowBehavior : MonoBehaviour
     {
         yield return new WaitForSeconds(secondsToFollow);
         StopFollowingTarget();
-        //statesConditions.StartRomingState();
     }
 }
