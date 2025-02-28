@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5441088133780482279}
   - component: {fileID: 7183899697726413247}
+  - component: {fileID: 3704139115770956400}
   - component: {fileID: 5755124558238684487}
   - component: {fileID: 4793926127783088807}
   - component: {fileID: 5215237931790553250}
@@ -17,7 +18,7 @@ GameObject:
   - component: {fileID: 6447297595118740107}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -67,6 +68,41 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!70 &3704139115770956400
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4211038337638405928}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.017750025, y: -0.035499573}
+  m_Size: {x: 1.8134818, y: 2.9169736}
+  m_Direction: 0
 --- !u!114 &5755124558238684487
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -398,6 +434,7 @@ GameObject:
   - component: {fileID: 4102687357772872286}
   - component: {fileID: 7250409015209275607}
   - component: {fileID: 6447608065849507451}
+  - component: {fileID: 647780259736744777}
   m_Layer: 0
   m_Name: Player Attack
   m_TagString: Untagged
@@ -499,6 +536,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackTransform: {fileID: 8434669725652598548}
   attackPivot: {fileID: 8434669725652598548}
+--- !u!114 &647780259736744777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6309827246151885602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3ad2bcc307cd744681b704ce355bcdd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  orbPrefab: {fileID: 7470672308218697450, guid: 8d74b5d709294774aa6785c9d49c80a0, type: 3}
+  <spawnChance>k__BackingField: 0.5
+  <maxOrbs>k__BackingField: 10
+  <currentOrbs>k__BackingField: 0
 --- !u!1 &6654923754253579728
 GameObject:
   m_ObjectHideFlags: 0
