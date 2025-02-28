@@ -23,7 +23,6 @@ public class Actions : MonoBehaviour {
     }
 
     public void Attack(InputAction.CallbackContext context) {
-        Debug.Log("Attack");
         OnAttack.Invoke();
     }
 }

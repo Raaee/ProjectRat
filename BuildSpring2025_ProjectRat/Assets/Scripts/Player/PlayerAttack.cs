@@ -5,7 +5,8 @@ public class PlayerAttack : MonoBehaviour
 {
     private Actions actions;
     private Collider2D attackCol;
-    [SerializeField] private GameObject attackCollider;
+    [SerializeField] private GameObject attackVisual;
+    [SerializeField] private int attackDamage = 2;
     [SerializeField] private float attackDuration = 0.1f;
     public bool isAttacking { get; private set; }
 
@@ -15,35 +16,39 @@ public class PlayerAttack : MonoBehaviour
     private const string BOSS_PODIUM_TAG = "BossPodium";
 
     private void Start() {
-        attackCol = attackCollider.GetComponent<PolygonCollider2D>();
+        attackCol = GetComponent<PolygonCollider2D>();
         actions = GetComponentInParent<Actions>();
         actions.OnAttack.AddListener(OnAttack);
-        attackCollider.SetActive(false);
+
+        isAttacking = false;
+        ToggleCollider();
     }
     private IEnumerator PerformAttack() {
         isAttacking = true;
-        attackCollider.SetActive(isAttacking);
-        attackCol.enabled = isAttacking;
+        ToggleCollider();
         yield return new WaitForSeconds(attackDuration);
 
         isAttacking = false;
+        ToggleCollider();
+    }
+    private void ToggleCollider() {
         attackCol.enabled = isAttacking;
-        attackCollider.SetActive(isAttacking);
+        attackVisual.SetActive(isAttacking);
     }
     private void OnAttack() {
         if (isAttacking) return;
         StartCoroutine(PerformAttack());
     }
-    private void OnTriggerEnter2D(Collider2D collision) {
+    private void OnTriggerEnter2D(Collider2D col) {
         if (!isAttacking) return;
-        
-        if (collision.tag == MINION_RAT_TAG) {
+
+        if (col.gameObject.tag == MINION_RAT_TAG) {
      
         }
-        else if (collision.tag == BOSS_TAG) {
-        
+        if (col.gameObject.tag == BOSS_TAG) {
+            col.gameObject.GetComponent<Health>().RemoveHealth(attackDamage);
         }
-        else if (collision.tag == BOSS_PODIUM_TAG) {
+        if (col.gameObject.tag == BOSS_PODIUM_TAG) {
         
         }
     }

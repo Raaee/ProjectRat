@@ -2,9 +2,6 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed = 10f;
-    [SerializeField] private float smoothTime = 0.1f;
-
     private InputManager inputManager;
     private Rigidbody2D rb;
 
