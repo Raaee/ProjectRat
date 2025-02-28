@@ -7,8 +7,10 @@ public class PlayerAttack : MonoBehaviour
     private Collider2D attackCol;
     [SerializeField] private GameObject attackVisual;
     [SerializeField] private int attackDamage = 2;
+    [SerializeField] private int poweredAttackDamage = 6;
     [SerializeField] private float attackDuration = 0.1f;
     public bool isAttacking { get; private set; }
+    private AcidOrbs acidOrbs;
 
     [Header("TAGS")]
     private const string MINION_RAT_TAG = "MinionRat";
@@ -16,12 +18,17 @@ public class PlayerAttack : MonoBehaviour
     private const string BOSS_PODIUM_TAG = "BossPodium";
 
     private void Start() {
+        acidOrbs = GetComponent<AcidOrbs>();
         attackCol = GetComponent<PolygonCollider2D>();
         actions = GetComponentInParent<Actions>();
         actions.OnAttack.AddListener(OnAttack);
 
         isAttacking = false;
         ToggleCollider();
+    }
+    private void OnAttack() {
+        if (isAttacking) return;
+        StartCoroutine(PerformAttack());
     }
     private IEnumerator PerformAttack() {
         isAttacking = true;
@@ -35,9 +42,11 @@ public class PlayerAttack : MonoBehaviour
         attackCol.enabled = isAttacking;
         attackVisual.SetActive(isAttacking);
     }
-    private void OnAttack() {
-        if (isAttacking) return;
-        StartCoroutine(PerformAttack());
+    private bool IsAcidOrbTriggered() {
+        float chance = Random.Range(0, 1.0f);
+        if (chance >= acidOrbs.spawnChance)
+            return true;
+        return false;
     }
     private void OnTriggerEnter2D(Collider2D col) {
         if (!isAttacking) return;
@@ -46,10 +55,21 @@ public class PlayerAttack : MonoBehaviour
      
         }
         if (col.gameObject.tag == BOSS_TAG) {
-            col.gameObject.GetComponent<Health>().RemoveHealth(attackDamage);
+            TriggerOrbs();            
+            int damage = attackDamage;
+            if (acidOrbs.currentOrbs == acidOrbs.maxOrbs) {
+                damage = poweredAttackDamage;
+                acidOrbs.ResetOrbs();
+            }
+            col.gameObject.GetComponent<Health>().RemoveHealth(damage);
         }
         if (col.gameObject.tag == BOSS_PODIUM_TAG) {
         
+        }
+    }
+    private void TriggerOrbs() {
+        if (IsAcidOrbTriggered()) {
+            acidOrbs.SpawnOrb();
         }
     }
 }
