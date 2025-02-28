@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8697805320026812488}
   - component: {fileID: 4284359290034675691}
   - component: {fileID: 8844373344034658461}
+  - component: {fileID: 7504932925815145275}
   m_Layer: 0
   m_Name: Cat
   m_TagString: Boss
@@ -111,6 +112,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHP: 100
   currentHP: 0
+--- !u!114 &7504932925815145275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6944497034271710787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5096b32e4600c8c43b6fbff528e42db5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnRadius: 10
+  attackRadius: 2.5
+  attackDamage: 5
+  delayPerSpawn: 0.25
+  collisions: []
+  areaPrefab: {fileID: 7663498541583923837, guid: 127f348c9e81f5c4b8d3876de449e8db, type: 3}
+  spawnedAreas: []
+  maxAmtPerAttack: 10
+  randomAmtPerAttack: 1
 --- !u!1 &8910567640608599190
 GameObject:
   m_ObjectHideFlags: 0
