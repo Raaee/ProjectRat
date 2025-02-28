@@ -12,6 +12,9 @@ public class PlayerAttack : MonoBehaviour
     public bool isAttacking { get; private set; }
     private AcidOrbs acidOrbs;
 
+    [Header("DEBUG")]
+    public bool spawnOrbs = true;
+
     [Header("TAGS")]
     private const string MINION_RAT_TAG = "MinionRat";
     private const string BOSS_TAG = "Boss";
@@ -55,7 +58,7 @@ public class PlayerAttack : MonoBehaviour
      
         }
         if (col.gameObject.tag == BOSS_TAG) {
-            TriggerOrbs();
+            if (spawnOrbs) TriggerOrbs();
             DamageBoss(col);
         }
         if (col.gameObject.tag == BOSS_PODIUM_TAG) {
