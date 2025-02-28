@@ -21,7 +21,7 @@ public class PlayerRadius : MonoBehaviour
         }
         else if (collision.gameObject.tag == "Boss") 
         {
-            Bosses.Add(collision.gameObject.transform.GetChild(0).GetChild(0).GetComponentInChildren<ChaseState>());
+            Bosses.Add(collision.gameObject.transform.GetChild(0).GetChild(0).GetComponentInChildren<ChasePlayerState>());
         }
     }
 
@@ -33,7 +33,7 @@ public class PlayerRadius : MonoBehaviour
         }
         else if (collision.gameObject.tag == "Boss")
         {
-            Bosses.Remove(collision.gameObject.transform.GetChild(0).GetChild(0).GetComponentInChildren<ChaseState>());
+            Bosses.Remove(collision.gameObject.transform.GetChild(0).GetChild(0).GetComponentInChildren<ChasePlayerState>());
         }
     }
 }

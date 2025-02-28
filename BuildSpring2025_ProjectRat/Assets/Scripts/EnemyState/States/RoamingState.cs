@@ -5,8 +5,10 @@ using UnityEngine;
 
 public class RoamingState : EnemieStates
 {
-    [SerializeField] private EnemieStates chaseState;
+    [SerializeField] private EnemieStates followState;
     [SerializeField] private EnemieStates fearState;
+    [SerializeField] private EnemieStates idleState;
+    [SerializeField] private EnemieStates chasePlayerState;
     [SerializeField] private GameObject player;
     [SerializeField] private FollowCollision followCollision;
     [SerializeField] private FearState fearStateGameObj;
@@ -22,7 +24,7 @@ public class RoamingState : EnemieStates
     public override void OnStateEnter()
     {
         Debug.Log("Enemy is currenly on roaming");
-        followCollision.OnRadius.AddListener(StartChaseState);
+        //followCollision.OnRadius.AddListener(StartChaseState);
     }
 
     public override void OnStateExit()
@@ -32,7 +34,7 @@ public class RoamingState : EnemieStates
 
     public override void OnStateUpdate()
     {
-        StartFearState();
+        //StartFearState();
     }
 
     public override void OnFixedUpdate()
@@ -43,7 +45,7 @@ public class RoamingState : EnemieStates
 
     public void StartChaseState()
     {
-        enemieStatesHandler.ChangeState(chaseState);
+        enemieStatesHandler.ChangeState(followState);
     }
 
     public void StartFearState()
@@ -53,4 +55,13 @@ public class RoamingState : EnemieStates
             enemieStatesHandler.ChangeState(fearState);
         }
     }
+
+    [ProButton]
+    public void TestPlayerAttack()
+    {
+        enemieStatesHandler.ChangeState(followState);
+    }
+
+    
+
 }

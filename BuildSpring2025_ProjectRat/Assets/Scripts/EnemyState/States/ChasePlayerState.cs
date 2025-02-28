@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ChaseState : EnemieStates
+public class ChasePlayerState : EnemieStates
 {
     [SerializeField] private EnemieStates roamingState;
-    [SerializeField] private EnemieStates attackState;
+    [SerializeField] private EnemieStates attackPlayerState;
     [SerializeField] private FollowCollision followCollision;
     private FollowBehavior follow;
 

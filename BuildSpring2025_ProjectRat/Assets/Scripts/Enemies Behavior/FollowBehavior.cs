@@ -10,14 +10,14 @@ public class FollowBehavior : MonoBehaviour
     [SerializeField] private GameObject player;
     [SerializeField] private float enemySpeed = 2f;
     [SerializeField] private float secondsToFollow = 2f;
-    private ChaseState chaseState;
+    private ChasePlayerState chaseState;
     public bool isFollowing = false;
     public bool keepFollowingTarget = false;
 
     private void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform.GetChild(0).gameObject;
-        chaseState = this.GetComponent<ChaseState>();
+        chaseState = this.GetComponent<ChasePlayerState>();
     }
 
     private void Update()
