@@ -55,13 +55,8 @@ public class PlayerAttack : MonoBehaviour
      
         }
         if (col.gameObject.tag == BOSS_TAG) {
-            TriggerOrbs();            
-            int damage = attackDamage;
-            if (acidOrbs.currentOrbs == acidOrbs.maxOrbs) {
-                damage = poweredAttackDamage;
-                acidOrbs.ResetOrbs();
-            }
-            col.gameObject.GetComponent<Health>().RemoveHealth(damage);
+            TriggerOrbs();
+            DamageBoss(col);
         }
         if (col.gameObject.tag == BOSS_PODIUM_TAG) {
         
@@ -71,5 +66,13 @@ public class PlayerAttack : MonoBehaviour
         if (IsAcidOrbTriggered()) {
             acidOrbs.SpawnOrb();
         }
+    }
+    private void DamageBoss(Collider2D col) {
+        int damage = attackDamage;
+        if (acidOrbs.currentOrbs == acidOrbs.maxOrbs) {
+            damage = poweredAttackDamage;
+            acidOrbs.ResetOrbs();
+        }
+        col.gameObject.GetComponent<Health>().RemoveHealth(damage);
     }
 }
