@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class PlayerRadius : MonoBehaviour
 {
-    [SerializeField] private List<FearState> rats;
-    public bool IsObjectInRadius(FearState obj) 
+    [SerializeField] private List<EnemieStates> rats;
+    [SerializeField] private List<EnemieStates> Bosses;
+    public bool IsObjectInRadius(EnemieStates obj) 
     {
         if (rats.Contains(obj))
             return true;
@@ -14,9 +15,13 @@ public class PlayerRadius : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Enemy") 
+        if (collision.gameObject.tag == "Enemy")
         {
             rats.Add(collision.gameObject.transform.GetChild(0).GetChild(0).GetComponentInChildren<FearState>());
+        }
+        else if (collision.gameObject.tag == "Boss") 
+        {
+            Bosses.Add(collision.gameObject.transform.GetChild(0).GetChild(0).GetComponentInChildren<ChaseState>());
         }
     }
 
@@ -25,6 +30,10 @@ public class PlayerRadius : MonoBehaviour
         if (collision.gameObject.tag == "Enemy")
         {
             rats.Remove(collision.gameObject.transform.GetChild(0).GetChild(0).GetComponentInChildren<FearState>());
+        }
+        else if (collision.gameObject.tag == "Boss")
+        {
+            Bosses.Remove(collision.gameObject.transform.GetChild(0).GetChild(0).GetComponentInChildren<ChaseState>());
         }
     }
 }

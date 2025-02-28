@@ -32,11 +32,7 @@ public class RoamingState : EnemieStates
 
     public override void OnStateUpdate()
     {
-        Debug.Log(player.GetComponentInChildren<PlayerRadius>());
-        if (player.GetComponentInChildren<PlayerRadius>().IsObjectInRadius(fearStateGameObj))
-        {
-            StartFearState();
-        }
+        StartFearState();
     }
 
     public override void OnFixedUpdate()
@@ -52,6 +48,9 @@ public class RoamingState : EnemieStates
 
     public void StartFearState()
     {
-        enemieStatesHandler.ChangeState(fearState);
+        if (player.GetComponentInChildren<PlayerRadius>().IsObjectInRadius(fearStateGameObj))
+        {
+            enemieStatesHandler.ChangeState(fearState);
+        }
     }
 }
