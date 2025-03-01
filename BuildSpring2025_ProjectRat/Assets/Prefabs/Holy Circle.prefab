@@ -4964,7 +4964,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackRadius: 6
   attackDamage: 5
-  damageDelay: 0.5
+  damageDelay: 1
   despawnDelay: 1.5
   collisions: []
   ps: {fileID: 2326894108553230528}
