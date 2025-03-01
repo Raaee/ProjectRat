@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f6cd542ca1bfcf24ba1798f919102854
+guid: e48bfee0e6ab6ea4f91140ab5ece33f1
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -44,11 +44,11 @@ TextureImporter:
   lightmap: 0
   compressionQuality: 50
   spriteMode: 2
-  spriteExtrude: 0
+  spriteExtrude: 1
   spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 96
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tempRats_0
+      name: acidOrbs_0
       rect:
         serializedVersion: 2
-        x: 490
-        y: 1040
-        width: 545
-        height: 713
+        x: 903
+        y: 791
+        width: 197
+        height: 215
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5a6348e8c6e91a949ada336798c13d8c
-      internalID: -1558249335
+      spriteID: 0522bd3b0efd8b04a8d402ca2a0943e7
+      internalID: -1611709232
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tempRats_1
+      name: acidOrbs_big1
       rect:
         serializedVersion: 2
-        x: 1592
-        y: 1135
-        width: 446
-        height: 538
+        x: 194
+        y: 411
+        width: 298
+        height: 327
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,20 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 96a43ab1c332796468355ba1045bf722
-      internalID: 721946487
+      spriteID: 7c232330933be53429b6e3a79983d7bc
+      internalID: 2085207825
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tempRats_2
+      name: acidOrbs_big2
       rect:
         serializedVersion: 2
-        x: 1570
-        y: 667
-        width: 510
-        height: 460
+        x: 522
+        y: 400
+        width: 300
+        height: 334
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,8 +179,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d0c23bbf78e57814eadb85fdc9e84173
-      internalID: -1736266108
+      spriteID: bbadb37ef599f2b499dbf9e12c526141
+      internalID: -1388987353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acidOrbs_11
+      rect:
+        serializedVersion: 2
+        x: 1155
+        y: 197
+        width: 216
+        height: 217
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dad0b39aab21d24c844f325a67e747d
+      internalID: 701479281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acidOrbs_13
+      rect:
+        serializedVersion: 2
+        x: 1426
+        y: 202
+        width: 205
+        height: 202
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 872c07ea99ae53b4e9927a22e32452e4
+      internalID: 966786249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acidOrbs_1
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 779
+        width: 208
+        height: 226
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2bd094e5def8f04db822c47642c7b7b
+      internalID: -1106317636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acidOrbs_6
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 780
+        width: 202
+        height: 220
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ce68cf86d9cb5745808ccfaefc05226
+      internalID: 1892829893
       vertices: []
       indices: 
       edges: []
@@ -196,9 +280,20 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      tempRats_0: -1558249335
-      tempRats_1: 721946487
-      tempRats_2: -1736266108
+      acidOrbs_0: -1611709232
+      acidOrbs_1: -1106317636
+      acidOrbs_10: -1395569
+      acidOrbs_11: 701479281
+      acidOrbs_12: -509444286
+      acidOrbs_13: 966786249
+      acidOrbs_2: 1469766667
+      acidOrbs_5: 1683362712
+      acidOrbs_6: 1892829893
+      acidOrbs_7: -1490477458
+      acidOrbs_8: 771587356
+      acidOrbs_9: -247474767
+      acidOrbs_big1: 2085207825
+      acidOrbs_big2: -1388987353
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
