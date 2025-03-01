@@ -827,7 +827,7 @@ GameObject:
   - component: {fileID: 1729340651019187275}
   m_Layer: 7
   m_Name: BaseEnemy
-  m_TagString: Minion
+  m_TagString: MinionRat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
