@@ -1,14 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
-using com.cyborgAssets.inspectorButtonPro;
 using UnityEngine;
 
-public class FearState : EnemieStates
+public class AttackPlayeState : EnemieStates
 {
-    [SerializeField] private EnemieStates roamingState;
+    [SerializeField] private EnemieStates chasePlayerState;
     [SerializeField] private PlayerRadius playerRadius;
-    [SerializeField] private EnemyMovement movement;
-
     public override void Awake()
     {
         base.Awake();
@@ -17,7 +14,7 @@ public class FearState : EnemieStates
 
     public override void OnStateEnter()
     {
-        Debug.Log("The enemy is currenly in fear");
+        Debug.Log("Attacking Player");
     }
 
     public override void OnStateExit()
@@ -27,14 +24,12 @@ public class FearState : EnemieStates
 
     public override void OnStateUpdate()
     {
-
         float distancesToTarget = Vector3.Distance(transform.position, playerRadius.transform.position);
-        if (distancesToTarget >= playerRadius.fearRadius)
-        {
-            enemieStatesHandler.ChangeState(roamingState);
-        }
 
-        movement.MoveAwayFromTarget();
+        if (distancesToTarget >= playerRadius.attackRadius)
+        {
+            enemieStatesHandler.ChangeState(chasePlayerState);
+        }
     }
     public override void OnFixedUpdate()
     {

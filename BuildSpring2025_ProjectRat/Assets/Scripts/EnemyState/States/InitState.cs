@@ -2,10 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ChaseState : EnemieStates
+public class InitState : EnemieStates
 {
     [SerializeField] private EnemieStates roamingState;
-    [SerializeField] private EnemieStates attackState;
 
     public override void Awake()
     {
@@ -14,14 +13,10 @@ public class ChaseState : EnemieStates
 
     public override void OnStateEnter()
     {
-        Debug.Log("The Enemy is chasing");
+        enemieStatesHandler.ChangeState(roamingState);
     }
 
     public override void OnStateExit()
-    {
-
-    }
-    public override void OnFixedUpdate()
     {
 
     }
@@ -29,6 +24,10 @@ public class ChaseState : EnemieStates
 
     public override void OnStateUpdate()
     {
-        enemieStatesHandler.ChangeState(roamingState);
+
+    }
+    public override void OnFixedUpdate()
+    {
+
     }
 }
