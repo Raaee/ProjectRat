@@ -6,12 +6,13 @@ using UnityEngine;
 public class FearState : EnemieStates
 {
     [SerializeField] private EnemieStates roamingState;
-
-    //Change to chaseState
+    [SerializeField] private PlayerRadius playerRadius;
+    [SerializeField] private EnemyMovement movement;
 
     public override void Awake()
     {
         base.Awake();
+        playerRadius = enemieStatesHandler.player.GetComponentInChildren<PlayerRadius>();
     }
 
     public override void OnStateEnter()
@@ -27,14 +28,16 @@ public class FearState : EnemieStates
     public override void OnStateUpdate()
     {
 
+        float distancesToTarget = Vector3.Distance(transform.position, playerRadius.transform.position);
+        if (distancesToTarget >= playerRadius.fearRadius)
+        {
+            enemieStatesHandler.ChangeState(roamingState);
+        }
+
+        movement.MoveAwayFromTarget();
     }
     public override void OnFixedUpdate()
     {
 
-    }
-
-    public void StartRomingState()
-    {
-        enemieStatesHandler.ChangeState(roamingState);
     }
 }

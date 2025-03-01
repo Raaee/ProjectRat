@@ -7,23 +7,21 @@ public class FollowBehavior : MonoBehaviour
 {
     [SerializeField] private StatesConditions statesConditions;
     [SerializeField] private GameObject objToMove;
-    [SerializeField] private GameObject player;
     [SerializeField] private float enemySpeed = 2f;
-    [SerializeField] private float secondsToFollow = 2f;
     private ChasePlayerState chaseState;
     public bool isFollowing = false;
     public bool keepFollowingTarget = false;
 
     private void Awake()
     {
-        player = GameObject.FindGameObjectWithTag("Player").transform.GetChild(0).gameObject;
+        //player = GameObject.FindGameObjectWithTag("Player").transform.GetChild(0).gameObject;
         chaseState = this.GetComponent<ChasePlayerState>();
     }
 
     private void Update()
     {
         if (isFollowing) {
-            MoveTowardsTarget(player.transform);
+            //MoveTowardsTarget(player.transform);
         }
     }
 
@@ -36,13 +34,12 @@ public class FollowBehavior : MonoBehaviour
     public void StopFollowingTarget()
     {
         isFollowing = false;
-        chaseState.StartRomingState();
+        //chaseState.StartRomingState();
     }
 
     public void StopFollowing()
     {
-        if (!keepFollowingTarget)
-            StartCoroutine(FollowForXSeconds());
+            //StartCoroutine(FollowForXSeconds());
     }
 
     public void KeepFollowingTarget()
@@ -51,14 +48,5 @@ public class FollowBehavior : MonoBehaviour
     }
 
 
-    public void MoveTowardsTarget(Transform targetTransform)
-    {
-        objToMove.transform.position = Vector2.MoveTowards(transform.position, targetTransform.position, enemySpeed * Time.deltaTime);
-    }
 
-    public IEnumerator FollowForXSeconds()
-    {
-        yield return new WaitForSeconds(secondsToFollow);
-        StopFollowingTarget();
-    }
 }

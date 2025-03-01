@@ -14,4 +14,14 @@ public class EnemyMovement : MonoBehaviour
     {
         objToMove.transform.position = Vector2.MoveTowards(transform.position, targetTransform.position, enemySpeed * Time.deltaTime);
     }
+
+    public void MoveAwayFromTarget()
+    {
+        Debug.Log("MoveAwayFromTarget");
+    }
+
+    public void StartRoaming()
+    {
+        Debug.Log("Start Roaming");
+    }
 }

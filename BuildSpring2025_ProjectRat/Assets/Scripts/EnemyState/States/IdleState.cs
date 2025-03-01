@@ -1,3 +1,4 @@
+using com.cyborgAssets.inspectorButtonPro;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -33,6 +34,20 @@ public class IdleState : EnemieStates
     public override void OnFixedUpdate()
     {
 
+    }
+
+    [ProButton]
+    public void TestFollowPlayerForMinion()
+    {
+        if (followState != null)
+            enemieStatesHandler.ChangeState(followState);
+    }
+
+    [ProButton]
+    public void TestChasePlayerForBoss()
+    {
+        if (chasePlayerState != null)
+            enemieStatesHandler.ChangeState(chasePlayerState);
     }
 
     public IEnumerator WaitForXSeconds() 

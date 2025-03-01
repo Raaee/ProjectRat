@@ -4,14 +4,17 @@ using UnityEngine;
 
 public class AttackPlayeState : EnemieStates
 {
+    [SerializeField] private EnemieStates chasePlayerState;
+    [SerializeField] private PlayerRadius playerRadius;
     public override void Awake()
     {
         base.Awake();
+        playerRadius = enemieStatesHandler.player.GetComponentInChildren<PlayerRadius>();
     }
 
     public override void OnStateEnter()
     {
-
+        Debug.Log("Attacking Player");
     }
 
     public override void OnStateExit()
@@ -21,7 +24,12 @@ public class AttackPlayeState : EnemieStates
 
     public override void OnStateUpdate()
     {
+        float distancesToTarget = Vector3.Distance(transform.position, playerRadius.transform.position);
 
+        if (distancesToTarget >= playerRadius.attackRadius)
+        {
+            enemieStatesHandler.ChangeState(chasePlayerState);
+        }
     }
     public override void OnFixedUpdate()
     {

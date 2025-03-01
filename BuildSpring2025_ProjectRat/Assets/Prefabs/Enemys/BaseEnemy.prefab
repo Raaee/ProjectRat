@@ -45,12 +45,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roamingState: {fileID: 4701619956932930859}
-  attackBoss: {fileID: 4664518870171098639}
-  chaseBoss: {fileID: 1145701127841236781}
-  followCollision: {fileID: 4314285473793493433}
+  attackBossState: {fileID: 0}
+  chaseBossState: {fileID: 0}
   movement: {fileID: 1729340651019187275}
-  player: {fileID: 0}
-  keepFollowingTarget: 0
+  playerRadius: {fileID: 0}
 --- !u!1 &1295671779003682487
 GameObject:
   m_ObjectHideFlags: 0
@@ -392,6 +390,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roamingState: {fileID: 4701619956932930859}
+  playerRadius: {fileID: 0}
+  movement: {fileID: 0}
 --- !u!1 &4301020424082849994
 GameObject:
   m_ObjectHideFlags: 0
@@ -523,6 +523,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingState: {fileID: 6120990644231221680}
   <CurrentState>k__BackingField: {fileID: 0}
+  player: {fileID: 0}
 --- !u!1 &5639136916534149995
 GameObject:
   m_ObjectHideFlags: 0
@@ -570,6 +571,7 @@ MonoBehaviour:
   roamingState: {fileID: 4701619956932930859}
   fearState: {fileID: 5488024787495605474}
   followState: {fileID: 3344816920253773031}
+  chasePlayerState: {fileID: 0}
   secondsToChangeState: 2
 --- !u!1 &5845923697885477685
 GameObject:
@@ -706,9 +708,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   statesConditions: {fileID: 0}
   objToMove: {fileID: 6371445702999229875}
-  player: {fileID: 0}
   enemySpeed: 2
-  secondsToFollow: 2
   isFollowing: 0
   keepFollowingTarget: 0
 --- !u!114 &8517783456181662810
@@ -725,7 +725,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roamingState: {fileID: 4701619956932930859}
   attackPlayerState: {fileID: 4375979288521577113}
-  followCollision: {fileID: 0}
+  movement: {fileID: 0}
+  secondsToFollow: 2
+  playerRadius: {fileID: 0}
+  aggroTimer: 3
 --- !u!1 &5887213553701789379
 GameObject:
   m_ObjectHideFlags: 0
@@ -824,7 +827,7 @@ GameObject:
   - component: {fileID: 1729340651019187275}
   m_Layer: 7
   m_Name: BaseEnemy
-  m_TagString: Enemy
+  m_TagString: Minion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -985,6 +988,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6440ca49b2820a943afc1d15d051488d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  chasePlayerState: {fileID: 0}
+  playerRadius: {fileID: 0}
 --- !u!1 &6642834687948724083
 GameObject:
   m_ObjectHideFlags: 0
@@ -1032,9 +1037,10 @@ MonoBehaviour:
   followState: {fileID: 3344816920253773031}
   fearState: {fileID: 5488024787495605474}
   idleState: {fileID: 456715296998513566}
-  player: {fileID: 0}
-  followCollision: {fileID: 4314285473793493433}
-  fearStateGameObj: {fileID: 0}
+  chasePlayerState: {fileID: 0}
+  movement: {fileID: 1729340651019187275}
+  playerRadius: {fileID: 0}
+  typeOfEnemy: {fileID: 6371445702999229875}
 --- !u!1 &7050445253994942755
 GameObject:
   m_ObjectHideFlags: 0
@@ -1123,6 +1129,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bbdec018bc26a04c85814f750185e0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roamingState: {fileID: 0}
+  attackBossState: {fileID: 0}
+  followState: {fileID: 0}
+  movement: {fileID: 0}
 --- !u!1 &8904390402025497055
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,29 +1,35 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using com.cyborgAssets.inspectorButtonPro;
 
 public class ChasePlayerState : EnemieStates
 {
     [SerializeField] private EnemieStates roamingState;
     [SerializeField] private EnemieStates attackPlayerState;
-    [SerializeField] private FollowCollision followCollision;
-    private FollowBehavior follow;
+    [SerializeField] private EnemyMovement movement;
+    [SerializeField] private float secondsToFollow = 2f;
+    [SerializeField] private PlayerRadius playerRadius;
+    [SerializeField] private int aggroTimer = 3;
+    //[SerializeField] private FollowCollision followCollision;
+    //private FollowBehavior follow;
 
     public override void Awake()
     {
         base.Awake();
-        follow = FindFirstObjectByType<FollowBehavior>();
+        //player = GameObject.FindGameObjectWithTag("Player").transform.GetChild(0).gameObject;
+        // follow = FindFirstObjectByType<FollowBehavior>();
+        playerRadius = enemieStatesHandler.player.GetComponentInChildren<PlayerRadius>();
     }
 
     public override void OnStateEnter()
     {
-        StartFollow();
-        followCollision.OnExitRadius.AddListener(StartRomingState);
+        //followCollision.OnExitRadius.AddListener(StartRomingState);
     }
 
     public override void OnStateExit()
     {
-        StopFollow();
+
     }
     public override void OnFixedUpdate()
     {
@@ -32,28 +38,31 @@ public class ChasePlayerState : EnemieStates
 
     public override void OnStateUpdate()
     {
-        if (follow.isFollowing)
+        float distancesToTarget = Vector3.Distance(transform.position, playerRadius.transform.position);
+        if (distancesToTarget >= playerRadius.aggroRadius)
         {
-            follow.KeepFollowingTarget();
+            playerIsOutOfAggroRange();
         }
-        else
+
+        if (distancesToTarget <= playerRadius.attackRadius)
         {
-            follow.StopFollowingTarget();
+            enemieStatesHandler.ChangeState(attackPlayerState);
         }
+
+        movement.MoveTowardsTarget(enemieStatesHandler.player.transform);
     }
 
-    public void StartRomingState()
+    [ProButton]
+    public void playerIsOutOfAggroRange() 
     {
+        StartCoroutine(ChaseForXSeconds());
+    }
+
+    public IEnumerator ChaseForXSeconds()
+    {
+        yield return new WaitForSeconds(secondsToFollow);
         enemieStatesHandler.ChangeState(roamingState);
     }
 
-    private void StartFollow()
-    { 
-        follow.StarFollowing(); 
-    }
-
-    private void StopFollow() 
-    {
-        follow.StopFollowing();
-    }
 }
+

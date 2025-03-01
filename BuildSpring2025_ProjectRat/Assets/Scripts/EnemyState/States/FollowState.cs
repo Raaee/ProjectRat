@@ -6,18 +6,19 @@ using UnityEngine;
 public class FollowState : EnemieStates
 {
     [SerializeField] private EnemieStates roamingState;
-    [SerializeField] private EnemieStates attackBoss;
-    [SerializeField] private EnemieStates chaseBoss;
-    [SerializeField] private FollowCollision followCollision;
+    [SerializeField] private EnemieStates attackBossState;
+    [SerializeField] private EnemieStates chaseBossState;
     [SerializeField] private EnemyMovement movement;
-    [SerializeField] private GameObject player;
-    private FollowBehavior follow;
-    public bool keepFollowingTarget = false;
+    [SerializeField] private PlayerRadius playerRadius;
+    //[SerializeField] private FollowCollision followCollision;
+    //private FollowBehavior follow;
+    //public bool keepFollowingTarget = false;
 
     public override void Awake()
     {
         base.Awake();
-        player = GameObject.FindGameObjectWithTag("Player").transform.GetChild(0).gameObject;
+        playerRadius = enemieStatesHandler.player.GetComponentInChildren<PlayerRadius>();
+        //player = GameObject.FindGameObjectWithTag("Player").transform.GetChild(0).gameObject;
     }
 
     public override void OnStateEnter()
@@ -32,7 +33,13 @@ public class FollowState : EnemieStates
 
     public override void OnStateUpdate()
     {
-        movement.MoveTowardsTarget(player.transform);
+        float distancesToTarget = Vector3.Distance(transform.position, playerRadius.transform.position);
+        if (distancesToTarget <= playerRadius.followRadius)
+        {
+            movement.MoveAwayFromTarget();
+        }
+
+        movement.MoveTowardsTarget(enemieStatesHandler.player.transform);
     }
 
     public override void OnFixedUpdate()
