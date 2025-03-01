@@ -4,9 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - MinionRat
   - Boss
-  - Minion
-  - Enemy
+  - BossPodium
   layers:
   - Default
   - TransparentFX
@@ -43,4 +43,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Ps
+    uniqueID: 3690263207
     locked: 0
