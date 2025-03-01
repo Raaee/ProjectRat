@@ -124,14 +124,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5096b32e4600c8c43b6fbff528e42db5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnRadius: 10
-  attackRadius: 2.5
-  attackDamage: 5
+  <spawnRadius>k__BackingField: 20
   delayPerSpawn: 0.25
-  collisions: []
-  areaPrefab: {fileID: 7663498541583923837, guid: 127f348c9e81f5c4b8d3876de449e8db, type: 3}
-  spawnedAreas: []
-  maxAmtPerAttack: 10
+  attackPrefab: {fileID: 7663498541583923837, guid: 127f348c9e81f5c4b8d3876de449e8db, type: 3}
+  maxAmtPerAttack: 5
   randomAmtPerAttack: 1
 --- !u!1 &8910567640608599190
 GameObject:
