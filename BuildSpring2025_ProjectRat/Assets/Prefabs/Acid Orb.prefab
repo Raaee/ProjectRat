@@ -4925,6 +4925,7 @@ GameObject:
   - component: {fileID: 5348621356410514920}
   - component: {fileID: 139344173880432188}
   - component: {fileID: 4230966109909724024}
+  - component: {fileID: 3808443835909658807}
   m_Layer: 0
   m_Name: Acid Orb
   m_TagString: Untagged
@@ -5002,3 +5003,20 @@ MonoBehaviour:
   - {fileID: 1892829893, guid: e48bfee0e6ab6ea4f91140ab5ece33f1, type: 3}
   - {fileID: 701479281, guid: e48bfee0e6ab6ea4f91140ab5ece33f1, type: 3}
   - {fileID: 966786249, guid: e48bfee0e6ab6ea4f91140ab5ece33f1, type: 3}
+--- !u!114 &3808443835909658807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7470672308218697450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f37a7771b17e87140a85a3c016e76f0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objToMove: {fileID: 7470672308218697450}
+  duration: 10
+  hoverStrength: 1
+  easeType: 1
+  smoothSnap: 1
