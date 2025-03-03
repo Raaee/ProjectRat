@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6983504160231613982}
   - component: {fileID: 2322382834767098620}
   m_Layer: 0
-  m_Name: ratKing
+  m_Name: centerTarget
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
