@@ -4,11 +4,24 @@ using UnityEngine;
 
 public abstract class Collectable : MonoBehaviour
 {
-    public abstract void Collect();
+    [SerializeField] private bool delayDestroy = false;
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.tag == "Player") {
             Collect();
-            Destroy(gameObject);
+            if (delayDestroy) {
+                Delay();
+            } else {
+                DestroySelf();
+            }
         }
     }
+    public abstract void Collect();
+    protected abstract IEnumerator DelayedKill();
+    protected void Delay() {
+        StartCoroutine(DelayedKill());
+    }
+    protected void DestroySelf() {
+        Destroy(gameObject);
+    }
+
 }
