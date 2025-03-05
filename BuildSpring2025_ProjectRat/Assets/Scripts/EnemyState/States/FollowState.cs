@@ -48,7 +48,7 @@ public class FollowState : EnemieStates
     }
 
     [ProButton]
-    public void TestMinionPurified()
+    public void MinionPurification()
     {
         enemieStatesHandler.ChangeState(roamingState);
     }
