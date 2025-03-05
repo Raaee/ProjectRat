@@ -12,11 +12,12 @@ public class CharacterUIHandler : MonoBehaviour
     {
         slider.maxValue = health.MaxHP; 
         slider.value = health.CurrentHP;
-        health.OnHeal.AddListener(UpdateSlider);
+        health.OnHurt.AddListener(UpdateSlider);
     }
 
     private void UpdateSlider(float amt)
     {
+        Debug.Log(health.CurrentHP);
         slider.value = health.CurrentHP;
     }
 }

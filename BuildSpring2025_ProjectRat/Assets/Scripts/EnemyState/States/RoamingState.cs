@@ -66,14 +66,10 @@ public class RoamingState : EnemieStates
 
     public override void OnFixedUpdate()
     {
-        
-        //PlayerRadius.(Player.IsObjectInRadius(this)
+
+        movement.StartRoaming();
     }
 
-    public void StartChaseState()
-    {
-        
-    }
 
     public void StartFearState()
     {
