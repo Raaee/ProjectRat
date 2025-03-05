@@ -185,7 +185,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 15
+  orthographic size: 17
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -311,7 +311,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!199 &1257897250
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -5189,10 +5189,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3972370501255166893, guid: 2a98d6c8c2725254ca2e43510da436fe, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 4211038337638405928, guid: 2a98d6c8c2725254ca2e43510da436fe, type: 3}
       propertyPath: m_Name
       value: Player
@@ -5313,11 +5309,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7679300328555830163, guid: 9d2413ad3dba69b4f965ff83991eebeb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.504944
+      value: 7.23
       objectReference: {fileID: 0}
     - target: {fileID: 7679300328555830163, guid: 9d2413ad3dba69b4f965ff83991eebeb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.891112
+      value: -1.03
       objectReference: {fileID: 0}
     - target: {fileID: 7679300328555830163, guid: 9d2413ad3dba69b4f965ff83991eebeb, type: 3}
       propertyPath: m_LocalPosition.z
