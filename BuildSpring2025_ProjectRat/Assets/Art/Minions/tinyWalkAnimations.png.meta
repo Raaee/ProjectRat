@@ -45,7 +45,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 0
+  spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -123,64 +123,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tinyWalkAnimations_0
-      rect:
-        serializedVersion: 2
-        x: 54
-        y: 1108
-        width: 309
-        height: 293
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 56ac06ed2655c034fb74493905590d9f
-      internalID: -49375832
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tinyWalkAnimations_1
-      rect:
-        serializedVersion: 2
-        x: 364
-        y: 1101
-        width: 312
-        height: 295
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4b432f1ab00b13245981df540f14023a
-      internalID: -1974372338
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: tinyWalkAnimations_2
       rect:
         serializedVersion: 2
         x: 1064
-        y: 1105
-        width: 310
-        height: 311
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        y: 1085
+        width: 304
+        height: 331
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e5cb367e97457b948b8db041415b1370
-      internalID: -183390821
+      spriteID: 6f0350696ebe2be4995b1981f36710c4
+      internalID: -33081070
       vertices: []
       indices: 
       edges: []
@@ -189,19 +147,19 @@ TextureImporter:
       name: tinyWalkAnimations_3
       rect:
         serializedVersion: 2
-        x: 1383
-        y: 1122
-        width: 325
-        height: 271
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 1391
+        y: 1124
+        width: 310
+        height: 262
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c71d334cdfe6e0248af0e97e103b3a50
-      internalID: -402388144
+      spriteID: 87c9dca08658fd049a36b2426888f0e6
+      internalID: -239543997
       vertices: []
       indices: 
       edges: []
@@ -210,40 +168,166 @@ TextureImporter:
       name: tinyWalkAnimations_5
       rect:
         serializedVersion: 2
-        x: 1731
-        y: 1144
-        width: 303
-        height: 251
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 1736
+        y: 1140
+        width: 298
+        height: 255
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 051b0a932b090f2488591191f249cc71
-      internalID: 807698725
+      spriteID: 5ecba26532636a845a44dbc8acf81688
+      internalID: 352783353
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tinyWalkAnimations_6
+      name: tinyWalkAnimations_16
       rect:
         serializedVersion: 2
-        x: 706
-        y: 1092
-        width: 339
-        height: 299
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 156
+        y: 922
+        width: 160
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cb144fddc3873544abbc1b7184c2925c
-      internalID: -310729334
+      spriteID: be2265af760ea5f4a8bc9e892473738d
+      internalID: -55423944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tinyWalkAnimations_17
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 911
+        width: 216
+        height: 90
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a5e696942d66b7498a27caa0cd993b3
+      internalID: 1467265828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tinyWalkAnimations_18
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 923
+        width: 175
+        height: 92
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96f0218b97c5d5a48a794f2df28b4781
+      internalID: 85561131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tinyWalkAnimations_19
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 952
+        width: 144
+        height: 38
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 070aef774931e254c926bb16d977818e
+      internalID: 190838069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tinyWalkAnimations_21
+      rect:
+        serializedVersion: 2
+        x: 1521
+        y: 952
+        width: 88
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8388a2dc26165cb489386727f34ba425
+      internalID: -1502269731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tinyWalkAnimations_22
+      rect:
+        serializedVersion: 2
+        x: 1836
+        y: 949
+        width: 128
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65786ae8270628f419319e638842d311
+      internalID: 842093505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tinyWalkAnimations_23
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 548
+        width: 176
+        height: 312
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd2b8bd513619324397f6f9b133dc508
+      internalID: -1970499245
       vertices: []
       indices: 
       edges: []
@@ -252,19 +336,19 @@ TextureImporter:
       name: tinyWalkAnimations_24
       rect:
         serializedVersion: 2
-        x: 109
-        y: 680
-        width: 196
-        height: 316
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 459
+        y: 543
+        width: 198
+        height: 294
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0391f07fe9c087445bb5b92e91f8f3a5
-      internalID: -1888981794
+      spriteID: 99ed0130a50cddc44811bc4cbe1b8f91
+      internalID: -1682327104
       vertices: []
       indices: 
       edges: []
@@ -273,19 +357,19 @@ TextureImporter:
       name: tinyWalkAnimations_25
       rect:
         serializedVersion: 2
-        x: 459
-        y: 677
-        width: 217
-        height: 323
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 808
+        y: 545
+        width: 204
+        height: 288
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5eeba936f815da744aac0cc3b40f1bd9
-      internalID: -231816319
+      spriteID: 85a54e267006d114b8f743a580b82e22
+      internalID: -1876057072
       vertices: []
       indices: 
       edges: []
@@ -294,19 +378,19 @@ TextureImporter:
       name: tinyWalkAnimations_26
       rect:
         serializedVersion: 2
-        x: 805
-        y: 681
-        width: 232
-        height: 322
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 1172
+        y: 552
+        width: 188
+        height: 284
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 97a97f0ac18a6e8438d8ee4585ebe695
-      internalID: 309417590
+      spriteID: 26147d90a67cc4e418b30997f062f6b1
+      internalID: -587818222
       vertices: []
       indices: 
       edges: []
@@ -315,19 +399,19 @@ TextureImporter:
       name: tinyWalkAnimations_27
       rect:
         serializedVersion: 2
-        x: 1162
-        y: 683
-        width: 216
-        height: 315
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 1516
+        y: 548
+        width: 172
+        height: 284
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b63c45cc38f6ae140b6f7b729a98d1ee
-      internalID: -2004501003
+      spriteID: 494ee10b9d404324785a60ecc1e58315
+      internalID: -130163526
       vertices: []
       indices: 
       edges: []
@@ -336,19 +420,19 @@ TextureImporter:
       name: tinyWalkAnimations_28
       rect:
         serializedVersion: 2
-        x: 1513
-        y: 675
-        width: 199
-        height: 320
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 1820
+        y: 584
+        width: 77
+        height: 56
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 92706717ca824cc4592a172ecd558d32
-      internalID: 1906827756
+      spriteID: ddd1c7126fa81fe498445d697ce8f5d5
+      internalID: 1273416773
       vertices: []
       indices: 
       edges: []
@@ -357,19 +441,19 @@ TextureImporter:
       name: tinyWalkAnimations_29
       rect:
         serializedVersion: 2
-        x: 95
-        y: 165
-        width: 210
-        height: 446
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 108
+        y: 71
+        width: 148
+        height: 354
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 009c17ba4bc80834eacaf5f8a6e74d81
-      internalID: -1402398616
+      spriteID: 6c2f9ddc550f44c4eb9c961dc5bf4026
+      internalID: 27629553
       vertices: []
       indices: 
       edges: []
@@ -378,19 +462,19 @@ TextureImporter:
       name: tinyWalkAnimations_30
       rect:
         serializedVersion: 2
-        x: 450
-        y: 171
-        width: 226
-        height: 438
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 416
+        y: 70
+        width: 192
+        height: 355
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6334793d8036f9241b7f98415af0e774
-      internalID: 37792358
+      spriteID: d733baf0742d2404dbf9e3542fdd2b69
+      internalID: 1418736653
       vertices: []
       indices: 
       edges: []
@@ -399,19 +483,19 @@ TextureImporter:
       name: tinyWalkAnimations_31
       rect:
         serializedVersion: 2
-        x: 806
-        y: 176
-        width: 242
-        height: 439
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 724
+        y: 70
+        width: 192
+        height: 356
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 412803e8cf2177d4f92dbdc2511d1e0e
-      internalID: -427740466
+      spriteID: 4ffc763d4b315a64eb463eaa0934b554
+      internalID: -1011314490
       vertices: []
       indices: 
       edges: []
@@ -420,19 +504,19 @@ TextureImporter:
       name: tinyWalkAnimations_32
       rect:
         serializedVersion: 2
-        x: 1177
-        y: 177
-        width: 219
-        height: 435
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 1038
+        y: 67
+        width: 186
+        height: 389
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f6a833afb2f027e45bdef76ecdec5f47
-      internalID: 296703077
+      spriteID: efe112e94d6742a4ab2ad982ea928aa8
+      internalID: -1921158178
       vertices: []
       indices: 
       edges: []
@@ -441,19 +525,103 @@ TextureImporter:
       name: tinyWalkAnimations_33
       rect:
         serializedVersion: 2
-        x: 1525
-        y: 176
-        width: 216
-        height: 430
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 1368
+        y: 68
+        width: 165
+        height: 361
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 34600485d9d7d754082c9cc24af144fc
-      internalID: 334532782
+      spriteID: 1d92d0c616896f34297c7f5aa3b7752b
+      internalID: 1306550652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tinyWalkAnimations_34
+      rect:
+        serializedVersion: 2
+        x: 1808
+        y: 180
+        width: 72
+        height: 74
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4f9ed7533f42184eb4ec028e993ba93
+      internalID: 1958885479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tinyWalkAnimations_0
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 1096
+        width: 325
+        height: 315
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b54cd2883eb055946bd43dea517bcd51
+      internalID: 712087881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tinyWalkAnimations_1
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 1094
+        width: 312
+        height: 294
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2165aeee55832d4a807fa5fbd393c90
+      internalID: -1810889008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tinyWalkAnimations_4
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 1094
+        width: 330
+        height: 296
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5961f02b6f914d34baa84188155725af
+      internalID: -310106825
       vertices: []
       indices: 
       edges: []
@@ -469,41 +637,41 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      tinyWalkAnimations_0: -49375832
-      tinyWalkAnimations_1: -1974372338
-      tinyWalkAnimations_10: 1485105718
-      tinyWalkAnimations_11: -1039441354
-      tinyWalkAnimations_12: -1952862247
-      tinyWalkAnimations_13: -1683701993
-      tinyWalkAnimations_14: 2001186093
-      tinyWalkAnimations_15: 202509152
-      tinyWalkAnimations_16: 1011153667
-      tinyWalkAnimations_17: 1611504752
-      tinyWalkAnimations_18: 788146531
-      tinyWalkAnimations_19: 1535357430
-      tinyWalkAnimations_2: -183390821
-      tinyWalkAnimations_20: 779689215
-      tinyWalkAnimations_21: -2115804591
-      tinyWalkAnimations_22: -400724361
-      tinyWalkAnimations_23: 735806335
-      tinyWalkAnimations_24: -1888981794
-      tinyWalkAnimations_25: -231816319
-      tinyWalkAnimations_26: 309417590
-      tinyWalkAnimations_27: -2004501003
-      tinyWalkAnimations_28: 1906827756
-      tinyWalkAnimations_29: -1402398616
-      tinyWalkAnimations_3: -402388144
-      tinyWalkAnimations_30: 37792358
-      tinyWalkAnimations_31: -427740466
-      tinyWalkAnimations_32: 296703077
-      tinyWalkAnimations_33: 334532782
-      tinyWalkAnimations_34: 1976565766
-      tinyWalkAnimations_4: -220198118
-      tinyWalkAnimations_5: 807698725
-      tinyWalkAnimations_6: -310729334
-      tinyWalkAnimations_7: -1867286326
-      tinyWalkAnimations_8: -1612010721
-      tinyWalkAnimations_9: 1011163274
+      tinyWalkAnimations_0: 712087881
+      tinyWalkAnimations_1: -1810889008
+      tinyWalkAnimations_10: -2017271870
+      tinyWalkAnimations_11: -1331518282
+      tinyWalkAnimations_12: 699337730
+      tinyWalkAnimations_13: -1766690423
+      tinyWalkAnimations_14: -820875967
+      tinyWalkAnimations_15: -1003625746
+      tinyWalkAnimations_16: -55423944
+      tinyWalkAnimations_17: 1467265828
+      tinyWalkAnimations_18: 85561131
+      tinyWalkAnimations_19: 190838069
+      tinyWalkAnimations_2: -33081070
+      tinyWalkAnimations_20: 468968472
+      tinyWalkAnimations_21: -1502269731
+      tinyWalkAnimations_22: 842093505
+      tinyWalkAnimations_23: -1970499245
+      tinyWalkAnimations_24: -1682327104
+      tinyWalkAnimations_25: -1876057072
+      tinyWalkAnimations_26: -587818222
+      tinyWalkAnimations_27: -130163526
+      tinyWalkAnimations_28: 1273416773
+      tinyWalkAnimations_29: 27629553
+      tinyWalkAnimations_3: -239543997
+      tinyWalkAnimations_30: 1418736653
+      tinyWalkAnimations_31: -1011314490
+      tinyWalkAnimations_32: -1921158178
+      tinyWalkAnimations_33: 1306550652
+      tinyWalkAnimations_34: 1958885479
+      tinyWalkAnimations_4: -310106825
+      tinyWalkAnimations_5: 352783353
+      tinyWalkAnimations_6: 2004470532
+      tinyWalkAnimations_7: 1429427460
+      tinyWalkAnimations_8: 98990680
+      tinyWalkAnimations_9: -1960502422
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
