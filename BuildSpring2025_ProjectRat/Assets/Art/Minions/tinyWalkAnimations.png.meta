@@ -147,10 +147,10 @@ TextureImporter:
       name: tinyWalkAnimations_3
       rect:
         serializedVersion: 2
-        x: 1391
-        y: 1124
-        width: 310
-        height: 262
+        x: 1384
+        y: 1114
+        width: 326
+        height: 276
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
