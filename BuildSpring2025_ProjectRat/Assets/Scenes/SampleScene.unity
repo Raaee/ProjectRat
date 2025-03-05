@@ -348,7 +348,7 @@ MonoBehaviour:
   roamingCountText: {fileID: 77422224}
   radius: 5
   spawnDelay: 0.5
-  spawnMax: 50
+  spawnMax: 10
   isSpawning: 1
   spawnedMinions: []
 --- !u!1 &519420028

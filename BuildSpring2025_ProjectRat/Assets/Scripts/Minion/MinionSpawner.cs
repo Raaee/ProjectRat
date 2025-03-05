@@ -59,6 +59,11 @@ public class MinionSpawner : MonoBehaviour
                 MinionSpawn();
                 yield return new WaitForSeconds(spawnDelay);
             }
+            else
+            {
+                isSpawning = false;
+                yield break;
+            }
 
         }
 
