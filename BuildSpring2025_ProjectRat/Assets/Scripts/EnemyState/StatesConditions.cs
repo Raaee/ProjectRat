@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class StatesConditions : MonoBehaviour
 {
+    //Now redundant "Probally not going to used it"
+
     private EnemieStates chaseState;
     private EnemieStates fearState;
     private EnemieStates attackState;
@@ -17,9 +19,9 @@ public class StatesConditions : MonoBehaviour
         enemieStatesHandler = GetComponent<EnemieStatesHandler>();
 
         roamingState = GetComponentInChildren<RoamingState>();
-        chaseState = GetComponentInChildren<ChaseState>();
+        chaseState = GetComponentInChildren<ChasePlayerState>();
         fearState = GetComponentInChildren<FearState>();
-        attackState = GetComponentInChildren<AttackState>();
+        attackState = GetComponentInChildren<AttackPlayeState>();
     }
 
 
