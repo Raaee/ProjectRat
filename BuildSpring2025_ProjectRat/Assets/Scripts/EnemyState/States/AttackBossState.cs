@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AttackState : EnemieStates
+public class AttackBossState : EnemieStates
 {
     public override void Awake()
     {
@@ -11,7 +11,6 @@ public class AttackState : EnemieStates
 
     public override void OnStateEnter()
     {
-
     }
 
     public override void OnStateExit()
@@ -23,6 +22,7 @@ public class AttackState : EnemieStates
     {
 
     }
+
     public override void OnFixedUpdate()
     {
 
