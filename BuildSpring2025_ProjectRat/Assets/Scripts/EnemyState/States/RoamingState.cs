@@ -26,12 +26,12 @@ public class RoamingState : EnemieStates
 
     public override void OnStateEnter()
     {
-        
+
     }
 
     public override void OnStateExit()
     {
-        
+
     }
 
     public override void OnStateUpdate()
@@ -50,7 +50,7 @@ public class RoamingState : EnemieStates
 
         if (typeOfEnemy.tag == "Boss") 
         {
-            float distancesToTarget = Vector3.Distance(transform.position, playerRadius.transform.position);
+            float distancesToTarget = Vector3.Distance(transform.position, playerRadius.gameObject.transform.position);
 
             if (distancesToTarget <= playerRadius.aggroRadius)
             {
@@ -58,15 +58,12 @@ public class RoamingState : EnemieStates
                     enemieStatesHandler.ChangeState(chasePlayerState);
             }
         }
-
-        movement.StartRoaming();
     }
 
         
 
     public override void OnFixedUpdate()
     {
-
         movement.StartRoaming();
     }
 
@@ -77,6 +74,11 @@ public class RoamingState : EnemieStates
         {
             enemieStatesHandler.ChangeState(fearState);
         }*/
+    }
+
+    public virtual void ToIdle()
+    {
+        enemieStatesHandler.ChangeState(idleState);
     }
 
     [ProButton]
@@ -93,6 +95,5 @@ public class RoamingState : EnemieStates
             enemieStatesHandler.ChangeState(chasePlayerState);
     }
 
-
-
+    
 }
