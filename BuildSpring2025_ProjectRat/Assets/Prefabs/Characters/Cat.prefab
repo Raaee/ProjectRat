@@ -339,7 +339,7 @@ MonoBehaviour:
   fearState: {fileID: 0}
   followState: {fileID: 0}
   chasePlayerState: {fileID: 3707296309162712092}
-  secondsToChangeState: 2
+  idleTime: 2
 --- !u!1 &4117009009038008194
 GameObject:
   m_ObjectHideFlags: 0
@@ -611,8 +611,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objToMove: {fileID: 6944497034271710787}
   player: {fileID: 0}
-  enemySpeed: 2
+  playerRadius: {fileID: 0}
+  roaming: {fileID: 5358186288899677342}
+  enemySpeed: 10
   secondsToFollow: 2
+  isRoaming: 0
+  firstTarget: 0
+  targetVector: 0
+  roamRadius: 50
 --- !u!1 &6946599633352977815
 GameObject:
   m_ObjectHideFlags: 0

@@ -967,8 +967,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objToMove: {fileID: 8013399156281415326}
   player: {fileID: 0}
-  enemySpeed: 10
-  secondsToFollow: 2
+  playerRadius: {fileID: 0}
   roaming: {fileID: 7713389511978820121}
+  enemySpeed: 8
+  secondsToFollow: 2
+  isRoaming: 0
+  firstTarget: 0
   targetVector: 0
-  roamRadius: 10
+  roamRadius: 50

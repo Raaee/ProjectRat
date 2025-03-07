@@ -5,14 +5,19 @@ using UnityEngine;
 public class EnemyMovement : MonoBehaviour
 {
     [SerializeField] private GameObject objToMove;
-    [SerializeField] private GameObject player;
-    [SerializeField] private float enemySpeed = 2f;
-    [SerializeField] private float secondsToFollow = 2f;
-    public bool isRoaming = false;
     [SerializeField] private RoamingState roaming;
+    [SerializeField] private float enemySpeed = 2f;
+    private GameObject player;
+    private PlayerRadius playerRadius;
+    private Vector2 targetPosition;
+    public bool firstTarget = false;
+    public float roamRadius = 100f;
 
-    public float targetVector;
-    public float roamRadius = 100f;     
+    private void Awake()
+    {
+        player = GameObject.FindGameObjectWithTag("Player").gameObject;
+        playerRadius = player.GetComponentInChildren<PlayerRadius>();
+    }
 
     public void MoveTowardsTarget(Transform targetTransform)
     {
@@ -32,8 +37,22 @@ public class EnemyMovement : MonoBehaviour
 
     public void StartRoaming()
     {
-        
-    }
+        if (firstTarget) 
+        {
+            targetPosition = (Vector2)transform.position + Random.insideUnitCircle * roamRadius;
+            firstTarget = false;
+        }
 
-    
+        float distancesToTarget = Vector3.Distance(transform.position, playerRadius.gameObject.transform.position);
+
+        if (Vector2.Distance((Vector2)transform.position, targetPosition) > 0.1f && distancesToTarget >= playerRadius.aggroRadius)
+        {
+            MoveTowardsTarget(targetPosition);
+        }
+
+        else if (Vector2.Distance((Vector2)transform.position, targetPosition) <= 0.1f)
+        {
+            targetPosition = (Vector2)transform.position + Random.insideUnitCircle * roamRadius;
+        }
+    }
 }

@@ -16,7 +16,7 @@ public class RoamingBehaviour : MonoBehaviour
 
     IEnumerator Roam()
     {
-            targetPosition = (Vector2)transform.position + Random.insideUnitCircle * roamRadius;
+        targetPosition = (Vector2)transform.position + Random.insideUnitCircle * roamRadius;
         while(true)
         {
 
