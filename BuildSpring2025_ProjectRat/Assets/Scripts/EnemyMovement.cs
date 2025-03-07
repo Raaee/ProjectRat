@@ -10,7 +10,7 @@ public class EnemyMovement : MonoBehaviour
     private GameObject player;
     private PlayerRadius playerRadius;
     private Vector2 targetPosition;
-    public bool firstTarget = false;
+    public bool alreadyRoaming = false;
     public float roamRadius = 100f;
 
     private void Awake()
@@ -37,20 +37,19 @@ public class EnemyMovement : MonoBehaviour
 
     public void StartRoaming()
     {
-        if (firstTarget) 
+        if (alreadyRoaming)
         {
-            targetPosition = (Vector2)transform.position + Random.insideUnitCircle * roamRadius;
-            firstTarget = false;
+            targetPosition = (Vector2)transform.position + Random.insideUnitCircle * roamRadius; // roaming behavior
+            alreadyRoaming = false;
         }
+        float distancesToTarget = Vector3.Distance(transform.position, playerRadius.gameObject.transform.position); 
 
-        float distancesToTarget = Vector3.Distance(transform.position, playerRadius.gameObject.transform.position);
-
-        if (Vector2.Distance((Vector2)transform.position, targetPosition) > 0.1f && distancesToTarget >= playerRadius.aggroRadius)
+        if (Vector2.Distance((Vector2)transform.position, targetPosition) > 0.1f && distancesToTarget >= playerRadius.aggroRadius) // if not close to target
         {
             MoveTowardsTarget(targetPosition);
         }
 
-        else if (Vector2.Distance((Vector2)transform.position, targetPosition) <= 0.1f)
+        else if (Vector2.Distance((Vector2)transform.position, targetPosition) <= 0.1f) // at the end of roam. find another point
         {
             targetPosition = (Vector2)transform.position + Random.insideUnitCircle * roamRadius;
         }

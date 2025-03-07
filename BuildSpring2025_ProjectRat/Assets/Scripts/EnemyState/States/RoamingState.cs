@@ -21,7 +21,7 @@ public class RoamingState : EnemieStates
 
     public override void OnStateEnter()
     {
-        movement.firstTarget = true;
+        movement.alreadyRoaming = true;
     }
 
     public override void OnStateExit()
