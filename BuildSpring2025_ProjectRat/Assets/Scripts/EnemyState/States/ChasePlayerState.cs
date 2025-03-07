@@ -9,22 +9,18 @@ public class ChasePlayerState : EnemieStates
     [SerializeField] private EnemieStates attackPlayerState;
     [SerializeField] private EnemyMovement movement;
     [SerializeField] private float secondsToFollow = 2f;
-    [SerializeField] private PlayerRadius playerRadius;
     [SerializeField] private int aggroTimer = 3;
-    //[SerializeField] private FollowCollision followCollision;
-    //private FollowBehavior follow;
+    private PlayerRadius playerRadius;
 
     public override void Awake()
     {
         base.Awake();
-        //player = GameObject.FindGameObjectWithTag("Player").transform.GetChild(0).gameObject;
-        // follow = FindFirstObjectByType<FollowBehavior>();
         playerRadius = enemieStatesHandler.player.GetComponentInChildren<PlayerRadius>();
     }
 
     public override void OnStateEnter()
     {
-        //followCollision.OnExitRadius.AddListener(StartRomingState);
+        
     }
 
     public override void OnStateExit()

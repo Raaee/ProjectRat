@@ -9,7 +9,7 @@ public class IdleState : EnemieStates
     [SerializeField] private EnemieStates fearState;
     [SerializeField] private EnemieStates followState;
     [SerializeField] private EnemieStates chasePlayerState;
-    [SerializeField] private int secondsToChangeState = 2;
+    [SerializeField] private float idleTime = 2f;
 
     public override void Awake()
     {
@@ -19,6 +19,7 @@ public class IdleState : EnemieStates
     public override void OnStateEnter()
     {
         StartCoroutine(WaitForXSeconds());
+        Debug.Log("idling");
     }
 
     public override void OnStateExit()
@@ -52,7 +53,7 @@ public class IdleState : EnemieStates
 
     public IEnumerator WaitForXSeconds() 
     {
-        yield return new WaitForSeconds(secondsToChangeState);
+        yield return new WaitForSeconds(idleTime);
         enemieStatesHandler.ChangeState(roamingState);
     }
 }

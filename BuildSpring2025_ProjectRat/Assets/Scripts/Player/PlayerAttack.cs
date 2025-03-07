@@ -6,7 +6,7 @@ public class PlayerAttack : MonoBehaviour
     private Actions actions;
     private Collider2D attackCol;
     [SerializeField] private GameObject attackVisual;
-    [SerializeField] private int attackDamage = 2;
+    [SerializeField] public int attackDamage { get; set; } = 2;
     [SerializeField] private int poweredAttackDamage = 6;
     [SerializeField] private float attackDuration = 0.1f;
     public bool isAttacking { get; private set; }

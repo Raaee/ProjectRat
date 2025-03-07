@@ -187,6 +187,9 @@ MonoBehaviour:
   OnHeal:
     m_PersistentCalls:
       m_Calls: []
+  OnDeath:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &63906784
 GameObject:
   m_ObjectHideFlags: 0
@@ -1170,6 +1173,53 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &879547816
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 879547818}
+  - component: {fileID: 879547817}
+  m_Layer: 0
+  m_Name: PlayerManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &879547817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 879547816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f916225069aa4e70b7ce9467132bbc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Bosses: []
+  healthIncreaseValue: 10
+  attackIncreaseValue: 10
+--- !u!4 &879547818
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 879547816}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.6012945, y: 4.389281, z: -0.5325377}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &952908336
 GameObject:
   m_ObjectHideFlags: 0
@@ -7097,6 +7147,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minion_Chunky
       objectReference: {fileID: 0}
+    - target: {fileID: 6123146260406962062, guid: 901b3bb615da8954a91bc4c20c7f9d3b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7198,6 +7252,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6714271656293955931, guid: 2a98d6c8c2725254ca2e43510da436fe, type: 3}
+      propertyPath: fearRadius
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6714271656293955931, guid: 2a98d6c8c2725254ca2e43510da436fe, type: 3}
+      propertyPath: aggroRadius
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 6714271656293955931, guid: 2a98d6c8c2725254ca2e43510da436fe, type: 3}
+      propertyPath: attackRadius
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6714271656293955931, guid: 2a98d6c8c2725254ca2e43510da436fe, type: 3}
+      propertyPath: followRadius
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7218,6 +7288,10 @@ PrefabInstance:
     - target: {fileID: 1589061956857725468, guid: 5f526985c4390b04bad5a6856f5e520f, type: 3}
       propertyPath: m_Name
       value: Minion_Tiny
+      objectReference: {fileID: 0}
+    - target: {fileID: 1589061956857725468, guid: 5f526985c4390b04bad5a6856f5e520f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2033901053274917017, guid: 5f526985c4390b04bad5a6856f5e520f, type: 3}
       propertyPath: m_LocalScale.x
@@ -7288,6 +7362,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minion_Skrunky
       objectReference: {fileID: 0}
+    - target: {fileID: 2957387709611827396, guid: 9d2413ad3dba69b4f965ff83991eebeb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6617459562587064379, guid: 9d2413ad3dba69b4f965ff83991eebeb, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -7342,14 +7420,15 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 519420032}
+  - {fileID: 879547818}
   - {fileID: 3116282281397752258}
+  - {fileID: 1056201902}
+  - {fileID: 952908339}
   - {fileID: 1257897252}
   - {fileID: 6519187287447910144}
   - {fileID: 1838863282717979657}
   - {fileID: 5916457980487630023}
   - {fileID: 40738885}
-  - {fileID: 1056201902}
-  - {fileID: 952908339}
   - {fileID: 1586904156}
   - {fileID: 358583796}
   - {fileID: 1959743559}

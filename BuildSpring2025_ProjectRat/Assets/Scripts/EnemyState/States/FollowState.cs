@@ -9,7 +9,7 @@ public class FollowState : EnemieStates
     [SerializeField] private EnemieStates attackBossState;
     [SerializeField] private EnemieStates chaseBossState;
     [SerializeField] private EnemyMovement movement;
-    [SerializeField] private PlayerRadius playerRadius;
+    private PlayerRadius playerRadius;
     //[SerializeField] private FollowCollision followCollision;
     //private FollowBehavior follow;
     //public bool keepFollowingTarget = false;

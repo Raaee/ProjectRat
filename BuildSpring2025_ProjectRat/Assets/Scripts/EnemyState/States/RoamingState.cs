@@ -9,48 +9,31 @@ public class RoamingState : EnemieStates
     [SerializeField] private EnemieStates fearState;
     [SerializeField] private EnemieStates idleState;
     [SerializeField] private EnemieStates chasePlayerState;
-
     [SerializeField] private EnemyMovement movement;
-    [SerializeField] private PlayerRadius playerRadius;
     [SerializeField] private GameObject typeOfEnemy;
-    //[SerializeField] private FollowCollision followCollision;
-    //[SerializeField] private FearState fearStateGameObj;
+    private PlayerRadius playerRadius;
 
     public override void Awake()
     {
         base.Awake();
         playerRadius = enemieStatesHandler.player.GetComponentInChildren<PlayerRadius>();
-        //fearStateGameObj = this.transform.parent.GetComponentInChildren<FearState>();
     }
-
 
     public override void OnStateEnter()
     {
-        
+        movement.alreadyRoaming = true;
     }
 
     public override void OnStateExit()
     {
-        
+
     }
 
     public override void OnStateUpdate()
     {
-        /*if (typeOfEnemy.tag == "Minion")
-        {
-            float distancesToTarget = Vector3.Distance(transform.position, playerRadius.transform.position);
-
-            if (distancesToTarget <= playerRadius.fearRadius)
-            {
-                if (followState != null)
-                    enemieStatesHandler.ChangeState(followState);
-            }
-
-        }*/
-
         if (typeOfEnemy.tag == "Boss") 
         {
-            float distancesToTarget = Vector3.Distance(transform.position, playerRadius.transform.position);
+            float distancesToTarget = Vector3.Distance(transform.position, playerRadius.gameObject.transform.position);
 
             if (distancesToTarget <= playerRadius.aggroRadius)
             {
@@ -58,25 +41,17 @@ public class RoamingState : EnemieStates
                     enemieStatesHandler.ChangeState(chasePlayerState);
             }
         }
-
-        movement.StartRoaming();
     }
 
         
-
     public override void OnFixedUpdate()
     {
-
         movement.StartRoaming();
     }
 
-
-    public void StartFearState()
+    public virtual void ToIdle()
     {
-        /*if (player.GetComponentInChildren<PlayerRadius>().IsObjectInRadius(fearStateGameObj))
-        {
-            enemieStatesHandler.ChangeState(fearState);
-        }*/
+        enemieStatesHandler.ChangeState(idleState);
     }
 
     [ProButton]
@@ -93,6 +68,5 @@ public class RoamingState : EnemieStates
             enemieStatesHandler.ChangeState(chasePlayerState);
     }
 
-
-
+    
 }
