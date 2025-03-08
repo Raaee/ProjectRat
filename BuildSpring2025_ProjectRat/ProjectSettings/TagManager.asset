@@ -7,16 +7,15 @@ TagManager:
   - MinionRat
   - Boss
   - BossPodium
-  - MiniBoss
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Collision
+  - 
   - Water
   - UI
-  - Player
-  - Enemy
+  - 
+  - 
   - 
   - 
   - 

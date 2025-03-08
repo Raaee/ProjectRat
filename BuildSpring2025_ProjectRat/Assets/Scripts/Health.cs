@@ -1,33 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 
 public class Health : MonoBehaviour
 {
-    [field: SerializeField] public int MaxHP { get; set; } = 100;
-    [field: SerializeField] public int CurrentHP { get; set; } = 0;
+    [SerializeField] private int maxHP = 100;
+    [SerializeField] private int currentHP = 0;
 
-    [HideInInspector] public UnityEvent<float> OnHurt;
-    [HideInInspector] public UnityEvent<float> OnHeal;
-    [HideInInspector] public UnityEvent<GameObject> OnDeath;
-
-    private void Awake() {
-        CurrentHP = MaxHP;
+    private void Start() {
+        currentHP = maxHP;
     }
     public void AddHealth(int amt) {
-        CurrentHP += amt;
-        OnHeal?.Invoke(amt);
-        CurrentHP = Mathf.Clamp(CurrentHP, 0, MaxHP);
+        currentHP += amt;
+        currentHP = Mathf.Clamp(currentHP, 0, maxHP);
         Debug.Log("Heal | " + gameObject.name);
     }
     public void RemoveHealth(int amt) {
-        CurrentHP -= amt;
-        OnHurt?.Invoke(amt);
-        CurrentHP = Mathf.Clamp(CurrentHP, 0, MaxHP);
-        if (CurrentHP <= 0) {
+        currentHP -= amt;
+        currentHP = Mathf.Clamp(currentHP, 0, maxHP);
+        if (currentHP <= 0) {
             Debug.Log("Dead");
-            OnDeath.Invoke(this.gameObject);
         }
         Debug.Log("Hurting | " + gameObject.name);
 
