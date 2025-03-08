@@ -4,7 +4,7 @@ using UnityEngine;
 
 public abstract class Collectable : MonoBehaviour
 {
-    [SerializeField] private bool delayDestroy = false;
+    [SerializeField] private bool delayDestroy = true;
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.tag == "Player") {
             Collect();
