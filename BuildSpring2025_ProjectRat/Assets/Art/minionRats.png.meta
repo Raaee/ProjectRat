@@ -1,0 +1,382 @@
+fileFormatVersion: 2
+guid: bce5121c3249b25428ba7ba57913f0b7
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 96
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 100
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: minionRats_0
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 1030
+        width: 572
+        height: 208
+      alignment: 9
+      pivot: {x: 0.61759937, y: 0.12684807}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 828d796fb2b167f47a34fee3eb8ea449
+      internalID: -1466953762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minionRats_1
+      rect:
+        serializedVersion: 2
+        x: 667
+        y: 804
+        width: 178
+        height: 551
+      alignment: 9
+      pivot: {x: 0.50272465, y: 0.30573064}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f351892e1f2750b4fb41c6d584b15add
+      internalID: -1823820183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minionRats_2
+      rect:
+        serializedVersion: 2
+        x: 867
+        y: 776
+        width: 204
+        height: 542
+      alignment: 9
+      pivot: {x: 0.53623486, y: 0.70938796}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b5c679f6dd114549998c9b3ab3c879a
+      internalID: 781294468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minionRats_3
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 543
+        width: 382
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5464417, y: 0.27477622}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a7eb36d609256e4b9815ab33e2adfa1
+      internalID: -417086915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minionRats_4
+      rect:
+        serializedVersion: 2
+        x: 1490
+        y: 551
+        width: 187
+        height: 226
+      alignment: 9
+      pivot: {x: 0.47232854, y: 0.26450396}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 048684a329a349e44b8e1c9b7d5fb588
+      internalID: 647005521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minionRats_5
+      rect:
+        serializedVersion: 2
+        x: 1720
+        y: 530
+        width: 197
+        height: 245
+      alignment: 9
+      pivot: {x: 0.5075045, y: 0.34612688}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d566ebeee5617fd4d88624e8b2a5fece
+      internalID: -332428139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minionRats_6
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 319
+        width: 222
+        height: 194
+      alignment: 9
+      pivot: {x: 0.56895834, y: 0.21758167}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dc146b7081ac43448f5124d53119f74
+      internalID: 1124584560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minionRats_7
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 319
+        width: 106
+        height: 203
+      alignment: 9
+      pivot: {x: 0.49239853, y: 0.32139128}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f7ced128a8742944a7e4cd70a39348b
+      internalID: -1249820442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minionRats_8
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 340
+        width: 88
+        height: 152
+      alignment: 9
+      pivot: {x: 0.49084264, y: 0.26146355}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf61eff0eb3d41e4d821b075652d5c7c
+      internalID: 1973746390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minionRats_9
+      rect:
+        serializedVersion: 2
+        x: 1482
+        y: 265
+        width: 197
+        height: 247
+      alignment: 9
+      pivot: {x: 0.50375193, y: 0.21270122}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9167d9688637694caf4c7c43865893a
+      internalID: -2037821218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minionRats_10
+      rect:
+        serializedVersion: 2
+        x: 1714
+        y: 267
+        width: 201
+        height: 238
+      alignment: 9
+      pivot: {x: 0.5110331, y: 0.3540244}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 957a003d11e2dc94f9d8cf2e5d0495c0
+      internalID: 1393497994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      minionRats_0: -1466953762
+      minionRats_1: -1823820183
+      minionRats_10: 1393497994
+      minionRats_2: 781294468
+      minionRats_3: -417086915
+      minionRats_4: 647005521
+      minionRats_5: -332428139
+      minionRats_6: 1124584560
+      minionRats_7: -1249820442
+      minionRats_8: 1973746390
+      minionRats_9: -2037821218
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
