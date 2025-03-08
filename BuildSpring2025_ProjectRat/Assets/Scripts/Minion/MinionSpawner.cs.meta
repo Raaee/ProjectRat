@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: cf4dd3346c2535c458dc3ba4151cbc2b
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - centerTargetPrefab: {fileID: 4467856247156876636, guid: 07e9343b944bb0346b324a950bf054ef, type: 3}
+  - minionRatPrefab: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
