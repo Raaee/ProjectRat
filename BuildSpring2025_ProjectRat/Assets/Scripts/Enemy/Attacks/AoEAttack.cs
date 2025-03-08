@@ -30,7 +30,7 @@ public abstract class AoEAttack : MonoBehaviour
         yield return new WaitForSeconds(despawnDelay);
         DestroySelf();
     }
-    private void DamageAllCollisions() {
+    protected void DamageAllCollisions() {
         foreach (GameObject go in collisions) {
             if (go.tag == "Player") {
                 go.GetComponent<Health>().RemoveHealth(attackDamage);

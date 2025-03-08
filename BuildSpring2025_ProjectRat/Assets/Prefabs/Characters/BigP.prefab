@@ -284,6 +284,7 @@ GameObject:
   - component: {fileID: 6042835556175487380}
   - component: {fileID: 1241881111438919047}
   - component: {fileID: 3805234849321452515}
+  - component: {fileID: 5004817201831650010}
   m_Layer: 0
   m_Name: AttackPlayer
   m_TagString: Untagged
@@ -333,6 +334,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chasePlayerState: {fileID: 4645044216143018808}
   playerRadius: {fileID: 0}
+--- !u!114 &5004817201831650010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2094376792516616029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78d6609c674054bde9cf697531efc8bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackRadius: 5
+  attackDamage: 5
+  damageDelay: 0.5
+  despawnDelay: 1
+  collisions: []
+  projectilePrefab: {fileID: 0}
+  MaxlifeTime: 5
 --- !u!1 &2675787539592013396
 GameObject:
   m_ObjectHideFlags: 0
@@ -727,7 +747,6 @@ MonoBehaviour:
   idleState: {fileID: 363013469649715548}
   chasePlayerState: {fileID: 4645044216143018808}
   movement: {fileID: 3164365422104852344}
-  playerRadius: {fileID: 0}
   typeOfEnemy: {fileID: 8013399156281415326}
 --- !u!1 &5069181808364348080
 GameObject:
@@ -795,7 +814,6 @@ MonoBehaviour:
   attackPlayerState: {fileID: 3805234849321452515}
   movement: {fileID: 3164365422104852344}
   secondsToFollow: 2
-  playerRadius: {fileID: 0}
   aggroTimer: 3
 --- !u!1 &7247907443313758334
 GameObject:
@@ -953,6 +971,9 @@ MonoBehaviour:
   OnHeal:
     m_PersistentCalls:
       m_Calls: []
+  OnDeath:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &3164365422104852344
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -966,12 +987,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objToMove: {fileID: 8013399156281415326}
-  player: {fileID: 0}
-  playerRadius: {fileID: 0}
   roaming: {fileID: 7713389511978820121}
   enemySpeed: 8
-  secondsToFollow: 2
-  isRoaming: 0
-  firstTarget: 0
-  targetVector: 0
+  alreadyRoaming: 0
   roamRadius: 50
