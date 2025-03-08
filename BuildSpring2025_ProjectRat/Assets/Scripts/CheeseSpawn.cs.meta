@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 024132a619183dc4cb5de13797f9f3da
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - centerPlayerPrefab: {fileID: 4211038337638405928, guid: 2a98d6c8c2725254ca2e43510da436fe, type: 3}
+  - CheesePrefab: {fileID: 3004535495907767582, guid: 61993bbf75f0a544684f0cbcb203e287, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
