@@ -45,9 +45,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   centerTarget: {fileID: 0}
-  minionRatPrefab: {fileID: 0}
+  ratPrefabs:
+  - {fileID: 1589061956857725468, guid: 5f526985c4390b04bad5a6856f5e520f, type: 3}
+  - {fileID: 2957387709611827396, guid: 9d2413ad3dba69b4f965ff83991eebeb, type: 3}
+  - {fileID: 6123146260406962062, guid: 901b3bb615da8954a91bc4c20c7f9d3b, type: 3}
+  rareRatPrefab: {fileID: 1589061956857725468, guid: 0ef1192c1210d234aadc2ece6d184128, type: 3}
+  rareRatSpawnChance: 0.666
   roamingCountText: {fileID: 0}
-  radius: 5
+  radius: 20
   spawnDelay: 0.5
   spawnMax: 50
   isSpawning: 0
