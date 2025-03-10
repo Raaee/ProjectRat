@@ -15,6 +15,8 @@ public class ChasePlayerState : EnemieStates
     public override void Awake()
     {
         base.Awake();
+    }
+    private void Start() {
         playerRadius = enemieStatesHandler.player.GetComponentInChildren<PlayerRadius>();
     }
 

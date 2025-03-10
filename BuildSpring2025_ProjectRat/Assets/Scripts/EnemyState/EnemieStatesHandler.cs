@@ -12,7 +12,7 @@ public class EnemieStatesHandler : MonoBehaviour
 
     private void Awake()
     {
-        player = GameObject.FindGameObjectWithTag("Player").gameObject;
+        player = FindObjectOfType<PlayerMovement>().gameObject;
     }
 
     private void Start()

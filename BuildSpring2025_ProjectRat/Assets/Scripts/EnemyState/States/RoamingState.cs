@@ -16,6 +16,9 @@ public class RoamingState : EnemieStates
     public override void Awake()
     {
         base.Awake();
+    }
+    private void Start() {
+        
         playerRadius = enemieStatesHandler.player.GetComponentInChildren<PlayerRadius>();
     }
 
