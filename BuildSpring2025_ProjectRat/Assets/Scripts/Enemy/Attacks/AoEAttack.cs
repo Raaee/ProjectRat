@@ -44,7 +44,8 @@ public abstract class AoEAttack : MonoBehaviour
     private void DestroySelf() {
         Destroy(gameObject);
     }
-    private void OnDrawGizmos() {
+    public void OnDrawGizmos()
+    {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(randCenterPoint, attackRadius);
     }

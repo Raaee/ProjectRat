@@ -6,6 +6,9 @@ public class AttackPlayeState : EnemieStates
 {
     [SerializeField] private EnemieStates chasePlayerState;
     [SerializeField] private PlayerRadius playerRadius;
+    [SerializeField] private ProjectileBA projectileBA;
+    
+
     public override void Awake()
     {
         base.Awake();
@@ -15,6 +18,7 @@ public class AttackPlayeState : EnemieStates
     public override void OnStateEnter()
     {
         Debug.Log("Attacking Player");
+
     }
 
     public override void OnStateExit()
@@ -33,6 +37,10 @@ public class AttackPlayeState : EnemieStates
     }
     public override void OnFixedUpdate()
     {
-
+        if (!projectileBA.isShooting)
+        {
+            projectileBA.Attack();
+            projectileBA.isShooting = true;
+        }
     }
 }

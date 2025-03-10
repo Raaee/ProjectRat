@@ -7262,7 +7262,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6714271656293955931, guid: 2a98d6c8c2725254ca2e43510da436fe, type: 3}
       propertyPath: attackRadius
-      value: 15
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 6714271656293955931, guid: 2a98d6c8c2725254ca2e43510da436fe, type: 3}
       propertyPath: followRadius
@@ -7273,63 +7273,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a98d6c8c2725254ca2e43510da436fe, type: 3}
---- !u!1001 &3568910870085728439
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 6423028422015343874, guid: 7db831073a80a448187a8e86dfcd8aac, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6423028422015343874, guid: 7db831073a80a448187a8e86dfcd8aac, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6423028422015343874, guid: 7db831073a80a448187a8e86dfcd8aac, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6423028422015343874, guid: 7db831073a80a448187a8e86dfcd8aac, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6423028422015343874, guid: 7db831073a80a448187a8e86dfcd8aac, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6423028422015343874, guid: 7db831073a80a448187a8e86dfcd8aac, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6423028422015343874, guid: 7db831073a80a448187a8e86dfcd8aac, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6423028422015343874, guid: 7db831073a80a448187a8e86dfcd8aac, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6423028422015343874, guid: 7db831073a80a448187a8e86dfcd8aac, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6423028422015343874, guid: 7db831073a80a448187a8e86dfcd8aac, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6840933701109634795, guid: 7db831073a80a448187a8e86dfcd8aac, type: 3}
-      propertyPath: m_Name
-      value: BAProjectile
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 7db831073a80a448187a8e86dfcd8aac, type: 3}
 --- !u!1001 &5916457980487630023
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7489,4 +7432,3 @@ SceneRoots:
   - {fileID: 1586904156}
   - {fileID: 358583796}
   - {fileID: 1959743559}
-  - {fileID: 3568910870085728439}

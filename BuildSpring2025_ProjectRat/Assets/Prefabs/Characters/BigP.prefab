@@ -334,6 +334,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chasePlayerState: {fileID: 4645044216143018808}
   playerRadius: {fileID: 0}
+  projectileBA: {fileID: 5004817201831650010}
 --- !u!114 &5004817201831650010
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -346,13 +347,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78d6609c674054bde9cf697531efc8bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackRadius: 5
-  attackDamage: 5
-  damageDelay: 0.5
-  despawnDelay: 1
-  collisions: []
-  projectilePrefab: {fileID: 0}
-  MaxlifeTime: 5
+  projectilePrefab: {fileID: 6840933701109634795, guid: 7db831073a80a448187a8e86dfcd8aac, type: 3}
+  fireAoE: {fileID: 2782661884586761244, guid: 7574281849e2daa43ac40129bafba985, type: 3}
+  MaxlifeTime: 1.5
+  lifeTime: 5
+  isShooting: 0
 --- !u!1 &2675787539592013396
 GameObject:
   m_ObjectHideFlags: 0

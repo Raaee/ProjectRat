@@ -14,9 +14,7 @@ public class AoESpecial : MonoBehaviour
     [SerializeField] private bool randomAmtPerAttack = true;
 
     private Vector2 randCenterPoint;
-
-    [ProButton]
-    private void Attack() {
+    public void Attack() {
         StartCoroutine(SpawnAreas());
     }
     private IEnumerator SpawnAreas() {

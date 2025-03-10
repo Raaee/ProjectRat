@@ -5,41 +5,50 @@ using UnityEngine;
 public class ProjectileBA : MonoBehaviour
 {
     [SerializeField] private GameObject projectilePrefab;
+    [SerializeField] private GameObject fireAoE;
     [SerializeField] private float MaxlifeTime = 5f;
+    private PlayerRadius playerRadius;
+    public float lifeTime = 5f;
+    public bool isShooting = false;
 
     private void Start()
+    {
+        playerRadius = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<PlayerRadius>();
+    }
+
+    public void Attack()
+    {
+        SpanwPojectile(GameObject.FindGameObjectWithTag("Player").transform.position);
+    }
+
+
+    private void FixedUpdate()
     {
         
     }
 
-    //creat the Projectile
-    //Momment
-    //Projectile Livetime
-
-
-    //Throw Projectile
-    //If hit player point
-    //if end of live -> expode And creat a AoE
-
-    private void SpanwPojectile(Vector2 moveDirection)
+    public void SpanwPojectile(Vector2 moveDirection)
     {
-        GameObject projectileGO = Instantiate(projectilePrefab, transform);
+        Debug.Log(moveDirection);
+        if (isShooting)
+        {
+            return;
+        }
+
+        GameObject projectileGO = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
         Projectile projectile = projectileGO.GetComponent<Projectile>();
         projectile.SetMoveDirection(moveDirection);
         projectile.SetLifeTime(MaxlifeTime);
-        // loop checking the condition of lifetime
-        //spawns aoe at projectile pos
-        // destroy proj
-        //GOAoEAttk.StartAttack();
+        projectile.OnProjecDisabled.AddListener(StartAoE);
     }
 
-    private void SpanwAoE(Transform pos)
+    public void StartAoE(Projectile projectile)
     {
-
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        SpanwPojectile(collision.transform.position);
+        isShooting = false;
+        GameObject AoEEffect = Instantiate(fireAoE, projectile.transform.position, Quaternion.identity);
+        AoEAttack attack = AoEEffect.GetComponent<AoEAttack>();
+        attack.StartAttack();
+        /*rojectile.randCenterPoint = projectile.transform.position;
+        projectile.StartAttack();*/
     }
 }
