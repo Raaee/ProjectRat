@@ -45,7 +45,7 @@ public class Projectile : MonoBehaviour
 
     public void MoveProjectile()
     {
-        rb2D.velocity = new Vector2(moveDirection.x, moveDirection.y) * projectileSpeed;
+        rb2D.velocity = new Vector2(moveDirection.x, moveDirection.y).normalized * projectileSpeed;
         float angle = Mathf.Atan2(-moveDirection.y, -moveDirection.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0f, 0f, angle);
         //rb2D.AddForce(moveDirection * projectileSpeed * Time.fixedDeltaTime);
