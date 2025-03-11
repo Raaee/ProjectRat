@@ -56,8 +56,8 @@ public class RoamingState : EnemieStates
         enemieStatesHandler.ChangeState(idleState);
     }
 
-    [ProButton]
-    public void TestFollowPlayerForMinion()
+    
+    public void InfectMinion()
     {
         if (followState != null)
             enemieStatesHandler.ChangeState(followState);

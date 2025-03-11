@@ -390,6 +390,9 @@ MonoBehaviour:
   objToMove: {fileID: 6123146260406962062}
   roaming: {fileID: 1878566438732854563}
   enemySpeed: 5
+  roamingSpeed: 4
+  followingSpeed: 10
+  fearSpeed: 8
   alreadyRoaming: 0
   roamRadius: 50
 --- !u!1 &6556313339694282291

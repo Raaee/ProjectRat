@@ -7254,7 +7254,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6714271656293955931, guid: 2a98d6c8c2725254ca2e43510da436fe, type: 3}
       propertyPath: fearRadius
-      value: 30
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6714271656293955931, guid: 2a98d6c8c2725254ca2e43510da436fe, type: 3}
       propertyPath: aggroRadius
