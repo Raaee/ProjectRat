@@ -26,7 +26,7 @@ public class MouseTrapSpawner : MonoBehaviour
         int boundary = Random.Range(0,2);
         float randomLoc = Random.Range(0f,101f) / 100f;
 
-        float[] offset = { -0.1f, 0.1f };
+        float[] offset = { -0.2f, 0.2f };
         Vector3 pos;
         if (isVertical == 1) {
             pos = mainCamera.GetComponent<Camera>().ViewportToWorldPoint(new Vector3(randomLoc, boundary + offset[boundary], 0));
