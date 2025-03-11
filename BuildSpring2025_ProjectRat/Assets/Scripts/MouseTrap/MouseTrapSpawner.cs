@@ -6,7 +6,7 @@ public class MouseTrapSpawner : MonoBehaviour
     public int minTimerRangeSeconds = 5;
     public int maxTimerRangeSeconds = 10;
 
-    [SerializeField] private int timerDuration;
+    [HideInInspector] private int timerDuration;
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject mainCamera;
     [SerializeField] private GameObject mouseTrap;
@@ -14,6 +14,7 @@ public class MouseTrapSpawner : MonoBehaviour
     private void Awake() {
         player.GetComponent<Health>().OnDead.AddListener(StopTimer);
         
+        timerDuration = Random.Range(minTimerRangeSeconds, maxTimerRangeSeconds + 1);        
         timer = StartCoroutine(Timer());
     }
 
@@ -21,7 +22,6 @@ public class MouseTrapSpawner : MonoBehaviour
         yield return new WaitForSeconds(timerDuration);
 
         int isVertical = Random.Range(0,2);
-
 
         int boundary = Random.Range(0,2);
         float randomLoc = Random.Range(0f,101f) / 100f;
