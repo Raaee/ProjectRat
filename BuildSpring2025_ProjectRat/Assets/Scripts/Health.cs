@@ -10,8 +10,7 @@ public class Health : MonoBehaviour
 
     [HideInInspector] public UnityEvent<float> OnHurt;
     [HideInInspector] public UnityEvent<float> OnHeal;
-    [HideInInspector] public UnityEvent OnDead;
-
+    [HideInInspector] public UnityEvent<GameObject> OnDeath;
 
     private void Awake() {
         CurrentHP = MaxHP;
@@ -28,12 +27,9 @@ public class Health : MonoBehaviour
         CurrentHP = Mathf.Clamp(CurrentHP, 0, MaxHP);
         if (CurrentHP <= 0) {
             Debug.Log("Dead");
+            OnDeath.Invoke(this.gameObject);
         }
         Debug.Log("Hurting | " + gameObject.name);
 
-    }
-
-    public void OnPlayerDead() {
-        OnDead.Invoke();
     }
 }
