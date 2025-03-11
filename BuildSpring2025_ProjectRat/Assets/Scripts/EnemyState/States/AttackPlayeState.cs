@@ -12,7 +12,10 @@ public class AttackPlayeState : EnemieStates
     public override void Awake()
     {
         base.Awake();
-        playerRadius = enemieStatesHandler.player.GetComponentInChildren<PlayerRadius>();
+    }
+    void Start()
+    {
+        playerRadius = enemieStatesHandler.player.GetComponentInChildren<PlayerRadius>();        
     }
 
     public override void OnStateEnter()

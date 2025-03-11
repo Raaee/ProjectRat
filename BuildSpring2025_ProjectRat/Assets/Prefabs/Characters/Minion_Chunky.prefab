@@ -228,7 +228,6 @@ MonoBehaviour:
   idleState: {fileID: 1947866463035511971}
   chasePlayerState: {fileID: 0}
   movement: {fileID: 5980979217704060823}
-  playerRadius: {fileID: 0}
   typeOfEnemy: {fileID: 6123146260406962062}
 --- !u!1 &5821255512884644034
 GameObject:
@@ -288,6 +287,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4704013870522101293}
   - component: {fileID: 3889343603410530433}
+  - component: {fileID: 4981271558351819034}
   - component: {fileID: 5980979217704060823}
   m_Layer: 0
   m_Name: Minion_Chunky
@@ -345,9 +345,36 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.5, y: 1}
+  m_Offset: {x: 0.12583065, y: 0.43047297}
+  m_Size: {x: 1.9569855, y: 1.9569855}
   m_Direction: 0
+--- !u!50 &4981271558351819034
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6123146260406962062}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!114 &5980979217704060823
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -363,7 +390,7 @@ MonoBehaviour:
   objToMove: {fileID: 6123146260406962062}
   roaming: {fileID: 1878566438732854563}
   enemySpeed: 5
-  firstTarget: 0
+  alreadyRoaming: 0
   roamRadius: 50
 --- !u!1 &6556313339694282291
 GameObject:
@@ -413,7 +440,6 @@ MonoBehaviour:
   attackBossState: {fileID: 0}
   chaseBossState: {fileID: 0}
   movement: {fileID: 5980979217704060823}
-  playerRadius: {fileID: 0}
 --- !u!1 &7183139413343926661
 GameObject:
   m_ObjectHideFlags: 0

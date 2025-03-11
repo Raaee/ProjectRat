@@ -20,9 +20,6 @@ public class Projectile : MonoBehaviour
         rb2D = GetComponent<Rigidbody2D>();
         
     }
-
-
-
     private void Update()
     {
         
@@ -63,6 +60,9 @@ public class Projectile : MonoBehaviour
             Health playerHealth = collider.gameObject.GetComponent<Health>();
             playerHealth.RemoveHealth(ProjectileDamage);
             Debug.Log("Player Hit"); 
+        }
+        if (collider.gameObject.tag == "MinionRat") {
+            collider.gameObject.GetComponentInChildren<FollowState>().MinionPurification();
         }
     }
 
