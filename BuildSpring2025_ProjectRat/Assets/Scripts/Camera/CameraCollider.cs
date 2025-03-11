@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ViewDetection : MonoBehaviour {
+public class CameraCollider : MonoBehaviour {
     private void FixedUpdate() {
         Camera cam = GetComponent<Camera>();
         
