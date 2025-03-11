@@ -44,6 +44,7 @@ public class PlayerAttack : MonoBehaviour
     private void ToggleCollider() {
         attackCol.enabled = isAttacking;
         attackVisual.SetActive(isAttacking);
+        Debug.Log("$Attack collider active: {isAttacking}");
     }
     private bool IsAcidOrbTriggered() {
         float chance = Random.Range(0, 1.0f);
@@ -59,9 +60,11 @@ public class PlayerAttack : MonoBehaviour
         }
         if (col.gameObject.tag == BOSS_TAG) {
             if (spawnOrbs) TriggerOrbs();
-            DamageBoss(col);
+            col.gameObject.GetComponent<Health>().RemoveHealth(GetDamageAmount());
         }
         if (col.gameObject.tag == BOSS_PODIUM_TAG) {
+            Debug.Log("Boss Podium Hit!");
+            col.gameObject.GetComponent<Health>().RemoveHealth(GetDamageAmount());
         
         }
     }
@@ -70,12 +73,15 @@ public class PlayerAttack : MonoBehaviour
             acidOrbs.SpawnOrb();
         }
     }
-    private void DamageBoss(Collider2D col) {
+    private int GetDamageAmount()
+    {
         int damage = attackDamage;
-        if (acidOrbs.currentOrbs == acidOrbs.maxOrbs) {
+        if (acidOrbs.currentOrbs == acidOrbs.maxOrbs)
+        {
             damage = poweredAttackDamage;
             acidOrbs.ResetOrbs();
         }
-        col.gameObject.GetComponent<Health>().RemoveHealth(damage);
+        return damage;
+
     }
 }
