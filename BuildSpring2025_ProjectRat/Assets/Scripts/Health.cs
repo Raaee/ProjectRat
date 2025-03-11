@@ -13,7 +13,6 @@ public class Health : MonoBehaviour
     [HideInInspector] public UnityEvent<GameObject> OnDeath;
     [HideInInspector] public UnityEvent OnDead;
 
-
     private void Awake() {
         CurrentHP = MaxHP;
     }
