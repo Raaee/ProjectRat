@@ -43,6 +43,17 @@ public class RoamingState : EnemieStates
                     enemieStatesHandler.ChangeState(chasePlayerState);
             }
         }
+
+        else if (typeOfEnemy.tag == "MinionRat")
+        {
+            float distancesToTarget = Vector3.Distance(transform.position, playerRadius.gameObject.transform.position);
+
+            if (distancesToTarget <= playerRadius.fearRadius)
+            {
+                if (fearState != null)
+                    enemieStatesHandler.ChangeState(fearState);
+            }
+        }
     }
 
         

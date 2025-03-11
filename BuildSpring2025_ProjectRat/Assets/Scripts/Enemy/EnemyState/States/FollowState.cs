@@ -39,7 +39,7 @@ public class FollowState : EnemieStates
             movement.MoveAwayFromTarget();
         }
 
-        movement.MoveTowardsTarget(enemieStatesHandler.player.transform);
+        movement.FollowingTarget(enemieStatesHandler.player.transform.position);
     }
 
     public override void OnFixedUpdate()
@@ -50,7 +50,7 @@ public class FollowState : EnemieStates
     [ProButton]
     public void MinionPurification()
     {
-            Debug.Log("purified minion");
+        Debug.Log("purified minion");
         enemieStatesHandler.ChangeState(roamingState);
     }
 }

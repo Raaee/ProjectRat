@@ -47,7 +47,7 @@ public class MinionSpawner : MonoBehaviour
     }
     private GameObject GetRandomRat() {
         float ratChance = Random.Range(0f, 100f);
-        Debug.Log(ratChance);
+        //Debug.Log(ratChance);
         if (ratChance <= rareRatSpawnChance) {
             return rareRatPrefab;
         }

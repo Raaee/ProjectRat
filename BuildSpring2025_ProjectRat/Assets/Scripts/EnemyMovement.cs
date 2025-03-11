@@ -10,6 +10,7 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] private float roamingSpeed = 5f;
     [SerializeField] private float followingSpeed = 5f;
     [SerializeField] private float fearSpeed = 5f;
+    public bool isFearing { get; set; } = false;
     private GameObject player;
     private PlayerRadius playerRadius;
     private Vector2 targetPosition;
@@ -24,23 +25,27 @@ public class EnemyMovement : MonoBehaviour
 
     public void MoveTowardsTarget(Transform targetTransform)
     {
-        enemySpeed = followingSpeed;
         objToMove.transform.position = Vector2.MoveTowards(transform.position, targetTransform.position, enemySpeed * Time.deltaTime);
     }
 
     public void MoveTowardsTarget(Vector2 targetposition)
     {
-        enemySpeed = followingSpeed;
         objToMove.transform.position = Vector2.MoveTowards(transform.position, targetposition, enemySpeed * Time.deltaTime);
     }
 
+    public void FollowingTarget(Vector2 targetposition)
+    {
+        enemySpeed = followingSpeed;
+        MoveTowardsTarget(targetposition);
+    }
 
     public void MoveAwayFromTarget()
     {
+        isFearing = true;
+        enemySpeed = 0;
         enemySpeed = fearSpeed;
         Debug.Log("MoveAwayFromTarget");
-        MoveTowardsTarget(transform.position - playerRadius.transform.position.normalized);
-  
+        MoveTowardsTarget(transform.position - player.transform.position);
     }
 
     public void StartRoaming()
@@ -52,9 +57,17 @@ public class EnemyMovement : MonoBehaviour
             alreadyRoaming = false;
         }
 
-        float distancesToTarget = Vector3.Distance(transform.position, playerRadius.gameObject.transform.position); 
+        float distancesToTarget = Vector3.Distance(transform.position, playerRadius.gameObject.transform.position);
+        float distFromRoamPos = Vector2.Distance((Vector2)transform.position, targetPosition);
 
-        if (Vector2.Distance((Vector2)transform.position, targetPosition) > 0.1f && (distancesToTarget >= playerRadius.aggroRadius || distancesToTarget <= playerRadius.fearRadius)) // if not close to target
+
+        if (distancesToTarget >= playerRadius.fearRadius)
+        {
+            MoveTowardsTarget(targetPosition);
+            return;
+        }
+
+        if (distFromRoamPos > 0.1f && distancesToTarget >= playerRadius.aggroRadius) // if not close to target
         {
             MoveTowardsTarget(targetPosition);
         }

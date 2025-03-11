@@ -206,7 +206,10 @@ MonoBehaviour:
   objToMove: {fileID: 2957387709611827396}
   roaming: {fileID: 1652659718782078100}
   enemySpeed: 8
-  firstTarget: 0
+  roamingSpeed: 6
+  followingSpeed: 15
+  fearSpeed: 12
+  alreadyRoaming: 0
   roamRadius: 100
 --- !u!1 &4609043926117204738
 GameObject:
@@ -256,7 +259,6 @@ MonoBehaviour:
   attackBossState: {fileID: 7466502789597392092}
   chaseBossState: {fileID: 7361546198123605599}
   movement: {fileID: 7164952940432506010}
-  playerRadius: {fileID: 0}
 --- !u!1 &5274021647744952713
 GameObject:
   m_ObjectHideFlags: 0
@@ -569,7 +571,6 @@ MonoBehaviour:
   idleState: {fileID: 8655002569288785829}
   chasePlayerState: {fileID: 0}
   movement: {fileID: 7164952940432506010}
-  playerRadius: {fileID: 0}
   typeOfEnemy: {fileID: 2957387709611827396}
 --- !u!1 &8958553508586674021
 GameObject:
