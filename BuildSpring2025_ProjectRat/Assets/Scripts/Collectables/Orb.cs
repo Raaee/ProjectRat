@@ -21,7 +21,7 @@ public class Orb : Collectable
         int rand = Random.Range(0, orbSprites.Length-1);
         sr.sprite = orbSprites[rand];
     }
-    public override void Collect() {
+    public override void Collect(GameObject collector) {
         FindObjectOfType<AcidOrbs>().AddOrbs(1);
     }
     protected override IEnumerator DelayedKill() {
@@ -33,4 +33,7 @@ public class Orb : Collectable
         hoverBounce.KillHover();
         DestroySelf();
     }
+
+    public override void MinionCollect(GameObject collector) {}
+   
 }
