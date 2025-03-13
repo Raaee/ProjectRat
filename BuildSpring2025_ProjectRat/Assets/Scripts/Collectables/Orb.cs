@@ -27,10 +27,10 @@ public class Orb : Collectable
     protected override IEnumerator DelayedKill() {
         col.enabled = false;
         sr.sprite = null;
-        normalPs.Stop();
-        collectionPs.Play();
+        normalPs?.Stop();
+        collectionPs?.Play();
         yield return new WaitForSeconds(1f);
-        hoverBounce.KillHover();
+        hoverBounce?.KillHover();
         DestroySelf();
     }
 
