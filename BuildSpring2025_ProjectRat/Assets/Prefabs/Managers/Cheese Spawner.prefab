@@ -47,5 +47,5 @@ MonoBehaviour:
   centerTarget: {fileID: 0}
   CheesePrefab: {fileID: 3004535495907767582, guid: 61993bbf75f0a544684f0cbcb203e287, type: 3}
   radius: 50
-  spawnDelay: 1
+  spawnDelay: 5
   isSpawning: 1
