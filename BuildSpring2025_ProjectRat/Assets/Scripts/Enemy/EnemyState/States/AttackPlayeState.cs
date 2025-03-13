@@ -26,7 +26,7 @@ public class AttackPlayeState : EnemieStates
 
     public override void OnStateExit()
     {
-
+        projectileBA.secreteAttack = false;
     }
 
     public override void OnStateUpdate()
@@ -40,6 +40,7 @@ public class AttackPlayeState : EnemieStates
     }
     public override void OnFixedUpdate()
     {
+        projectileBA.Attack();
         if (!projectileBA.isShooting)
         {
             projectileBA.Attack();

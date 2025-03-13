@@ -19,11 +19,12 @@ public class FearState : EnemieStates
     public override void OnStateEnter()
     {
         Debug.Log("The enemy is currenly in fear");
+        movement.isFearing = true;
     }
 
     public override void OnStateExit()
     {
-
+        movement.isFearing = false;
     }
 
     public override void OnStateUpdate()
@@ -35,14 +36,9 @@ public class FearState : EnemieStates
             enemieStatesHandler.ChangeState(roamingState);
         }
 
-        if (!movement.isFearing)
-        {
-            movement.MoveAwayFromTarget();
-        }
-        else
-        {
-            movement.isFearing = false;
-        }
+        movement.MoveAwayFromTarget();
+ 
+        
     }
     public override void OnFixedUpdate()
     {

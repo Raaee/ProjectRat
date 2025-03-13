@@ -34,11 +34,18 @@ public class FollowState : EnemieStates
     public override void OnStateUpdate()
     {
         float distancesToTarget = Vector3.Distance(transform.position, playerRadius.transform.position);
-        if (distancesToTarget <= playerRadius.followRadius)
+        if (distancesToTarget < playerRadius.followRadius)
         {
+            movement.isFearing = true;
             movement.MoveAwayFromTarget();
+            return;
+        }
+        if(distancesToTarget <= playerRadius.followRadius)
+        {
+            return;
         }
 
+        movement.isFearing = false;
         movement.FollowingTarget(enemieStatesHandler.player.transform.position);
     }
 

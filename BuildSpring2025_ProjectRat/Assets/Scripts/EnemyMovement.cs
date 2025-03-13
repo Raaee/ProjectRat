@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class EnemyMovement : MonoBehaviour
 {
@@ -13,9 +14,11 @@ public class EnemyMovement : MonoBehaviour
     public bool isFearing { get; set; } = false;
     private GameObject player;
     private PlayerRadius playerRadius;
-    private Vector2 targetPosition;
+    public Vector2 targetPosition { get; set; }
     public bool alreadyRoaming = false;
     public float roamRadius = 100f;
+
+    public UnityEvent OnTargetPosition;
 
     private void Awake()
     {
@@ -41,7 +44,10 @@ public class EnemyMovement : MonoBehaviour
 
     public void MoveAwayFromTarget()
     {
-        isFearing = true;
+        if (!isFearing)
+        {
+            return;
+        }
         enemySpeed = 0;
         enemySpeed = fearSpeed;
         Debug.Log("MoveAwayFromTarget");
@@ -64,7 +70,6 @@ public class EnemyMovement : MonoBehaviour
         if (distancesToTarget >= playerRadius.fearRadius)
         {
             MoveTowardsTarget(targetPosition);
-            return;
         }
 
         if (distFromRoamPos > 0.1f && distancesToTarget >= playerRadius.aggroRadius) // if not close to target
@@ -75,6 +80,7 @@ public class EnemyMovement : MonoBehaviour
         else if (Vector2.Distance((Vector2)transform.position, targetPosition) <= 0.1f) // at the end of roam. find another point
         {
             targetPosition = (Vector2)transform.position + Random.insideUnitCircle * roamRadius;
+            OnTargetPosition?.Invoke();
         }
     }
 }

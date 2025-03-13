@@ -19,7 +19,8 @@ public class RoamingState : EnemieStates
     }
     void Start()
     {
-        playerRadius = enemieStatesHandler.player.GetComponentInChildren<PlayerRadius>();        
+        playerRadius = enemieStatesHandler.player.GetComponentInChildren<PlayerRadius>();
+        movement.OnTargetPosition.AddListener(ToIdle);
     }
     public override void OnStateEnter()
     {
@@ -59,11 +60,13 @@ public class RoamingState : EnemieStates
         
     public override void OnFixedUpdate()
     {
-        movement.StartRoaming();
+        
+           movement.StartRoaming();
     }
 
     public virtual void ToIdle()
     {
+        Debug.Log("ToIdle");
         enemieStatesHandler.ChangeState(idleState);
     }
 

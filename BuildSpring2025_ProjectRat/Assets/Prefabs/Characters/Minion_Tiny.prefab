@@ -338,6 +338,9 @@ MonoBehaviour:
   fearSpeed: 14
   alreadyRoaming: 0
   roamRadius: 100
+  OnTargetPosition:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1881636316178449093
 GameObject:
   m_ObjectHideFlags: 0
@@ -482,6 +485,7 @@ MonoBehaviour:
   followState: {fileID: 7104121649657737867}
   chasePlayerState: {fileID: 0}
   idleTime: 2
+  typeOfEnemy: {fileID: 1589061956857725468}
 --- !u!1 &5014246867313703112
 GameObject:
   m_ObjectHideFlags: 0
