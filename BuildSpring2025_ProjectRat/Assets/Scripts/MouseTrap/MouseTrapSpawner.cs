@@ -12,7 +12,7 @@ public class MouseTrapSpawner : MonoBehaviour
     [SerializeField] private GameObject mouseTrap;
     private Coroutine timer;
     private void Awake() {
-        player.GetComponent<Health>().OnDead.AddListener(StopTimer);
+        player.GetComponent<Health>().OnDeath.AddListener(StopTimer);
         
         timerDuration = Random.Range(minTimerRangeSeconds, maxTimerRangeSeconds + 1);        
         timer = StartCoroutine(Timer());
@@ -40,7 +40,7 @@ public class MouseTrapSpawner : MonoBehaviour
         timer = StartCoroutine(Timer());
     }
 
-    private void StopTimer() {
+    private void StopTimer(GameObject _) {
         Debug.Log("Stopping Mouse Trap timer, player is dead :(");
         StopCoroutine(timer);
     }
