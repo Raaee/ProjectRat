@@ -7,7 +7,7 @@ public abstract class Collectable : MonoBehaviour
     private int despawnDurationSeconds = 60;
     private Coroutine despawnTimer;
 
-    private void Awake() {
+    private void Start() {
         despawnTimer = StartCoroutine(OutOfBoundsTimer());
     }
 
