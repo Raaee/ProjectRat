@@ -77,7 +77,9 @@ public class IdleState : EnemieStates
 
     public IEnumerator WaitForXSeconds() 
     {
-        yield return new WaitForSeconds(idleTime);
+        float randomIdle = Random.Range(0.1f, 1.5f);
+        Debug.Log(randomIdle);
+        yield return new WaitForSeconds(Random.Range(0.1f, 1.5f));
         //pick a ramdom Idletime
         Debug.Log("idling");
         enemieStatesHandler.ChangeState(roamingState);

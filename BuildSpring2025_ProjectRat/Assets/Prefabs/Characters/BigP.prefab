@@ -1,5 +1,54 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &211566968133670747
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5686505135153235647}
+  - component: {fileID: 8405783917201908839}
+  m_Layer: 0
+  m_Name: SPOffset
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5686505135153235647
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 211566968133670747}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.61, y: -6.93, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6042835556175487380}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8405783917201908839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 211566968133670747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8694be5b4fe068248a5563a4dfd35d6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <spawnRadius>k__BackingField: 3
+  delayPerSpawn: 0.1
+  attackPrefab: {fileID: 7663498541583923837, guid: 127f348c9e81f5c4b8d3876de449e8db, type: 3}
+  maxAmtPerAttack: 20
+  randomAmtPerAttack: 1
 --- !u!1 &252458886156357638
 GameObject:
   m_ObjectHideFlags: 0
@@ -284,7 +333,6 @@ GameObject:
   - component: {fileID: 6042835556175487380}
   - component: {fileID: 1241881111438919047}
   - component: {fileID: 3805234849321452515}
-  - component: {fileID: 5004817201831650010}
   m_Layer: 0
   m_Name: AttackPlayer
   m_TagString: Untagged
@@ -304,7 +352,9 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 909606953884677835}
+  - {fileID: 5686505135153235647}
   m_Father: {fileID: 6814238136254600919}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1241881111438919047
@@ -334,24 +384,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chasePlayerState: {fileID: 4645044216143018808}
   playerRadius: {fileID: 0}
-  projectileBA: {fileID: 5004817201831650010}
---- !u!114 &5004817201831650010
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2094376792516616029}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78d6609c674054bde9cf697531efc8bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: 6840933701109634795, guid: 7db831073a80a448187a8e86dfcd8aac, type: 3}
-  fireAoE: {fileID: 2782661884586761244, guid: 7574281849e2daa43ac40129bafba985, type: 3}
-  MaxlifeTime: 1.5
-  lifeTime: 5
-  isShooting: 0
+  projectileBA: {fileID: 5013617977728355730}
+  pigeonSpecial: {fileID: 8405783917201908839}
 --- !u!1 &2675787539592013396
 GameObject:
   m_ObjectHideFlags: 0
@@ -697,6 +731,7 @@ MonoBehaviour:
   followState: {fileID: 0}
   chasePlayerState: {fileID: 4645044216143018808}
   idleTime: 2
+  typeOfEnemy: {fileID: 0}
 --- !u!1 &3758447226274034398
 GameObject:
   m_ObjectHideFlags: 0
@@ -814,6 +849,57 @@ MonoBehaviour:
   movement: {fileID: 3164365422104852344}
   secondsToFollow: 2
   aggroTimer: 3
+--- !u!1 &6097055004926254137
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 909606953884677835}
+  - component: {fileID: 5013617977728355730}
+  m_Layer: 0
+  m_Name: BAOffeset
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &909606953884677835
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6097055004926254137}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.84, y: -3.62, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6042835556175487380}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5013617977728355730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6097055004926254137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78d6609c674054bde9cf697531efc8bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectilePrefab: {fileID: 6840933701109634795, guid: 7db831073a80a448187a8e86dfcd8aac, type: 3}
+  fireAoE: {fileID: 2782661884586761244, guid: 7574281849e2daa43ac40129bafba985, type: 3}
+  MaxlifeTime: 1.5
+  lifeTime: 5
+  isShooting: 0
+  secondsIntervals: 2
+  secreteAttack: 0
 --- !u!1 &7247907443313758334
 GameObject:
   m_ObjectHideFlags: 0
@@ -973,6 +1059,9 @@ MonoBehaviour:
   OnDeath:
     m_PersistentCalls:
       m_Calls: []
+  OnDead:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &3164365422104852344
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -988,5 +1077,11 @@ MonoBehaviour:
   objToMove: {fileID: 8013399156281415326}
   roaming: {fileID: 7713389511978820121}
   enemySpeed: 8
+  roamingSpeed: 5
+  followingSpeed: 5
+  fearSpeed: 5
   alreadyRoaming: 0
   roamRadius: 50
+  OnTargetPosition:
+    m_PersistentCalls:
+      m_Calls: []

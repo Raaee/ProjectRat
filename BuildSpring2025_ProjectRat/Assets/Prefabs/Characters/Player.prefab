@@ -135,10 +135,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rats: []
   Bosses: []
-  fearRadius: 5
-  followRadius: 5
-  aggroRadius: 6
-  attackRadius: 2
+  fearRadius: 15
+  followRadius: 10
+  aggroRadius: 35
+  attackRadius: 20
 --- !u!1 &4211038337638405928
 GameObject:
   m_ObjectHideFlags: 0
@@ -362,6 +362,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   OnHeal:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDeath:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDead:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1 &4455122309063981288
@@ -666,7 +672,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackVisual: {fileID: 4455122309063981288}
-  attackDamage: 2
   poweredAttackDamage: 6
   attackDuration: 0.15
   spawnOrbs: 1
