@@ -141,7 +141,6 @@ MonoBehaviour:
   attackPlayerState: {fileID: 8330023907740647082}
   movement: {fileID: 8292542431472260229}
   secondsToFollow: 2
-  playerRadius: {fileID: 0}
   aggroTimer: 3
 --- !u!1 &1952591942696983225
 GameObject:
@@ -442,7 +441,6 @@ MonoBehaviour:
   idleState: {fileID: 8457898427371697709}
   chasePlayerState: {fileID: 6119782926209937302}
   movement: {fileID: 8292542431472260229}
-  playerRadius: {fileID: 0}
   typeOfEnemy: {fileID: 5392197244910137045}
 --- !u!1 &4034579807201871361
 GameObject:
@@ -705,6 +703,12 @@ MonoBehaviour:
   OnHeal:
     m_PersistentCalls:
       m_Calls: []
+  OnDeath:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDead:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &8292542431472260229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -718,14 +722,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objToMove: {fileID: 5392197244910137045}
-  player: {fileID: 0}
-  playerRadius: {fileID: 0}
   roaming: {fileID: 181198815807538291}
   enemySpeed: 9
-  secondsToFollow: 2
-  isRoaming: 0
-  firstTarget: 0
-  targetVector: 0
+  alreadyRoaming: 0
   roamRadius: 50
 --- !u!1 &5639349928681863004
 GameObject:
@@ -872,9 +871,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -1237744203
+  m_SortingLayer: 3
+  m_SortingOrder: 1
   m_Sprite: {fileID: 1323076084, guid: 0fc3c9e125be14341894c72bf0acd665, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

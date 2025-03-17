@@ -364,6 +364,12 @@ MonoBehaviour:
   OnHeal:
     m_PersistentCalls:
       m_Calls: []
+  OnDeath:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDead:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &4455122309063981288
 GameObject:
   m_ObjectHideFlags: 0
@@ -666,7 +672,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackVisual: {fileID: 4455122309063981288}
-  attackDamage: 2
   poweredAttackDamage: 6
   attackDuration: 0.15
   spawnOrbs: 1
@@ -770,8 +775,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -613790451
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 594419318, guid: 9cf91a648fe92ce4c8aeb38bc4802ff6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

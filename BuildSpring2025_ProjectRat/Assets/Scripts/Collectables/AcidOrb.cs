@@ -17,9 +17,4 @@ public class AcidOrb : Collectable
     public override void MinionCollect(GameObject collector) {
         // do nothing
     }
-
-    protected override IEnumerator DelayedKill() {
-        yield return new WaitForSeconds(killDelay);
-        DestroySelf();
-    }
 }

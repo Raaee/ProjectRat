@@ -30,7 +30,8 @@ public class Orb : MonoBehaviour
     }
     private IEnumerator DelayedKill() {
         col.enabled = false;
-        sr.sprite = null;
+        yield return new WaitForSeconds(0.2f);
+        sr.gameObject.SetActive(false);
         if (normalPs) normalPs.Stop();
         if (collectionPs) collectionPs.Play();
         yield return new WaitForSeconds(killDelay);

@@ -73,7 +73,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -604704089
-  m_SortingLayer: 1
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_RenderMode: 0
   m_MeshDistribution: 0
@@ -5000,8 +5000,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba526cc707881eb4aa63982c071c52dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delayDestroy: 1
-  killDelay: 1
+  instantKill: 0
   orbBehavior: {fileID: 5556444054710583193}
   healAmount: 10
 --- !u!114 &5084418775481262176
@@ -5110,9 +5109,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -1444399367
+  m_SortingLayer: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: 1326273675, guid: 77d64e71e4c83ab47bbb8e5bfc7862c0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

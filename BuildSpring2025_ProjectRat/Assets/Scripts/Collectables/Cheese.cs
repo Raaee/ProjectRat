@@ -20,10 +20,4 @@ public class Cheese : Collectable
     {
         // do nothing
     }
-
-    protected override IEnumerator DelayedKill()
-    {
-        yield return new WaitForSeconds(killDelay);
-        DestroySelf();
-    }
 }
