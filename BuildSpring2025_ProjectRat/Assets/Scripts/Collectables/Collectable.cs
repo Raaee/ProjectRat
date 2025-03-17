@@ -5,6 +5,7 @@ using UnityEngine;
 public abstract class Collectable : MonoBehaviour
 {
     [SerializeField] private bool delayDestroy = true;
+    [SerializeField] protected float killDelay = 1f;
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.tag == "Player") {
             Collect(collision.gameObject);

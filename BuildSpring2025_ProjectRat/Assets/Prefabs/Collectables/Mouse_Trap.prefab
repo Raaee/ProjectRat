@@ -93,8 +93,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3757947561692342281}
-  - component: {fileID: 6823150212803977583}
   - component: {fileID: 5059892865994942026}
+  - component: {fileID: 6823150212803977583}
   m_Layer: 6
   m_Name: Mouse_Trap
   m_TagString: Untagged
@@ -118,20 +118,6 @@ Transform:
   - {fileID: 2618621784744271701}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6823150212803977583
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7249412613114198091}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8fe705183ea341baa1a5b4d6ffb9707, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  delayDestroy: 1
-  playerDmg: 10
 --- !u!61 &5059892865994942026
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -177,3 +163,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &6823150212803977583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7249412613114198091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8fe705183ea341baa1a5b4d6ffb9707, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delayDestroy: 1
+  killDelay: 0.5
+  playerDmg: 10

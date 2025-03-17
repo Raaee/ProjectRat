@@ -2,27 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Cheese : Collectable
+public class AcidOrb : Collectable
 {
     [SerializeField] private Orb orbBehavior;
-    [SerializeField] private int healAmount = 10;
 
     private void Start() {
         orbBehavior.OnBehaviorComplete.AddListener(DestroySelf);
     }
-    public override void Collect(GameObject collector)
-    {
-        FindObjectOfType<Health>().AddHealth(healAmount);
+    public override void Collect(GameObject collector) {
+        FindObjectOfType<AcidOrbs>().AddOrbs(1);
         orbBehavior.DelayKill();
     }
 
-    public override void MinionCollect(GameObject collector)
-    {
+    public override void MinionCollect(GameObject collector) {
         // do nothing
     }
 
-    protected override IEnumerator DelayedKill()
-    {
+    protected override IEnumerator DelayedKill() {
         yield return new WaitForSeconds(killDelay);
         DestroySelf();
     }

@@ -460,6 +460,67 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f71dc1b41ae710046b262de83b075edf, type: 3}
+--- !u!1001 &1730562352
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2751706965668997064, guid: 33703e56048c0ca40a6eb2db0cf29514, type: 3}
+      propertyPath: centerTarget
+      value: 
+      objectReference: {fileID: 48810738}
+    - target: {fileID: 3176559330576778775, guid: 33703e56048c0ca40a6eb2db0cf29514, type: 3}
+      propertyPath: m_Name
+      value: Cheese Spawner
+      objectReference: {fileID: 0}
+    - target: {fileID: 4104341518936790858, guid: 33703e56048c0ca40a6eb2db0cf29514, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.2000003
+      objectReference: {fileID: 0}
+    - target: {fileID: 4104341518936790858, guid: 33703e56048c0ca40a6eb2db0cf29514, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -7.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4104341518936790858, guid: 33703e56048c0ca40a6eb2db0cf29514, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 50.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4104341518936790858, guid: 33703e56048c0ca40a6eb2db0cf29514, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4104341518936790858, guid: 33703e56048c0ca40a6eb2db0cf29514, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4104341518936790858, guid: 33703e56048c0ca40a6eb2db0cf29514, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4104341518936790858, guid: 33703e56048c0ca40a6eb2db0cf29514, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4104341518936790858, guid: 33703e56048c0ca40a6eb2db0cf29514, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4104341518936790858, guid: 33703e56048c0ca40a6eb2db0cf29514, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4104341518936790858, guid: 33703e56048c0ca40a6eb2db0cf29514, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 33703e56048c0ca40a6eb2db0cf29514, type: 3}
 --- !u!1001 &1779122254
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -573,6 +634,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MinionSpawner
       objectReference: {fileID: 0}
+    - target: {fileID: 6605418238734319035, guid: c006e77d5dc41a543adaa9dfec2fc3c7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -643,6 +708,7 @@ SceneRoots:
   - {fileID: 879547818}
   - {fileID: 1779122254}
   - {fileID: 1963088942}
+  - {fileID: 1730562352}
   - {fileID: 1456661404}
   - {fileID: 2143841155}
   - {fileID: 1130025819}

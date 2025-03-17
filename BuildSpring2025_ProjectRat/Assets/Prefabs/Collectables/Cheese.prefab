@@ -5001,6 +5001,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delayDestroy: 1
+  killDelay: 1
+  orbBehavior: {fileID: 5556444054710583193}
   healAmount: 10
 --- !u!114 &5084418775481262176
 MonoBehaviour:
@@ -5030,11 +5032,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ff3be228cac206448ec199edbf77891, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delayDestroy: 1
   normalPs: {fileID: 0}
   collectionPs: {fileID: 8343393296904993839}
+  killDelay: 1.2
   orbSprites:
   - {fileID: 1326273675, guid: 77d64e71e4c83ab47bbb8e5bfc7862c0, type: 3}
+  OnBehaviorComplete:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &8111052586884994259
 GameObject:
   m_ObjectHideFlags: 0
