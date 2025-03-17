@@ -105,7 +105,7 @@ GameObject:
   - component: {fileID: 185677437774151876}
   - component: {fileID: 8360031918784983109}
   - component: {fileID: 7164952940432506010}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Minion_Skrunky
   m_TagString: MinionRat
   m_Icon: {fileID: 0}
@@ -266,6 +266,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3347368234571563379}
   - component: {fileID: 6617459562587064379}
+  - component: {fileID: 8664138971690517114}
   m_Layer: 0
   m_Name: Visual
   m_TagString: Untagged
@@ -308,7 +309,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: c63257d447b8bd846bef4baa2ddcd53f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -340,6 +341,41 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!70 &8664138971690517114
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5274021647744952713}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 192
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.70126534}
+  m_Size: {x: 2.5491755, y: 1.6600205}
+  m_Direction: 1
 --- !u!1 &5631846583949906934
 GameObject:
   m_ObjectHideFlags: 0

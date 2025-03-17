@@ -185,6 +185,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: tempRats_3
+      rect:
+        serializedVersion: 2
+        x: 1169
+        y: 1625
+        width: 421
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2458ad4e71f0f94599cf82bd5b9f146
+      internalID: -1973963359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -199,6 +220,7 @@ TextureImporter:
       tempRats_0: -1558249335
       tempRats_1: 721946487
       tempRats_2: -1736266108
+      tempRats_3: -1973963359
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

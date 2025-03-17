@@ -5,19 +5,31 @@ using UnityEngine.UI;
 
 public class CharacterUIHandler : MonoBehaviour
 {
-    [SerializeField] private Slider slider;
+    private AcidOrbs acidOrbs;
     [SerializeField] private Health health;
+    [SerializeField] private Slider healthSlider;
+    [SerializeField] private Slider orbSlider;
 
     private void Start()
     {
-        slider.maxValue = health.MaxHP; 
-        slider.value = health.CurrentHP;
-        health.OnHurt.AddListener(UpdateSlider);
+        acidOrbs = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<AcidOrbs>();
+        InitBars();
+        health.OnHurt.AddListener(UpdateHealthSlider);
+        health.OnHeal.AddListener(UpdateHealthSlider);
+        acidOrbs.OnOrbUpdate.AddListener(UpdateOrbSlider);
+    }
+    private void InitBars() {
+        healthSlider.maxValue = health.MaxHP;
+        healthSlider.value = health.CurrentHP;
+        if (orbSlider) orbSlider.maxValue = acidOrbs.maxOrbs;
+        if (orbSlider) orbSlider.value = acidOrbs.currentOrbs;
     }
 
-    private void UpdateSlider(float amt)
+    private void UpdateHealthSlider(float amt)
     {
-        Debug.Log(health.CurrentHP);
-        slider.value = health.CurrentHP;
+        healthSlider.value = health.CurrentHP;
+    }
+    private void UpdateOrbSlider() {
+        if (orbSlider) orbSlider.value = acidOrbs.currentOrbs;
     }
 }

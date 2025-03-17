@@ -10,7 +10,7 @@ public class AcidOrb : Collectable
         orbBehavior.OnBehaviorComplete.AddListener(DestroySelf);
     }
     public override void Collect(GameObject collector) {
-        FindObjectOfType<AcidOrbs>().AddOrbs(1);
+        collector.GetComponentInChildren<AcidOrbs>().AddOrbs(1);
         orbBehavior.DelayKill();
     }
 

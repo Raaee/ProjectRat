@@ -12,7 +12,7 @@ public class Cheese : Collectable
     }
     public override void Collect(GameObject collector)
     {
-        FindObjectOfType<Health>().AddHealth(healAmount);
+        collector.GetComponent<Health>().AddHealth(healAmount);
         orbBehavior.DelayKill();
     }
 

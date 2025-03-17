@@ -20,7 +20,6 @@ public class Health : MonoBehaviour
         CurrentHP += amt;
         OnHeal?.Invoke(amt);
         CurrentHP = Mathf.Clamp(CurrentHP, 0, MaxHP);
-        Debug.Log("Heal | " + gameObject.name);
     }
     public void RemoveHealth(int amt) {
         CurrentHP -= amt;
@@ -30,8 +29,6 @@ public class Health : MonoBehaviour
             Debug.Log("Dead");
             OnDeath.Invoke(this.gameObject);
         }
-        Debug.Log("Hurting | " + gameObject.name);
-
     }
 
     public void OnPlayerDead() {

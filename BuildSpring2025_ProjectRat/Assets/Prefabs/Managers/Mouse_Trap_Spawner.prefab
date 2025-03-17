@@ -46,7 +46,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minTimerRangeSeconds: 5
   maxTimerRangeSeconds: 10
-  timerDuration: 0
   player: {fileID: 0}
   mainCamera: {fileID: 0}
-  mouseTrap: {fileID: 0}
+  mouseTrap: {fileID: 7249412613114198091, guid: 6759b2c39c5444051ab6851603530863, type: 3}
