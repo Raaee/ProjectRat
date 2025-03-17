@@ -73,7 +73,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -604704089
-  m_SortingLayer: 1
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_RenderMode: 0
   m_MeshDistribution: 0
@@ -4900,9 +4900,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -1444399367
+  m_SortingLayer: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: 1892829893, guid: e48bfee0e6ab6ea4f91140ab5ece33f1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4987,7 +4987,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -604704089
-  m_SortingLayer: 1
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_RenderMode: 0
   m_MeshDistribution: 0
@@ -9813,6 +9813,7 @@ GameObject:
   - component: {fileID: 5348621356410514920}
   - component: {fileID: 139344173880432188}
   - component: {fileID: 4230966109909724024}
+  - component: {fileID: 485193652482649503}
   - component: {fileID: 3808443835909658807}
   m_Layer: 0
   m_Name: Acid Orb
@@ -9886,15 +9887,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ff3be228cac206448ec199edbf77891, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delayDestroy: 1
   normalPs: {fileID: 7136235740830327437}
   collectionPs: {fileID: 8159633091644957484}
+  killDelay: 1
   orbSprites:
   - {fileID: -1611709232, guid: e48bfee0e6ab6ea4f91140ab5ece33f1, type: 3}
   - {fileID: -1106317636, guid: e48bfee0e6ab6ea4f91140ab5ece33f1, type: 3}
   - {fileID: 1892829893, guid: e48bfee0e6ab6ea4f91140ab5ece33f1, type: 3}
   - {fileID: 701479281, guid: e48bfee0e6ab6ea4f91140ab5ece33f1, type: 3}
   - {fileID: 966786249, guid: e48bfee0e6ab6ea4f91140ab5ece33f1, type: 3}
+  OnBehaviorComplete:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &485193652482649503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7470672308218697450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96b988ff78ca07e44b9983398829b848, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  instantKill: 0
+  orbBehavior: {fileID: 4230966109909724024}
 --- !u!114 &3808443835909658807
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -228,7 +228,6 @@ MonoBehaviour:
   idleState: {fileID: 1947866463035511971}
   chasePlayerState: {fileID: 0}
   movement: {fileID: 5980979217704060823}
-  playerRadius: {fileID: 0}
   typeOfEnemy: {fileID: 6123146260406962062}
 --- !u!1 &5821255512884644034
 GameObject:
@@ -391,7 +390,7 @@ MonoBehaviour:
   objToMove: {fileID: 6123146260406962062}
   roaming: {fileID: 1878566438732854563}
   enemySpeed: 5
-  firstTarget: 0
+  alreadyRoaming: 0
   roamRadius: 50
 --- !u!1 &6556313339694282291
 GameObject:
@@ -441,7 +440,6 @@ MonoBehaviour:
   attackBossState: {fileID: 0}
   chaseBossState: {fileID: 0}
   movement: {fileID: 5980979217704060823}
-  playerRadius: {fileID: 0}
 --- !u!1 &7183139413343926661
 GameObject:
   m_ObjectHideFlags: 0
@@ -512,8 +510,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1237744203
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -417086915, guid: bce5121c3249b25428ba7ba57913f0b7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
