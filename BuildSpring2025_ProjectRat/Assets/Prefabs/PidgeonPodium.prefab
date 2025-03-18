@@ -532,7 +532,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70ff5f2311a6eca4b83dfb3974f9b964, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnBossSpawn:
+    m_PersistentCalls:
+      m_Calls: []
+  destroySeconds: 2
   Boss: {fileID: 8013399156281415326, guid: 38db985251dbb554da685fd8e7aa41a2, type: 3}
+  MiniBar: {fileID: 2330037112387123770}
 --- !u!1 &7170646796574615001
 GameObject:
   m_ObjectHideFlags: 0

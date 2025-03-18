@@ -9,6 +9,7 @@ public class BossPodium : MonoBehaviour
     private CapsuleCollider2D podiumCollider;
     [SerializeField] private int destroySeconds = 2;
     [SerializeField] private GameObject Boss;
+    [SerializeField] private GameObject MiniBar;
 
     void Start()
     {
@@ -19,9 +20,10 @@ public class BossPodium : MonoBehaviour
 
     private void SpawnBoss(GameObject go)
     {
+        MiniBar.SetActive(false);
+
         podiumCollider.enabled = false;
         GameObject newBoss = Instantiate(Boss);
-
         OnBossSpawn.Invoke(newBoss, GetBossColor());
 
         StartCoroutine(DestroySelf());
