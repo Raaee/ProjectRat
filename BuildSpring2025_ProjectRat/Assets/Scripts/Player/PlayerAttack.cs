@@ -55,6 +55,7 @@ public class PlayerAttack : MonoBehaviour
         if (!isAttacking) return;
 
         if (col.gameObject.tag == MINION_RAT_TAG) {
+<<<<<<< HEAD
      
         }
         if (col.gameObject.tag == BOSS_TAG) {
@@ -62,6 +63,16 @@ public class PlayerAttack : MonoBehaviour
             DamageBoss(col);
         }
         if (col.gameObject.tag == BOSS_PODIUM_TAG) {
+=======
+            Debug.Log("Infect Rat!");
+        }
+        if (col.gameObject.tag == BOSS_TAG) {
+            if (spawnOrbs) TriggerOrbs();
+            col.gameObject.GetComponent<Health>().RemoveHealth(GetDamageAmount());
+        }
+        if (col.gameObject.tag == BOSS_PODIUM_TAG) {
+            col.gameObject.GetComponent<Health>().RemoveHealth(GetDamageAmount());
+>>>>>>> main
         
         }
     }
@@ -70,6 +81,7 @@ public class PlayerAttack : MonoBehaviour
             acidOrbs.SpawnOrb();
         }
     }
+<<<<<<< HEAD
     private void DamageBoss(Collider2D col) {
         int damage = attackDamage;
         if (acidOrbs.currentOrbs == acidOrbs.maxOrbs) {
@@ -77,5 +89,17 @@ public class PlayerAttack : MonoBehaviour
             acidOrbs.ResetOrbs();
         }
         col.gameObject.GetComponent<Health>().RemoveHealth(damage);
+=======
+    private int GetDamageAmount()
+    {
+        int damage = attackDamage;
+        if (acidOrbs.currentOrbs == acidOrbs.maxOrbs)
+        {
+            damage = poweredAttackDamage;
+            acidOrbs.ResetOrbs();
+        }
+        return damage;
+
+>>>>>>> main
     }
 }
