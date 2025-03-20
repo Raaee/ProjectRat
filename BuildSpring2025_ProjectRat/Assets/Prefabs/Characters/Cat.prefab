@@ -406,7 +406,6 @@ MonoBehaviour:
   attackPlayerState: {fileID: 5462305171639127372}
   movement: {fileID: 5857094423582701759}
   secondsToFollow: 2
-  playerRadius: {fileID: 0}
   aggroTimer: 3
 --- !u!1 &6573497913773513947
 GameObject:
@@ -457,7 +456,6 @@ MonoBehaviour:
   idleState: {fileID: 7862874655051970169}
   chasePlayerState: {fileID: 3707296309162712092}
   movement: {fileID: 5857094423582701759}
-  playerRadius: {fileID: 0}
   typeOfEnemy: {fileID: 6944497034271710787}
 --- !u!1 &6944497034271710787
 GameObject:
@@ -473,7 +471,7 @@ GameObject:
   - component: {fileID: 8844373344034658461}
   - component: {fileID: 7504932925815145275}
   - component: {fileID: 5857094423582701759}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cat
   m_TagString: Boss
   m_Icon: {fileID: 0}
@@ -557,9 +555,9 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 2.692438, y: 1.7462336}
-  m_Direction: 1
+  m_Offset: {x: -0.36214805, y: -0.5633259}
+  m_Size: {x: 4.455704, y: 10.706129}
+  m_Direction: 0
 --- !u!114 &8844373344034658461
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -578,6 +576,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   OnHeal:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDeath:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDead:
     m_PersistentCalls:
       m_Calls: []
 --- !u!114 &7504932925815145275
@@ -610,14 +614,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objToMove: {fileID: 6944497034271710787}
-  player: {fileID: 0}
-  playerRadius: {fileID: 0}
   roaming: {fileID: 5358186288899677342}
   enemySpeed: 10
-  secondsToFollow: 2
-  isRoaming: 0
-  firstTarget: 0
-  targetVector: 0
+  alreadyRoaming: 0
   roamRadius: 50
 --- !u!1 &6946599633352977815
 GameObject:
@@ -734,8 +733,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a67147ce21ea9947a99311e19d698ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slider: {fileID: 5157012510086535589}
   health: {fileID: 8844373344034658461}
+  healthSlider: {fileID: 5157012510086535589}
+  orbSlider: {fileID: 0}
 --- !u!1 &7737644558447991561
 GameObject:
   m_ObjectHideFlags: 0
@@ -919,6 +919,7 @@ GameObject:
   m_Component:
   - component: {fileID: 220237129518209548}
   - component: {fileID: 2399920660918339523}
+  - component: {fileID: 885904740778056418}
   m_Layer: 0
   m_Name: Cat Visual
   m_TagString: Untagged
@@ -936,7 +937,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 5624872183257835911}
@@ -961,7 +962,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: f93ed90d339807b4d92f44a3c99465de, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -979,10 +980,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 790934913, guid: 0fc3c9e125be14341894c72bf0acd665, type: 3}
+  m_SortingLayerID: -1237744203
+  m_SortingLayer: 3
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 1090504452, guid: a16d9d991410b5f4c8fcd1a5b5f0ec73, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -993,3 +994,38 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!70 &885904740778056418
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8910567640608599190}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 192
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.45733273, y: -1.4300239}
+  m_Size: {x: 12.158718, y: 25.341236}
+  m_Direction: 0
