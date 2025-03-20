@@ -1,0 +1,642 @@
+fileFormatVersion: 2
+guid: 26bc1a180f8775446be6378cd272d7de
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 1
+    textureFormat: 4
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: big_bossPodiumsSHEET_2
+      rect:
+        serializedVersion: 2
+        x: 9210
+        y: 2535
+        width: 1529
+        height: 1910
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8094bcdc2a19b074abed61041c201707
+      internalID: 682109273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: big_bossPodiumsSHEET_3
+      rect:
+        serializedVersion: 2
+        x: 7114
+        y: 3651
+        width: 1580
+        height: 723
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be5b69d57b6b26648bfc7a8f4285daaa
+      internalID: 482227556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: big_bossPodiumsSHEET_12
+      rect:
+        serializedVersion: 2
+        x: 2437
+        y: 3019
+        width: 1005
+        height: 1337
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc24030b4a7ecdf45a0f504ba5625049
+      internalID: 2046961816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: big_bossPodiumsSHEET_13
+      rect:
+        serializedVersion: 2
+        x: 4136
+        y: 2533
+        width: 1261
+        height: 1813
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f64034a4d3bcac94689735bb967c5a3b
+      internalID: -558787735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: big_bossPodiumsSHEET_20
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 3206
+        width: 1774
+        height: 870
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f77c917ffc47585468662e5dc57ff837
+      internalID: -102314146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: big_bossPodiumsSHEET_26
+      rect:
+        serializedVersion: 2
+        x: 10970
+        y: 3318
+        width: 1921
+        height: 722
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 003406f80a5652542877eb208438a901
+      internalID: -1525899406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: big_bossPodiumsSHEET_39
+      rect:
+        serializedVersion: 2
+        x: 7398
+        y: 2265
+        width: 1008
+        height: 1251
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8808b499aecdd347825596ba8ac611c
+      internalID: 503855362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossPodiumsSHEET_51
+      rect:
+        serializedVersion: 2
+        x: 5798
+        y: 2625
+        width: 1158
+        height: 502
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7a64d72baa8dc84ca519e767b478922
+      internalID: 1143247219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossPodiumsSHEET_69
+      rect:
+        serializedVersion: 2
+        x: 6025
+        y: 1577
+        width: 687
+        height: 889
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15252fc72dc88ce468b9a15a1ac4b4e4
+      internalID: 857562464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossPodiumsSHEET_73
+      rect:
+        serializedVersion: 2
+        x: 3375
+        y: 1001
+        width: 874
+        height: 1277
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92eb5647fbc06114ca454b87fa335253
+      internalID: 311592345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossPodiumsSHEET_76
+      rect:
+        serializedVersion: 2
+        x: 10929
+        y: 1016
+        width: 1010
+        height: 1328
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1465c8f3c9810bc408082c468289c9ee
+      internalID: 851245009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossPodiumsSHEET_78
+      rect:
+        serializedVersion: 2
+        x: 1114
+        y: 1396
+        width: 1614
+        height: 717
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d53d67439054805489dc133fd93a5d0a
+      internalID: -634233003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossPodiumsSHEET_92
+      rect:
+        serializedVersion: 2
+        x: 4340
+        y: 185
+        width: 1371
+        height: 1371
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2e70f02b2fdb3044ad1ec07f060ad74
+      internalID: -2125900910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossPodiumsSHEET_103
+      rect:
+        serializedVersion: 2
+        x: 6956
+        y: 216
+        width: 1600
+        height: 1412
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47b59ef8dc26d674a88d85998cf77f04
+      internalID: 1584153819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossPodiumsSHEET_104
+      rect:
+        serializedVersion: 2
+        x: 9006
+        y: 214
+        width: 1771
+        height: 1364
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1a9dc79a159bd24a98a24d740cf15cb
+      internalID: -24263794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossPodiumsSHEET_114
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 257
+        width: 915
+        height: 1051
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a302e4aff98fd5840b14b213d7d3e9d9
+      internalID: 1012044952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossPodiumsSHEET_118
+      rect:
+        serializedVersion: 2
+        x: 1547
+        y: 84
+        width: 1194
+        height: 1140
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f789a34e11253e45a0c16f5a818c34d
+      internalID: -833942376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      big_bossPodiumsSHEET_12: 2046961816
+      big_bossPodiumsSHEET_13: -558787735
+      big_bossPodiumsSHEET_2: 682109273
+      big_bossPodiumsSHEET_20: -102314146
+      big_bossPodiumsSHEET_26: -1525899406
+      big_bossPodiumsSHEET_3: 482227556
+      big_bossPodiumsSHEET_39: 503855362
+      bossPodiumsSHEET_0: -596268619
+      bossPodiumsSHEET_1: -434681498
+      bossPodiumsSHEET_10: 1648730421
+      bossPodiumsSHEET_100: 110607624
+      bossPodiumsSHEET_101: -83478879
+      bossPodiumsSHEET_102: -887673194
+      bossPodiumsSHEET_103: 1584153819
+      bossPodiumsSHEET_104: -24263794
+      bossPodiumsSHEET_105: 1472643391
+      bossPodiumsSHEET_106: 168534475
+      bossPodiumsSHEET_107: 971601568
+      bossPodiumsSHEET_108: 1956494002
+      bossPodiumsSHEET_109: -749637136
+      bossPodiumsSHEET_11: -704274727
+      bossPodiumsSHEET_110: -846489603
+      bossPodiumsSHEET_111: 188144365
+      bossPodiumsSHEET_112: 1780533546
+      bossPodiumsSHEET_113: 2131790748
+      bossPodiumsSHEET_114: 1012044952
+      bossPodiumsSHEET_115: 1038939827
+      bossPodiumsSHEET_116: 512226229
+      bossPodiumsSHEET_117: 507095931
+      bossPodiumsSHEET_118: -833942376
+      bossPodiumsSHEET_119: -1850695718
+      bossPodiumsSHEET_120: -1269799464
+      bossPodiumsSHEET_121: 529788469
+      bossPodiumsSHEET_122: -372325899
+      bossPodiumsSHEET_123: 126642525
+      bossPodiumsSHEET_124: -1432539958
+      bossPodiumsSHEET_125: 2103236676
+      bossPodiumsSHEET_126: -2025390828
+      bossPodiumsSHEET_127: -1628174936
+      bossPodiumsSHEET_128: 65300451
+      bossPodiumsSHEET_129: 964510278
+      bossPodiumsSHEET_130: 600944393
+      bossPodiumsSHEET_131: -2073555924
+      bossPodiumsSHEET_132: -1583836865
+      bossPodiumsSHEET_133: 1198935792
+      bossPodiumsSHEET_134: 272012955
+      bossPodiumsSHEET_135: 902867917
+      bossPodiumsSHEET_136: -1501128975
+      bossPodiumsSHEET_137: -1089171827
+      bossPodiumsSHEET_138: 966747961
+      bossPodiumsSHEET_139: -1385869841
+      bossPodiumsSHEET_14: -1183960565
+      bossPodiumsSHEET_140: -1757485155
+      bossPodiumsSHEET_141: -2132894011
+      bossPodiumsSHEET_142: 590587336
+      bossPodiumsSHEET_143: -1933030085
+      bossPodiumsSHEET_144: -13148711
+      bossPodiumsSHEET_15: -1303781142
+      bossPodiumsSHEET_16: 355817799
+      bossPodiumsSHEET_17: 1956125891
+      bossPodiumsSHEET_18: -1348575436
+      bossPodiumsSHEET_19: 492916026
+      bossPodiumsSHEET_21: 480853709
+      bossPodiumsSHEET_22: 401049823
+      bossPodiumsSHEET_23: 233074596
+      bossPodiumsSHEET_24: 937643207
+      bossPodiumsSHEET_25: 1415574525
+      bossPodiumsSHEET_27: 1997855066
+      bossPodiumsSHEET_28: 144536632
+      bossPodiumsSHEET_29: -265987542
+      bossPodiumsSHEET_30: 413429095
+      bossPodiumsSHEET_31: -1835462781
+      bossPodiumsSHEET_32: -1400623032
+      bossPodiumsSHEET_33: -2134734375
+      bossPodiumsSHEET_34: 28820641
+      bossPodiumsSHEET_35: 1605811431
+      bossPodiumsSHEET_36: 1198500426
+      bossPodiumsSHEET_37: 954364477
+      bossPodiumsSHEET_38: -2031343786
+      bossPodiumsSHEET_4: -2016733393
+      bossPodiumsSHEET_40: -798339513
+      bossPodiumsSHEET_41: -1305717081
+      bossPodiumsSHEET_42: 1507543743
+      bossPodiumsSHEET_43: -1871130728
+      bossPodiumsSHEET_44: 1456625946
+      bossPodiumsSHEET_45: -760763580
+      bossPodiumsSHEET_46: 1043236973
+      bossPodiumsSHEET_47: 1987570268
+      bossPodiumsSHEET_48: -198113855
+      bossPodiumsSHEET_49: 2110425966
+      bossPodiumsSHEET_5: 945479830
+      bossPodiumsSHEET_50: -661094926
+      bossPodiumsSHEET_51: 1143247219
+      bossPodiumsSHEET_52: -1031344691
+      bossPodiumsSHEET_53: -364569691
+      bossPodiumsSHEET_54: -941301363
+      bossPodiumsSHEET_55: 2028661026
+      bossPodiumsSHEET_56: -513774749
+      bossPodiumsSHEET_57: 707256960
+      bossPodiumsSHEET_58: 767022430
+      bossPodiumsSHEET_59: -43132644
+      bossPodiumsSHEET_6: -1381822688
+      bossPodiumsSHEET_60: -510431803
+      bossPodiumsSHEET_61: 935447267
+      bossPodiumsSHEET_62: -949000477
+      bossPodiumsSHEET_63: 1605305301
+      bossPodiumsSHEET_64: -2129546630
+      bossPodiumsSHEET_65: 1555245447
+      bossPodiumsSHEET_66: 1219503070
+      bossPodiumsSHEET_67: -1454061763
+      bossPodiumsSHEET_68: 1835138028
+      bossPodiumsSHEET_69: 857562464
+      bossPodiumsSHEET_7: -1124737233
+      bossPodiumsSHEET_70: 673191556
+      bossPodiumsSHEET_71: 1930708409
+      bossPodiumsSHEET_72: -2039158189
+      bossPodiumsSHEET_73: 311592345
+      bossPodiumsSHEET_74: -182690562
+      bossPodiumsSHEET_75: -1976720787
+      bossPodiumsSHEET_76: 851245009
+      bossPodiumsSHEET_77: -63434374
+      bossPodiumsSHEET_78: -634233003
+      bossPodiumsSHEET_79: 1733320671
+      bossPodiumsSHEET_8: -664995083
+      bossPodiumsSHEET_80: -1711438906
+      bossPodiumsSHEET_81: 680736821
+      bossPodiumsSHEET_82: -251544279
+      bossPodiumsSHEET_83: 291724736
+      bossPodiumsSHEET_84: 663557021
+      bossPodiumsSHEET_85: 1540499009
+      bossPodiumsSHEET_86: 1231539274
+      bossPodiumsSHEET_87: -1957139035
+      bossPodiumsSHEET_88: 227090503
+      bossPodiumsSHEET_89: 675212675
+      bossPodiumsSHEET_9: -1610928480
+      bossPodiumsSHEET_90: 675355850
+      bossPodiumsSHEET_91: -1449731612
+      bossPodiumsSHEET_92: -2125900910
+      bossPodiumsSHEET_93: -2032923182
+      bossPodiumsSHEET_94: -936126533
+      bossPodiumsSHEET_95: -730943565
+      bossPodiumsSHEET_96: -214484627
+      bossPodiumsSHEET_97: 2041245894
+      bossPodiumsSHEET_98: -2011409434
+      bossPodiumsSHEET_99: -340326812
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
