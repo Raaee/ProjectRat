@@ -2,9 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using com.cyborgAssets.inspectorButtonPro;
-/*Make a script DialogueUI and have functions that toggle each of the boxes on/off
-So a function to turn off dialogueBox, one to turn on the singleSpeaker and another to turn on doubleSpeaker
-*/
+
 public class Dialogue : MonoBehaviour
 {
     [SerializeField] private GameObject singleSpeaker;
@@ -12,24 +10,24 @@ public class Dialogue : MonoBehaviour
 
     private void Start()
     {
-        defaultBoxes();
+        DeactivateAllBoxes();
     }
     [ProButton]
-    private void defaultBoxes()
+    private void DeactivateAllBoxes()
     {
         singleSpeaker.SetActive(false);
         doubleSpeaker.SetActive(false);
     }
 
     [ProButton]
-    private void singleBox()
+    private void SingleBox()
     {
         singleSpeaker.SetActive(true);
         doubleSpeaker.SetActive(false);
     }
 
     [ProButton]
-    private void doubleBox()
+    private void DoubleBox()
     {
         singleSpeaker.SetActive(false);
         doubleSpeaker.SetActive(true);
