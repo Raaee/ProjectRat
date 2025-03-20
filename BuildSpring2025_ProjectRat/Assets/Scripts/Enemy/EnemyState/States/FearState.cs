@@ -8,6 +8,7 @@ public class FearState : EnemieStates
     [SerializeField] private EnemieStates roamingState;
     [SerializeField] private PlayerRadius playerRadius;
     [SerializeField] private EnemyMovement movement;
+    
 
     public override void Awake()
     {
@@ -18,11 +19,12 @@ public class FearState : EnemieStates
     public override void OnStateEnter()
     {
         Debug.Log("The enemy is currenly in fear");
+        movement.isFearing = true;
     }
 
     public override void OnStateExit()
     {
-
+        movement.isFearing = false;
     }
 
     public override void OnStateUpdate()
@@ -35,6 +37,8 @@ public class FearState : EnemieStates
         }
 
         movement.MoveAwayFromTarget();
+ 
+        
     }
     public override void OnFixedUpdate()
     {

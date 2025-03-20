@@ -34,12 +34,19 @@ public class FollowState : EnemieStates
     public override void OnStateUpdate()
     {
         float distancesToTarget = Vector3.Distance(transform.position, playerRadius.transform.position);
-        if (distancesToTarget <= playerRadius.followRadius)
+        if (distancesToTarget < playerRadius.followRadius)
         {
+            movement.isFearing = true;
             movement.MoveAwayFromTarget();
+            return;
+        }
+        if(distancesToTarget <= playerRadius.followRadius)
+        {
+            return;
         }
 
-        movement.MoveTowardsTarget(enemieStatesHandler.player.transform);
+        movement.isFearing = false;
+        movement.FollowingTarget(enemieStatesHandler.player.transform.position);
     }
 
     public override void OnFixedUpdate()
@@ -50,6 +57,7 @@ public class FollowState : EnemieStates
     [ProButton]
     public void MinionPurification()
     {
+        Debug.Log("purified minion");
         enemieStatesHandler.ChangeState(roamingState);
     }
 }

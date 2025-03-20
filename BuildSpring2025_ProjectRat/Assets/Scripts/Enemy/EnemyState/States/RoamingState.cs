@@ -16,9 +16,12 @@ public class RoamingState : EnemieStates
     public override void Awake()
     {
         base.Awake();
-        playerRadius = enemieStatesHandler.player.GetComponentInChildren<PlayerRadius>();
     }
-
+    void Start()
+    {
+        playerRadius = enemieStatesHandler.player.GetComponentInChildren<PlayerRadius>();
+        movement.OnTargetPosition.AddListener(ToIdle);
+    }
     public override void OnStateEnter()
     {
         movement.alreadyRoaming = true;
@@ -41,21 +44,34 @@ public class RoamingState : EnemieStates
                     enemieStatesHandler.ChangeState(chasePlayerState);
             }
         }
+
+        else if (typeOfEnemy.tag == "MinionRat")
+        {
+            float distancesToTarget = Vector3.Distance(transform.position, playerRadius.gameObject.transform.position);
+
+            if (distancesToTarget <= playerRadius.fearRadius)
+            {
+                if (fearState != null)
+                    enemieStatesHandler.ChangeState(fearState);
+            }
+        }
     }
 
         
     public override void OnFixedUpdate()
     {
-        movement.StartRoaming();
+        
+           movement.StartRoaming();
     }
 
     public virtual void ToIdle()
     {
+        Debug.Log("ToIdle");
         enemieStatesHandler.ChangeState(idleState);
     }
 
-    [ProButton]
-    public void TestFollowPlayerForMinion()
+    
+    public void InfectMinion()
     {
         if (followState != null)
             enemieStatesHandler.ChangeState(followState);

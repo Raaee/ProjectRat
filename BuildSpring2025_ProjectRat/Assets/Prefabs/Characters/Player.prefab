@@ -46,10 +46,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rats: []
   Bosses: []
-  fearRadius: 5
-  followRadius: 5
-  aggroRadius: 6
-  attackRadius: 2
+  fearRadius: 15
+  followRadius: 10
+  aggroRadius: 35
+  attackRadius: 20
 --- !u!1 &4211038337638405928
 GameObject:
   m_ObjectHideFlags: 0
