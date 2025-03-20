@@ -45,7 +45,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 0
+  spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 96
@@ -73,7 +73,11 @@ TextureImporter:
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 2
+<<<<<<< HEAD
     compressionQuality: 100
+=======
+    compressionQuality: 50
+>>>>>>> spriteSlices
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
@@ -126,19 +130,19 @@ TextureImporter:
       name: minionRats_0
       rect:
         serializedVersion: 2
-        x: 61
-        y: 1030
-        width: 572
-        height: 208
-      alignment: 9
-      pivot: {x: 0.61759937, y: 0.12684807}
+        x: 47
+        y: 1013
+        width: 581
+        height: 249
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 828d796fb2b167f47a34fee3eb8ea449
-      internalID: -1466953762
+      spriteID: 1f2d9a346ab399f4989209d31c59526d
+      internalID: -1871389537
       vertices: []
       indices: 
       edges: []
@@ -147,19 +151,19 @@ TextureImporter:
       name: minionRats_1
       rect:
         serializedVersion: 2
-        x: 667
-        y: 804
-        width: 178
-        height: 551
-      alignment: 9
-      pivot: {x: 0.50272465, y: 0.30573064}
+        x: 649
+        y: 763
+        width: 217
+        height: 625
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f351892e1f2750b4fb41c6d584b15add
-      internalID: -1823820183
+      spriteID: daaaed966c2049543a99ce6139c07600
+      internalID: -1176856461
       vertices: []
       indices: 
       edges: []
@@ -168,19 +172,19 @@ TextureImporter:
       name: minionRats_2
       rect:
         serializedVersion: 2
-        x: 867
-        y: 776
-        width: 204
-        height: 542
-      alignment: 9
-      pivot: {x: 0.53623486, y: 0.70938796}
+        x: 854
+        y: 761
+        width: 246
+        height: 586
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1b5c679f6dd114549998c9b3ab3c879a
-      internalID: 781294468
+      spriteID: ff8329591177ccc4c83babea27adae1e
+      internalID: -1148492660
       vertices: []
       indices: 
       edges: []
@@ -189,19 +193,19 @@ TextureImporter:
       name: minionRats_3
       rect:
         serializedVersion: 2
-        x: 1068
-        y: 543
-        width: 382
-        height: 256
-      alignment: 9
-      pivot: {x: 0.5464417, y: 0.27477622}
+        x: 1052
+        y: 476
+        width: 409
+        height: 375
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3a7eb36d609256e4b9815ab33e2adfa1
-      internalID: -417086915
+      spriteID: 09c5eb63caf8bcd45ada63fbd30d9026
+      internalID: 1271569896
       vertices: []
       indices: 
       edges: []
@@ -210,19 +214,19 @@ TextureImporter:
       name: minionRats_4
       rect:
         serializedVersion: 2
-        x: 1490
-        y: 551
-        width: 187
-        height: 226
-      alignment: 9
-      pivot: {x: 0.47232854, y: 0.26450396}
+        x: 1472
+        y: 539
+        width: 222
+        height: 273
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 048684a329a349e44b8e1c9b7d5fb588
-      internalID: 647005521
+      spriteID: ba14b06f98663e04d840cc28e4f5e0fd
+      internalID: 782437961
       vertices: []
       indices: 
       edges: []
@@ -231,19 +235,19 @@ TextureImporter:
       name: minionRats_5
       rect:
         serializedVersion: 2
-        x: 1720
-        y: 530
-        width: 197
-        height: 245
-      alignment: 9
-      pivot: {x: 0.5075045, y: 0.34612688}
+        x: 1710
+        y: 511
+        width: 226
+        height: 290
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d566ebeee5617fd4d88624e8b2a5fece
-      internalID: -332428139
+      spriteID: 9ac4bd7559f24b041b94146a536db549
+      internalID: -866308152
       vertices: []
       indices: 
       edges: []
@@ -252,19 +256,19 @@ TextureImporter:
       name: minionRats_6
       rect:
         serializedVersion: 2
-        x: 155
-        y: 319
-        width: 222
-        height: 194
-      alignment: 9
-      pivot: {x: 0.56895834, y: 0.21758167}
+        x: 157
+        y: 320
+        width: 229
+        height: 189
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5dc146b7081ac43448f5124d53119f74
-      internalID: 1124584560
+      spriteID: 55b1110e0d54df44c827df0336a62073
+      internalID: 739171822
       vertices: []
       indices: 
       edges: []
@@ -273,19 +277,19 @@ TextureImporter:
       name: minionRats_7
       rect:
         serializedVersion: 2
-        x: 456
-        y: 319
-        width: 106
-        height: 203
-      alignment: 9
-      pivot: {x: 0.49239853, y: 0.32139128}
+        x: 450
+        y: 302
+        width: 136
+        height: 221
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2f7ced128a8742944a7e4cd70a39348b
-      internalID: -1249820442
+      spriteID: ecf75209891ea8c44b0b9965813b2ee7
+      internalID: 191660066
       vertices: []
       indices: 
       edges: []
@@ -294,19 +298,19 @@ TextureImporter:
       name: minionRats_8
       rect:
         serializedVersion: 2
-        x: 675
-        y: 340
-        width: 88
-        height: 152
-      alignment: 9
-      pivot: {x: 0.49084264, y: 0.26146355}
+        x: 652
+        y: 325
+        width: 139
+        height: 167
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bf61eff0eb3d41e4d821b075652d5c7c
-      internalID: 1973746390
+      spriteID: 27ebb516b4ebf5a409feebd8dd864663
+      internalID: -623341916
       vertices: []
       indices: 
       edges: []
@@ -315,40 +319,40 @@ TextureImporter:
       name: minionRats_9
       rect:
         serializedVersion: 2
-        x: 1482
-        y: 265
-        width: 197
-        height: 247
-      alignment: 9
-      pivot: {x: 0.50375193, y: 0.21270122}
+        x: 1472
+        y: 248
+        width: 220
+        height: 277
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d9167d9688637694caf4c7c43865893a
-      internalID: -2037821218
+      spriteID: 5eaf3d38fa15186478a2ad13b6e70d9b
+      internalID: 1804810774
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: minionRats_10
+      name: minionRats_11
       rect:
         serializedVersion: 2
-        x: 1714
-        y: 267
-        width: 201
-        height: 238
-      alignment: 9
-      pivot: {x: 0.5110331, y: 0.3540244}
+        x: 1704
+        y: 257
+        width: 236
+        height: 266
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 957a003d11e2dc94f9d8cf2e5d0495c0
-      internalID: 1393497994
+      spriteID: 17bc5d77628817d41a97052b5c1d0aef
+      internalID: -1652041565
       vertices: []
       indices: 
       edges: []
@@ -364,17 +368,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      minionRats_0: -1466953762
-      minionRats_1: -1823820183
-      minionRats_10: 1393497994
-      minionRats_2: 781294468
-      minionRats_3: -417086915
-      minionRats_4: 647005521
-      minionRats_5: -332428139
-      minionRats_6: 1124584560
-      minionRats_7: -1249820442
-      minionRats_8: 1973746390
-      minionRats_9: -2037821218
+      minionRats_0: -1871389537
+      minionRats_1: -1176856461
+      minionRats_10: -1766413193
+      minionRats_11: -1652041565
+      minionRats_2: -1148492660
+      minionRats_3: 1271569896
+      minionRats_4: 782437961
+      minionRats_5: -866308152
+      minionRats_6: 739171822
+      minionRats_7: 191660066
+      minionRats_8: -623341916
+      minionRats_9: 1804810774
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

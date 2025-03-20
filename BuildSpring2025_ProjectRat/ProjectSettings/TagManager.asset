@@ -7,15 +7,19 @@ TagManager:
   - MinionRat
   - Boss
   - BossPodium
+<<<<<<< HEAD
+=======
+  - MiniBoss
+>>>>>>> spriteSlices
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Collision
   - Water
   - UI
-  - 
-  - 
+  - Player
+  - Enemy
   - 
   - 
   - 
@@ -44,6 +48,24 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+  - name: Podiums
+    uniqueID: 1768200137
+    locked: 0
+  - name: collectables
+    uniqueID: 2850567929
+    locked: 0
+  - name: Characters
+    uniqueID: 3057223093
+    locked: 0
+  - name: Player
+    uniqueID: 3681176845
+    locked: 0
+>>>>>>> main
+>>>>>>> spriteSlices
   - name: Ps
     uniqueID: 3690263207
     locked: 0

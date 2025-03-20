@@ -1,5 +1,58 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+<<<<<<< HEAD
+=======
+--- !u!1 &2738227784895439167
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8906467485775652619}
+  - component: {fileID: 6714271656293955931}
+  m_Layer: 6
+  m_Name: PlayerRadius
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8906467485775652619
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2738227784895439167}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 50, y: 50, z: 50}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 5441088133780482279}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6714271656293955931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2738227784895439167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37763d5827951864ab851c4c8a91276c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rats: []
+  Bosses: []
+  fearRadius: 5
+  followRadius: 5
+  aggroRadius: 6
+  attackRadius: 2
+>>>>>>> spriteSlices
 --- !u!1 &4211038337638405928
 GameObject:
   m_ObjectHideFlags: 0
@@ -16,7 +69,11 @@ GameObject:
   - component: {fileID: 5215237931790553250}
   - component: {fileID: 1074653874125289425}
   - component: {fileID: 6447297595118740107}
+<<<<<<< HEAD
   m_Layer: 0
+=======
+  m_Layer: 6
+>>>>>>> spriteSlices
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -38,6 +95,10 @@ Transform:
   m_Children:
   - {fileID: 7969100626540056176}
   - {fileID: 1283133856495473246}
+<<<<<<< HEAD
+=======
+  - {fileID: 8906467485775652619}
+>>>>>>> spriteSlices
   - {fileID: 8434669725652598548}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -216,8 +277,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e5883c0f91f5a64a805b80a82595b93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   maxHP: 100
   currentHP: 0
+=======
+  <MaxHP>k__BackingField: 100
+  <CurrentHP>k__BackingField: 0
+  OnHurt:
+    m_PersistentCalls:
+      m_Calls: []
+  OnHeal:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDeath:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDead:
+    m_PersistentCalls:
+      m_Calls: []
+>>>>>>> spriteSlices
 --- !u!1 &4455122309063981288
 GameObject:
   m_ObjectHideFlags: 0
@@ -520,7 +598,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackVisual: {fileID: 4455122309063981288}
+<<<<<<< HEAD
   attackDamage: 2
+=======
+>>>>>>> spriteSlices
   poweredAttackDamage: 6
   attackDuration: 0.15
   spawnOrbs: 1
@@ -564,6 +645,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1283133856495473246}
   - component: {fileID: 3972370501255166893}
+<<<<<<< HEAD
+=======
+  - component: {fileID: 7294935653852152547}
+>>>>>>> spriteSlices
   m_Layer: 0
   m_Name: Player Visual
   m_TagString: Untagged
@@ -606,7 +691,11 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
+<<<<<<< HEAD
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+=======
+  - {fileID: 2100000, guid: ebc2ed8f6dddf7b41a873dec59dd441b, type: 2}
+>>>>>>> spriteSlices
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -624,8 +713,13 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+<<<<<<< HEAD
   m_SortingLayerID: 0
   m_SortingLayer: 0
+=======
+  m_SortingLayerID: -613790451
+  m_SortingLayer: 4
+>>>>>>> spriteSlices
   m_SortingOrder: 0
   m_Sprite: {fileID: 594419318, guid: 9cf91a648fe92ce4c8aeb38bc4802ff6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -638,6 +732,44 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+<<<<<<< HEAD
+=======
+--- !u!70 &7294935653852152547
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6654923754253579728}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.67, y: -2.3914924}
+  m_Size: {x: 11.335131, y: 11.33513}
+  m_Direction: 0
+>>>>>>> spriteSlices
 --- !u!1 &9146727820125235906
 GameObject:
   m_ObjectHideFlags: 0

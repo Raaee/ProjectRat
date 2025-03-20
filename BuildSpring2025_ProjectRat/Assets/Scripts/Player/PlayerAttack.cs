@@ -6,7 +6,11 @@ public class PlayerAttack : MonoBehaviour
     private Actions actions;
     private Collider2D attackCol;
     [SerializeField] private GameObject attackVisual;
+<<<<<<< HEAD
     [SerializeField] private int attackDamage = 2;
+=======
+    [SerializeField] public int attackDamage { get; set; } = 2;
+>>>>>>> spriteSlices
     [SerializeField] private int poweredAttackDamage = 6;
     [SerializeField] private float attackDuration = 0.1f;
     public bool isAttacking { get; private set; }
@@ -55,6 +59,10 @@ public class PlayerAttack : MonoBehaviour
         if (!isAttacking) return;
 
         if (col.gameObject.tag == MINION_RAT_TAG) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> spriteSlices
      
         }
         if (col.gameObject.tag == BOSS_TAG) {
@@ -62,6 +70,19 @@ public class PlayerAttack : MonoBehaviour
             DamageBoss(col);
         }
         if (col.gameObject.tag == BOSS_PODIUM_TAG) {
+<<<<<<< HEAD
+=======
+=======
+            Debug.Log("Infect Rat!");
+        }
+        if (col.gameObject.tag == BOSS_TAG) {
+            if (spawnOrbs) TriggerOrbs();
+            col.gameObject.GetComponent<Health>().RemoveHealth(GetDamageAmount());
+        }
+        if (col.gameObject.tag == BOSS_PODIUM_TAG) {
+            col.gameObject.GetComponent<Health>().RemoveHealth(GetDamageAmount());
+>>>>>>> main
+>>>>>>> spriteSlices
         
         }
     }
@@ -70,6 +91,10 @@ public class PlayerAttack : MonoBehaviour
             acidOrbs.SpawnOrb();
         }
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> spriteSlices
     private void DamageBoss(Collider2D col) {
         int damage = attackDamage;
         if (acidOrbs.currentOrbs == acidOrbs.maxOrbs) {
@@ -77,5 +102,20 @@ public class PlayerAttack : MonoBehaviour
             acidOrbs.ResetOrbs();
         }
         col.gameObject.GetComponent<Health>().RemoveHealth(damage);
+<<<<<<< HEAD
+=======
+=======
+    private int GetDamageAmount()
+    {
+        int damage = attackDamage;
+        if (acidOrbs.currentOrbs == acidOrbs.maxOrbs)
+        {
+            damage = poweredAttackDamage;
+            acidOrbs.ResetOrbs();
+        }
+        return damage;
+
+>>>>>>> main
+>>>>>>> spriteSlices
     }
 }

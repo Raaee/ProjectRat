@@ -14,6 +14,7 @@ AnimationClip:
   m_RotationCurves: []
   m_CompressedRotationCurves: []
   m_EulerCurves: []
+<<<<<<< HEAD
   m_PositionCurves:
   - curve:
       serializedVersion: 2
@@ -76,12 +77,16 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     path: 
+=======
+  m_PositionCurves: []
+>>>>>>> spriteSlices
   m_ScaleCurves: []
   m_FloatCurves: []
   m_PPtrCurves:
   - serializedVersion: 2
     curve:
     - time: 0
+<<<<<<< HEAD
       value: {fileID: 27629553, guid: 9a0a1b460bcbdc24ea86d98cd43cb996, type: 3}
     - time: 0.7692308
       value: {fileID: 1418736653, guid: 9a0a1b460bcbdc24ea86d98cd43cb996, type: 3}
@@ -93,6 +98,17 @@ AnimationClip:
       value: {fileID: 1306550652, guid: 9a0a1b460bcbdc24ea86d98cd43cb996, type: 3}
     - time: 3.8461537
       value: {fileID: 27629553, guid: 9a0a1b460bcbdc24ea86d98cd43cb996, type: 3}
+=======
+      value: {fileID: -1402398616, guid: 9a0a1b460bcbdc24ea86d98cd43cb996, type: 3}
+    - time: 0.07692308
+      value: {fileID: 37792358, guid: 9a0a1b460bcbdc24ea86d98cd43cb996, type: 3}
+    - time: 0.15384616
+      value: {fileID: -427740466, guid: 9a0a1b460bcbdc24ea86d98cd43cb996, type: 3}
+    - time: 0.23076923
+      value: {fileID: 296703077, guid: 9a0a1b460bcbdc24ea86d98cd43cb996, type: 3}
+    - time: 0.30769232
+      value: {fileID: 334532782, guid: 9a0a1b460bcbdc24ea86d98cd43cb996, type: 3}
+>>>>>>> spriteSlices
     attribute: m_Sprite
     path: 
     classID: 212
@@ -107,6 +123,7 @@ AnimationClip:
     genericBindings:
     - serializedVersion: 2
       path: 0
+<<<<<<< HEAD
       attribute: 1
       script: {fileID: 0}
       typeID: 4
@@ -116,6 +133,8 @@ AnimationClip:
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 0
+=======
+>>>>>>> spriteSlices
       attribute: 0
       script: {fileID: 0}
       typeID: 212
@@ -124,18 +143,30 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
+<<<<<<< HEAD
     - {fileID: 27629553, guid: 9a0a1b460bcbdc24ea86d98cd43cb996, type: 3}
     - {fileID: 1418736653, guid: 9a0a1b460bcbdc24ea86d98cd43cb996, type: 3}
     - {fileID: -1011314490, guid: 9a0a1b460bcbdc24ea86d98cd43cb996, type: 3}
     - {fileID: -1921158178, guid: 9a0a1b460bcbdc24ea86d98cd43cb996, type: 3}
     - {fileID: 1306550652, guid: 9a0a1b460bcbdc24ea86d98cd43cb996, type: 3}
     - {fileID: 27629553, guid: 9a0a1b460bcbdc24ea86d98cd43cb996, type: 3}
+=======
+    - {fileID: -1402398616, guid: 9a0a1b460bcbdc24ea86d98cd43cb996, type: 3}
+    - {fileID: 37792358, guid: 9a0a1b460bcbdc24ea86d98cd43cb996, type: 3}
+    - {fileID: -427740466, guid: 9a0a1b460bcbdc24ea86d98cd43cb996, type: 3}
+    - {fileID: 296703077, guid: 9a0a1b460bcbdc24ea86d98cd43cb996, type: 3}
+    - {fileID: 334532782, guid: 9a0a1b460bcbdc24ea86d98cd43cb996, type: 3}
+>>>>>>> spriteSlices
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
+<<<<<<< HEAD
     m_StopTime: 3.9230769
+=======
+    m_StopTime: 0.3846154
+>>>>>>> spriteSlices
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -150,6 +181,7 @@ AnimationClip:
     m_KeepOriginalPositionXZ: 0
     m_HeightFromFeet: 0
     m_Mirror: 0
+<<<<<<< HEAD
   m_EditorCurves:
   - serializedVersion: 2
     curve:
@@ -351,5 +383,10 @@ AnimationClip:
     flags: 0
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 1
+=======
+  m_EditorCurves: []
+  m_EulerEditorCurves: []
+  m_HasGenericRootTransform: 0
+>>>>>>> spriteSlices
   m_HasMotionFloatCurves: 0
   m_Events: []
