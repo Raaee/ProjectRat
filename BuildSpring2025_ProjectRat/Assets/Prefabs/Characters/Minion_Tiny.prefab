@@ -368,9 +368,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objToMove: {fileID: 1589061956857725468}
   roaming: {fileID: 531575894487417430}
-  enemySpeed: 3
+  enemySpeed: 0
+  roamingSpeed: 10
+  followingSpeed: 12
+  fearSpeed: 15
   alreadyRoaming: 0
   roamRadius: 100
+  OnTargetPosition:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1881636316178449093
 GameObject:
   m_ObjectHideFlags: 0
@@ -515,6 +521,7 @@ MonoBehaviour:
   followState: {fileID: 7104121649657737867}
   chasePlayerState: {fileID: 0}
   idleTime: 2
+  typeOfEnemy: {fileID: 1589061956857725468}
 --- !u!1 &5014246867313703112
 GameObject:
   m_ObjectHideFlags: 0

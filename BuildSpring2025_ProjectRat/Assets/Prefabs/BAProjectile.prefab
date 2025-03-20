@@ -132,8 +132,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectileSpeed: 25
-  ProjectileDamage: 1
-  lifeTime: 2
+  ProjectileDamage: 7
+  lifeTime: 0.5
   OnProjecDisabled:
     m_PersistentCalls:
       m_Calls: []

@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PigeonSpecial : MonoBehaviour
+public class PigeonSpecial : AoESpecial
 {
     [field: SerializeField] public float spawnRadius { get; private set; } = 10f;
     [SerializeField] private float delayPerSpawn = 0.2f;

@@ -7,14 +7,17 @@ public class AttackPlayeState : EnemieStates
     [SerializeField] private EnemieStates chasePlayerState;
     [SerializeField] private PlayerRadius playerRadius;
     [SerializeField] private ProjectileBA projectileBA;
-    [SerializeField] private PigeonSpecial pigeonSpecial;
+    [SerializeField] private AoESpecial specialAttack;
     public bool specialUse = false;
     [SerializeField] private int secondsCooldown = 5;
+    private Health enemyHealth;
+    [SerializeField] private int hpPercentSpecial = 250;
     
 
     public override void Awake()
     {
         base.Awake();
+        transform.parent.GetComponent<Health>();
     }
     void Start()
     {
@@ -50,15 +53,15 @@ public class AttackPlayeState : EnemieStates
             projectileBA.isShooting = true;
         }
 
-        if (transform.parent.parent.parent.GetComponent<Health>().CurrentHP == 100)
+        if (enemyHealth.CurrentHP == enemyHealth.MaxHP)
         {
             return;
         }
 
-        if (transform.parent.parent.parent.GetComponent<Health>().CurrentHP % 25 == 0 && !specialUse)
+        if (enemyHealth.CurrentHP % hpPercentSpecial == 0 && !specialUse)
         {
-            pigeonSpecial.Attack();
-            pigeonSpecial.Attack();
+            specialAttack.Attack();
+            specialAttack.Attack();
             specialUse = true;
             StartCoroutine(specialCoolDown());
         }

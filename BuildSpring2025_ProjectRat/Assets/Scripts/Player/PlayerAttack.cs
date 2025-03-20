@@ -6,7 +6,7 @@ public class PlayerAttack : MonoBehaviour
     private Actions actions;
     private Collider2D attackCol;
     [SerializeField] private GameObject attackVisual;
-    [SerializeField] public int attackDamage { get; set; } = 2;
+    [field: SerializeField] public int attackDamage { get; set; } = 2;
     [SerializeField] private int poweredAttackDamage = 6;
     [SerializeField] private float attackDuration = 0.1f;
     public bool isAttacking { get; private set; }
@@ -55,7 +55,7 @@ public class PlayerAttack : MonoBehaviour
         if (!isAttacking) return;
 
         if (col.gameObject.tag == MINION_RAT_TAG) {
-            Debug.Log("Infect Rat!");
+             col.gameObject.GetComponentInChildren<RoamingState>().InfectMinion();
         }
         if (col.gameObject.tag == BOSS_TAG) {
             if (spawnOrbs) TriggerOrbs();

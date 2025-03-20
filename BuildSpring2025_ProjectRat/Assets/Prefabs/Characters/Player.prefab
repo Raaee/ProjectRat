@@ -278,9 +278,8 @@ MonoBehaviour:
   OnDeath:
     m_PersistentCalls:
       m_Calls: []
-  OnDead:
-    m_PersistentCalls:
-      m_Calls: []
+  deathDelay: 2
+  destroyOnDeath: 1
 --- !u!1 &4455122309063981288
 GameObject:
   m_ObjectHideFlags: 0
@@ -583,7 +582,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackVisual: {fileID: 4455122309063981288}
-  poweredAttackDamage: 6
+  <attackDamage>k__BackingField: 4
+  poweredAttackDamage: 12
   attackDuration: 0.15
   spawnOrbs: 1
 --- !u!114 &6447608065849507451
@@ -614,8 +614,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   orbPrefab: {fileID: 7470672308218697450, guid: 8d74b5d709294774aa6785c9d49c80a0, type: 3}
   <spawnChance>k__BackingField: 0.5
-  <maxOrbs>k__BackingField: 10
+  <maxOrbs>k__BackingField: 8
   <currentOrbs>k__BackingField: 0
+  OnOrbUpdate:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &6654923754253579728
 GameObject:
   m_ObjectHideFlags: 0
