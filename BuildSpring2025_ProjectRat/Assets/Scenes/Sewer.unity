@@ -181,13 +181,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3368912761861561296, guid: 65b7aca139ac3b24883089f534fefa4c, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6484394147672896582, guid: 65b7aca139ac3b24883089f534fefa4c, type: 3}
       propertyPath: m_Name
       value: PidgeonPodium
+      objectReference: {fileID: 0}
+    - target: {fileID: 7795236631322893585, guid: 65b7aca139ac3b24883089f534fefa4c, type: 3}
+      propertyPath: destroyOnDeath
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -566,13 +566,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 703959126446875442, guid: 1c62228084de13644a2a052ad4b435de, type: 3}
+      propertyPath: destroyOnDeath
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1740294844941733436, guid: 1c62228084de13644a2a052ad4b435de, type: 3}
       propertyPath: m_Name
       value: CatPodium
-      objectReference: {fileID: 0}
-    - target: {fileID: 2242146037545364763, guid: 1c62228084de13644a2a052ad4b435de, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6497701047877030767, guid: 1c62228084de13644a2a052ad4b435de, type: 3}
       propertyPath: m_LocalPosition.x
@@ -638,10 +638,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2228648632814042952, guid: 2f3be6879c156a04788b17d80f3d9d28, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4027012565862435862, guid: 2f3be6879c156a04788b17d80f3d9d28, type: 3}
       propertyPath: m_LocalPosition.x
       value: 16.316813
@@ -680,6 +676,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4027012565862435862, guid: 2f3be6879c156a04788b17d80f3d9d28, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5463317256088759537, guid: 2f3be6879c156a04788b17d80f3d9d28, type: 3}
+      propertyPath: destroyOnDeath
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6651598779584237603, guid: 2f3be6879c156a04788b17d80f3d9d28, type: 3}
@@ -741,13 +741,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 977136356424876657, guid: f71dc1b41ae710046b262de83b075edf, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1715083922862417255, guid: f71dc1b41ae710046b262de83b075edf, type: 3}
       propertyPath: m_Name
       value: RabbitPodium
+      objectReference: {fileID: 0}
+    - target: {fileID: 4771820785587678045, guid: f71dc1b41ae710046b262de83b075edf, type: 3}
+      propertyPath: destroyOnDeath
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7926277497923188516, guid: f71dc1b41ae710046b262de83b075edf, type: 3}
       propertyPath: m_LocalPosition.x
