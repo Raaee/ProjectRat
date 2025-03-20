@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:BuildSpring2025_ProjectRat/Assets/CharacterUIHandler.cs.meta
 guid: 3a67147ce21ea9947a99311e19d698ff
+========
+guid: 6f916225069aa4e70b7ce9467132bbc6
+>>>>>>>> spriteSlices:BuildSpring2025_ProjectRat/Assets/PlayerManager.cs.meta
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2

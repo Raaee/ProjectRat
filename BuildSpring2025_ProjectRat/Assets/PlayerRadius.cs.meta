@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:BuildSpring2025_ProjectRat/Assets/PlayerRadius.cs.meta
 guid: 37763d5827951864ab851c4c8a91276c
+========
+guid: 3a67147ce21ea9947a99311e19d698ff
+>>>>>>>> spriteSlices:BuildSpring2025_ProjectRat/Assets/CharacterUIHandler.cs.meta
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
