@@ -11,27 +11,32 @@ public class MouseTrapSpawner : MonoBehaviour
     [SerializeField] private GameObject mainCamera;
     [SerializeField] private GameObject mouseTrap;
     private Coroutine timer;
-    private void Awake() {
-        player.GetComponent<Health>().OnDead.AddListener(StopTimer);
-        
-        timerDuration = Random.Range(minTimerRangeSeconds, maxTimerRangeSeconds + 1);        
+    private void Awake()
+    {
+        player.GetComponent<Health>().OnDeath.AddListener(StopTimer);
+
+        timerDuration = Random.Range(minTimerRangeSeconds, maxTimerRangeSeconds + 1);
         timer = StartCoroutine(Timer());
     }
 
-    private IEnumerator Timer() {
+    private IEnumerator Timer()
+    {
         yield return new WaitForSeconds(timerDuration);
 
-        int isVertical = Random.Range(0,2);
+        int isVertical = Random.Range(0, 2);
 
-        int boundary = Random.Range(0,2);
-        float randomLoc = Random.Range(0f,101f) / 100f;
+        int boundary = Random.Range(0, 2);
+        float randomLoc = Random.Range(0f, 101f) / 100f;
 
         float[] offset = { -0.1f, 0.1f };
         Vector3 pos;
-        if (isVertical == 1) {
+        if (isVertical == 1)
+        {
             pos = mainCamera.GetComponent<Camera>().ViewportToWorldPoint(new Vector3(randomLoc, boundary + offset[boundary], 0));
-        } else {
-            pos = mainCamera.GetComponent<Camera>().ViewportToWorldPoint(new Vector3(boundary + offset[boundary], randomLoc , 0));
+        }
+        else
+        {
+            pos = mainCamera.GetComponent<Camera>().ViewportToWorldPoint(new Vector3(boundary + offset[boundary], randomLoc, 0));
         }
         pos.z = 0f;
 
@@ -40,7 +45,8 @@ public class MouseTrapSpawner : MonoBehaviour
         timer = StartCoroutine(Timer());
     }
 
-    private void StopTimer() {
+    private void StopTimer(GameObject _)
+    {
         Debug.Log("Stopping Mouse Trap timer, player is dead :(");
         StopCoroutine(timer);
     }
