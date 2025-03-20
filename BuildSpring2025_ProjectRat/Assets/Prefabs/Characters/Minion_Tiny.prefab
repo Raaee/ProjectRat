@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2033901053274917017}
   - component: {fileID: 294776157192214838}
+  - component: {fileID: 7489833427151440745}
   m_Layer: 0
   m_Name: Visual
   m_TagString: Untagged
@@ -52,7 +53,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 65347ec89da963947b3756dbb895eb3a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -70,8 +71,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1237744203
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 1124584560, guid: bce5121c3249b25428ba7ba57913f0b7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -84,6 +85,41 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!70 &7489833427151440745
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 624324035970932798}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 192
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.094725356, y: 0.43057558}
+  m_Size: {x: 1.2958053, y: 1.1186904}
+  m_Direction: 1
 --- !u!1 &748786487276609649
 GameObject:
   m_ObjectHideFlags: 0
@@ -232,7 +268,7 @@ GameObject:
   - component: {fileID: 4076811236480659547}
   - component: {fileID: 8002477720422343588}
   - component: {fileID: 4160415295286004367}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Minion_Tiny
   m_TagString: MinionRat
   m_Icon: {fileID: 0}
@@ -333,14 +369,8 @@ MonoBehaviour:
   objToMove: {fileID: 1589061956857725468}
   roaming: {fileID: 531575894487417430}
   enemySpeed: 3
-  roamingSpeed: 8
-  followingSpeed: 15
-  fearSpeed: 14
   alreadyRoaming: 0
   roamRadius: 100
-  OnTargetPosition:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &1881636316178449093
 GameObject:
   m_ObjectHideFlags: 0
@@ -485,7 +515,6 @@ MonoBehaviour:
   followState: {fileID: 7104121649657737867}
   chasePlayerState: {fileID: 0}
   idleTime: 2
-  typeOfEnemy: {fileID: 1589061956857725468}
 --- !u!1 &5014246867313703112
 GameObject:
   m_ObjectHideFlags: 0
