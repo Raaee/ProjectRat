@@ -30,7 +30,7 @@ public abstract class AoEAttack : MonoBehaviour
         yield return new WaitForSeconds(despawnDelay);
         DestroySelf();
     }
-    private void DamageAllCollisions() {
+    protected void DamageAllCollisions() {
         foreach (GameObject go in collisions) {
             if (go.tag == "Player") {
                 go.GetComponent<Health>().RemoveHealth(attackDamage);
@@ -44,7 +44,8 @@ public abstract class AoEAttack : MonoBehaviour
     private void DestroySelf() {
         Destroy(gameObject);
     }
-    private void OnDrawGizmos() {
+    public void OnDrawGizmos()
+    {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(randCenterPoint, attackRadius);
     }
