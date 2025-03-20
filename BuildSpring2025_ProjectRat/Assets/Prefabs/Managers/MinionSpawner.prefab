@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6605418238734319035
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4737643975309180825}
+  - component: {fileID: 3349656569745634934}
+  m_Layer: 0
+  m_Name: MinionSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4737643975309180825
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6605418238734319035}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3349656569745634934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6605418238734319035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf4dd3346c2535c458dc3ba4151cbc2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  centerTarget: {fileID: 0}
+  ratPrefabs:
+  - {fileID: 1589061956857725468, guid: 5f526985c4390b04bad5a6856f5e520f, type: 3}
+  - {fileID: 2957387709611827396, guid: 9d2413ad3dba69b4f965ff83991eebeb, type: 3}
+  - {fileID: 6123146260406962062, guid: 901b3bb615da8954a91bc4c20c7f9d3b, type: 3}
+  rareRatPrefab: {fileID: 1589061956857725468, guid: 0ef1192c1210d234aadc2ece6d184128, type: 3}
+  rareRatSpawnChance: 0.666
+  roamingCountText: {fileID: 0}
+  radius: 20
+  spawnDelay: 0.5
+  spawnMax: 50
+  isSpawning: 0
+  spawnedMinions: []

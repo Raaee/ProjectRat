@@ -37,7 +37,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 2.7, y: -3.7}
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &5143984230652940077
@@ -115,8 +115,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a67147ce21ea9947a99311e19d698ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slider: {fileID: 5314568051877182436}
   health: {fileID: 4618146414169659059}
+  healthSlider: {fileID: 5314568051877182436}
+  orbSlider: {fileID: 0}
 --- !u!1 &287671282023846974
 GameObject:
   m_ObjectHideFlags: 0
@@ -555,6 +556,7 @@ GameObject:
   m_Component:
   - component: {fileID: 216868545928322612}
   - component: {fileID: 4029825183050764626}
+  - component: {fileID: 2830536924379323193}
   m_Layer: 0
   m_Name: Pigeon Visual
   m_TagString: Untagged
@@ -572,7 +574,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.023736192, w: 0.9997183}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.8000001, y: 0.8000001, z: 0.79999995}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 6468074063479953263}
@@ -615,9 +617,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -1237744203
+  m_SortingLayer: 3
+  m_SortingOrder: 1
   m_Sprite: {fileID: 1815822050, guid: 51f776fc87e58e745b00a24f8e9f3b12, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -629,6 +631,41 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!70 &2830536924379323193
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3456338453251954832}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 192
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.029490583, y: -0.47907823}
+  m_Size: {x: 10.524102, y: 20.463913}
+  m_Direction: 0
 --- !u!1 &3695282590614361052
 GameObject:
   m_ObjectHideFlags: 0
@@ -727,7 +764,6 @@ MonoBehaviour:
   idleState: {fileID: 363013469649715548}
   chasePlayerState: {fileID: 4645044216143018808}
   movement: {fileID: 3164365422104852344}
-  playerRadius: {fileID: 0}
   typeOfEnemy: {fileID: 8013399156281415326}
 --- !u!1 &5069181808364348080
 GameObject:
@@ -795,7 +831,6 @@ MonoBehaviour:
   attackPlayerState: {fileID: 3805234849321452515}
   movement: {fileID: 3164365422104852344}
   secondsToFollow: 2
-  playerRadius: {fileID: 0}
   aggroTimer: 3
 --- !u!1 &7247907443313758334
 GameObject:
@@ -846,7 +881,7 @@ GameObject:
   - component: {fileID: 479648448514665133}
   - component: {fileID: 4618146414169659059}
   - component: {fileID: 3164365422104852344}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BigP
   m_TagString: Boss
   m_Icon: {fileID: 0}
@@ -953,6 +988,12 @@ MonoBehaviour:
   OnHeal:
     m_PersistentCalls:
       m_Calls: []
+  OnDeath:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDead:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &3164365422104852344
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -966,12 +1007,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objToMove: {fileID: 8013399156281415326}
-  player: {fileID: 0}
-  playerRadius: {fileID: 0}
   roaming: {fileID: 7713389511978820121}
   enemySpeed: 8
-  secondsToFollow: 2
-  isRoaming: 0
-  firstTarget: 0
-  targetVector: 0
+  alreadyRoaming: 0
   roamRadius: 50

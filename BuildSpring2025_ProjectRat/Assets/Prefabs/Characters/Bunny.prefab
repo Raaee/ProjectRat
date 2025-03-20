@@ -141,7 +141,6 @@ MonoBehaviour:
   attackPlayerState: {fileID: 8330023907740647082}
   movement: {fileID: 8292542431472260229}
   secondsToFollow: 2
-  playerRadius: {fileID: 0}
   aggroTimer: 3
 --- !u!1 &1952591942696983225
 GameObject:
@@ -258,8 +257,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a67147ce21ea9947a99311e19d698ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slider: {fileID: 4852547670325274228}
   health: {fileID: 380006802123981198}
+  healthSlider: {fileID: 4852547670325274228}
+  orbSlider: {fileID: 0}
 --- !u!1 &2021967729995323250
 GameObject:
   m_ObjectHideFlags: 0
@@ -442,7 +442,6 @@ MonoBehaviour:
   idleState: {fileID: 8457898427371697709}
   chasePlayerState: {fileID: 6119782926209937302}
   movement: {fileID: 8292542431472260229}
-  playerRadius: {fileID: 0}
   typeOfEnemy: {fileID: 5392197244910137045}
 --- !u!1 &4034579807201871361
 GameObject:
@@ -598,7 +597,7 @@ GameObject:
   - component: {fileID: 1644543108275684549}
   - component: {fileID: 380006802123981198}
   - component: {fileID: 8292542431472260229}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Bunny
   m_TagString: Boss
   m_Icon: {fileID: 0}
@@ -682,9 +681,9 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.043054592, y: 0.0472762}
-  m_Size: {x: 2.692438, y: 1.7462336}
-  m_Direction: 1
+  m_Offset: {x: 0.0832932, y: -0.3148713}
+  m_Size: {x: 3.8118386, y: 5.287259}
+  m_Direction: 0
 --- !u!114 &380006802123981198
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -705,6 +704,12 @@ MonoBehaviour:
   OnHeal:
     m_PersistentCalls:
       m_Calls: []
+  OnDeath:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDead:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &8292542431472260229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -718,14 +723,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objToMove: {fileID: 5392197244910137045}
-  player: {fileID: 0}
-  playerRadius: {fileID: 0}
   roaming: {fileID: 181198815807538291}
   enemySpeed: 9
-  secondsToFollow: 2
-  isRoaming: 0
-  firstTarget: 0
-  targetVector: 0
+  alreadyRoaming: 0
   roamRadius: 50
 --- !u!1 &5639349928681863004
 GameObject:
@@ -812,6 +812,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4598766392869103278}
   - component: {fileID: 8486971869244870064}
+  - component: {fileID: 3790913297740594549}
   m_Layer: 0
   m_Name: Bunny Visual
   m_TagString: Untagged
@@ -829,7 +830,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 7885146534477703496}
@@ -854,7 +855,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 773c36b7ba8c6ba489f8b39fe3556664, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -872,10 +873,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 1323076084, guid: 0fc3c9e125be14341894c72bf0acd665, type: 3}
+  m_SortingLayerID: -1237744203
+  m_SortingLayer: 3
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 247483109, guid: a16d9d991410b5f4c8fcd1a5b5f0ec73, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -886,6 +887,41 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!70 &3790913297740594549
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6213849613331349923}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 192
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.30178964, y: -0.67064583}
+  m_Size: {x: 8.1759205, y: 9.3160095}
+  m_Direction: 0
 --- !u!1 &9134785977358857957
 GameObject:
   m_ObjectHideFlags: 0

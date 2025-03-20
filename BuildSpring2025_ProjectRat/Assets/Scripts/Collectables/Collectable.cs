@@ -4,22 +4,20 @@ using UnityEngine;
 
 public abstract class Collectable : MonoBehaviour
 {
-    [SerializeField] private bool delayDestroy = true;
+    [SerializeField] private bool instantKill = false;
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.tag == "Player") {
-            Collect();
-            if (delayDestroy) {
-                Delay();
-            } else {
-                DestroySelf();
-            }
+            Collect(collision.gameObject);
+        } else if (collision.tag == "MinionRat") {
+            MinionCollect(collision.gameObject);
+        }
+
+        if (instantKill) {
+            DestroySelf();
         }
     }
-    public abstract void Collect();
-    protected abstract IEnumerator DelayedKill();
-    protected void Delay() {
-        StartCoroutine(DelayedKill());
-    }
+    public abstract void Collect(GameObject collector);
+    public abstract void MinionCollect(GameObject collector);
     protected void DestroySelf() {
         Destroy(gameObject);
     }

@@ -4,14 +4,20 @@ using UnityEngine;
 
 public class Cheese : Collectable
 {
+    [SerializeField] private Orb orbBehavior;
     [SerializeField] private int healAmount = 10;
-    public override void Collect()
-    {
-        FindObjectOfType<Health>().AddHealth(healAmount);
+
+    private void Start() {
+        orbBehavior.OnBehaviorComplete.AddListener(DestroySelf);
     }
-    protected override IEnumerator DelayedKill()
+    public override void Collect(GameObject collector)
     {
-        yield return new WaitForSeconds(0.2f);
-        DestroySelf();
+        collector.GetComponent<Health>().AddHealth(healAmount);
+        orbBehavior.DelayKill();
+    }
+
+    public override void MinionCollect(GameObject collector)
+    {
+        // do nothing
     }
 }
