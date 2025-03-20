@@ -11,27 +11,33 @@ public class Health : MonoBehaviour
     [HideInInspector] public UnityEvent<float> OnHurt;
     [HideInInspector] public UnityEvent<float> OnHeal;
     [HideInInspector] public UnityEvent<GameObject> OnDeath;
-    [HideInInspector] public UnityEvent OnDead;
-
-    private void Awake() {
+    [SerializeField] private int deathDelay = 2;
+    [SerializeField] private bool destroyOnDeath = true;
+    private void Awake()
+    {
         CurrentHP = MaxHP;
     }
-    public void AddHealth(int amt) {
+    public void AddHealth(int amt)
+    {
         CurrentHP += amt;
         OnHeal?.Invoke(amt);
         CurrentHP = Mathf.Clamp(CurrentHP, 0, MaxHP);
     }
-    public void RemoveHealth(int amt) {
+    public void RemoveHealth(int amt)
+    {
         CurrentHP -= amt;
         OnHurt?.Invoke(amt);
         CurrentHP = Mathf.Clamp(CurrentHP, 0, MaxHP);
-        if (CurrentHP <= 0) {
-            Debug.Log("Dead");
-            OnDeath.Invoke(this.gameObject);
+        if (CurrentHP <= 0)
+        {
+            OnDeath.Invoke(gameObject);
+            if (destroyOnDeath) StartCoroutine(DestroySelf());
         }
     }
 
-    public void OnPlayerDead() {
-        OnDead.Invoke();
+    private IEnumerator DestroySelf()
+    {
+        yield return new WaitForSeconds(deathDelay);
+        Destroy(gameObject);
     }
 }

@@ -175,7 +175,7 @@ CapsuleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1740294844941733436}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -226,9 +226,6 @@ MonoBehaviour:
   OnDeath:
     m_PersistentCalls:
       m_Calls: []
-  OnDead:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &4000175582858211308
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -241,7 +238,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70ff5f2311a6eca4b83dfb3974f9b964, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnBossSpawn:
+    m_PersistentCalls:
+      m_Calls: []
+  destroySeconds: 2
   Boss: {fileID: 6944497034271710787, guid: 4dd6474f10b55494680aceb99c7ebafb, type: 3}
+  MiniBar: {fileID: 8921922064833837617}
+  podiumParticleSystem: {fileID: 0}
+  bossesBeatenRequirement: 2
 --- !u!1 &2069379282677853914
 GameObject:
   m_ObjectHideFlags: 0
@@ -542,7 +546,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 1
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -5281,7 +5285,7 @@ RectTransform:
   m_Father: {fileID: 8493861485467511200}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: -0.000009536743, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -5551,7 +5555,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5892317398863308087
 RectTransform:
   m_ObjectHideFlags: 0
