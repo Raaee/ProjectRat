@@ -55,7 +55,7 @@ public class PlayerAttack : MonoBehaviour
         if (!isAttacking) return;
 
         if (col.gameObject.tag == MINION_RAT_TAG) {
-            col.gameObject.GetComponentInChildren<RoamingState>().InfectMinion();
+            Debug.Log("Infect Rat!");
         }
         if (col.gameObject.tag == BOSS_TAG) {
             if (spawnOrbs) TriggerOrbs();
